@@ -1,0 +1,57 @@
+# IDEs
+.idea/
+.idea_modules/
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+
+.vscode/
+.history/
+*.vsix
+
+.metadata
+bin/
+tmp/
+target/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+*.launch
+.cproject
+.autotools
+.factorypath
+.buildpath
+.target
+.texlipse
+.springBeans
+.apt_generated/
+.apt_generated_test/
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
