@@ -243,7 +243,7 @@ public class DynAttributeManager implements DynAttributes {
         if (minimumSamplingInterval != null) {
             return new DynResponse<>(DynResponse.StatusCodes.Good, minimumSamplingInterval.apply(req.getUserContext(), req.getNodeId(), node));
         }
-        return new DynResponse<>(DynResponse.StatusCodes.Good, 0.0);
+        return new DynResponse<>(DynResponse.StatusCodes.Good, -1.0);
     }
 
     public void setMinimumSamplingInterval(DynRequest.Full<Double> minimumSamplingInterval) {
