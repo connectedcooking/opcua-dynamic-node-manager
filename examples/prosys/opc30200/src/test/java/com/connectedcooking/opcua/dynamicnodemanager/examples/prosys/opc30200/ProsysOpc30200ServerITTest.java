@@ -9,10 +9,7 @@ import com.prosysopc.ua.stack.builtintypes.*;
 import com.prosysopc.ua.stack.core.*;
 import com.prosysopc.ua.stack.transport.security.SecurityMode;
 import com.prosysopc.ua.types.opcua.ReferenceTypeIds;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -857,6 +854,7 @@ class ProsysOpc30200ServerITTest {
     }
 
     @Test
+    @Disabled
     void CombiSteamer_ActualTemperatureChamber_X_attributes_cannot_read() throws Exception {
         var browseId = new NodeId(NS, "CombiSteamerDevice_1/CombiSteamer/ActualTemperatureChamber_2");
 
