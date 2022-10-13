@@ -1,5 +1,11 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200;
 
+import com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys.ProsysDynNodeManagerAdaptor;
+import com.connectedcooking.opcua.dynamicnodemanager.core.DynNodeManager;
+import com.connectedcooking.opcua.dynamicnodemanager.core.RealNodeId;
+import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.DynLocalizedText;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.server.CommercialKitchenEquipmentServerInformationModel;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.server.DIServerInformationModel;
 import com.prosysopc.ua.ApplicationIdentity;
 import com.prosysopc.ua.UserTokenPolicies;
 import com.prosysopc.ua.server.UaServer;
@@ -7,12 +13,6 @@ import com.prosysopc.ua.stack.builtintypes.LocalizedText;
 import com.prosysopc.ua.stack.core.ApplicationDescription;
 import com.prosysopc.ua.stack.core.ApplicationType;
 import com.prosysopc.ua.stack.transport.security.SecurityMode;
-import com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys.ProsysDynNodeManagerAdaptor;
-import com.connectedcooking.opcua.dynamicnodemanager.core.DynNodeManager;
-import com.connectedcooking.opcua.dynamicnodemanager.core.RealNodeId;
-import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.DynLocalizedText;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.server.CommercialKitchenEquipmentServerInformationModel;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.server.DIServerInformationModel;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -23,6 +23,7 @@ import static java.util.stream.Collectors.toList;
 public class ProsysOpc30200Server {
 
     public static final String NAMESPACE_URI = "http://connectedcooking.com/OPCUA/CKE/";
+    private static final String NAMESPACE_VERSION = "1.0-SNAPSHOT";
 
     private final UaServer server;
     private final DeviceService deviceService;
@@ -70,7 +71,7 @@ public class ProsysOpc30200Server {
         var ckeNodeManager = server.getAddressSpace().getNodeManager(cke);
 
         var dynNodeManager = new DynNodeManager();
-        var prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, List.of(diNodeManager), dynNodeManager);
+        var prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, NAMESPACE_VERSION, dynNodeManager, List.of(diNodeManager));
 
         // https://reference.opcfoundation.org/v104/CommercialKitchenEquipment/v100/ObjectTypes/CombiSteamerDeviceType/
         var CombiSteamerDeviceType = new RealNodeId(cke, 1011);

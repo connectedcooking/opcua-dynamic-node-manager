@@ -22,18 +22,6 @@
             <groupId>com.prosysopc.ua</groupId>
             <artifactId>prosys-opc-ua-sdk-client-server</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.prosysopc.ua</groupId>-->
-<!--            <artifactId>prosys-opc-ua-sdk-evaluation</artifactId>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15to18</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcpkix-jdk15to18</artifactId>
-        </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>

@@ -653,7 +653,7 @@ public class DynNodeBuilder implements DynNodeGenericBuilder, DynNodeObjectBuild
 
     @Override
     public DynNodeBuilder writeMask(DynRequest.Full<Integer> writeMask) {
-        // TODO not supported yet
+        // writing attributes not supported
         return this;
     }
 
@@ -713,13 +713,13 @@ public class DynNodeBuilder implements DynNodeGenericBuilder, DynNodeObjectBuild
 
     @Override
     public DynNodeBuilder rolePermissions(DynRequest.Full<Object> rolePermissions) {
-        // TODO not supported yet
+        // not supported
         return this;
     }
 
     @Override
     public DynNodeBuilder userRolePermissions(DynRequest.Full<Object> userRolePermissions) {
-        // TODO not supported yet
+        // not supported
         return this;
     }
 

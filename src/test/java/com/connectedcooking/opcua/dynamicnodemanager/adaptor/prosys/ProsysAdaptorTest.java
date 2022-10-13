@@ -68,7 +68,7 @@ class ProsysAdaptorTest {
 
         when(mockNodeManagerTable.addNodeManager(eq(-1), any())).thenReturn(NS_INDEX);
 
-        adaptor = new ProsysDynNodeManagerAdaptor(mockUaServer, NS_URI, dynNodeManager);
+        adaptor = new ProsysDynNodeManagerAdaptor(mockUaServer, NS_URI, null, dynNodeManager);
     }
 
     @Test

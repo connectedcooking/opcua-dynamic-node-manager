@@ -17,8 +17,9 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <prosys.version>4.9.0-43</prosys.version>
-        <slf4j.version>1.7.36</slf4j.version>
         <bouncycastle.version>1.71</bouncycastle.version>
+        <micrometer.version>1.9.5</micrometer.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <jupiter.version>5.9.1</jupiter.version>
         <mockito.version>4.8.0</mockito.version>
     </properties>
@@ -45,13 +46,16 @@
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15to18</artifactId>
             <version>${bouncycastle.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpkix-jdk15to18</artifactId>
             <version>${bouncycastle.version}</version>
-            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-core</artifactId>
+            <version>${micrometer.version}</version>
         </dependency>
 
         <dependency>
@@ -138,7 +142,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
@@ -150,11 +154,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 

@@ -1,14 +1,29 @@
 # OPC UA Dynamic Node Manager
 
-Java library for modeling and integration of dynamic OPC UA node sets.
+Java library for modeling and integration of dynamic OPC UA information models.
 
 Implements a dynamic node manager that responses dynamically based on the user context.
 
-Aims to be easily integrated with [Prosys OPC UA SDK](https://www.prosysopc.com/products/opc-ua-java-sdk/) and [Eclipse Milo™](https://github.com/eclipse/milo) &sup1; OPC UA server libraries.
+Aims to be easily integrated with [Prosys OPC UA SDK](https://www.prosysopc.com/products/opc-ua-java-sdk/) and [Eclipse Milo™](https://github.com/eclipse/milo) &sup1; OPC UA server SDK libraries.
 
 &sup1; planed for Eclipse Milo™ 2.0
 
 ## Quick Start
+
+Add necessary dependencies:
+
+```xml
+<dependency>
+  <groupId>com.connectedcooking.opcua</groupId>
+  <artifactId>opcua-dynamic-node-manager</artifactId>
+  <version>...</version>
+</dependency>
+<dependency>
+  <groupId>com.prosysopc.ua</groupId>
+  <artifactId>prosys-opc-ua-sdk-client-server</artifactId>
+  <version>4.9.0-43</version>
+</dependency>
+```
 
 Create and register dynamic nodes:
 
@@ -128,7 +143,7 @@ Next, we assign the dynamic Device_&lt;ID&gt; node to the pre-defined DeviceSet 
 ```java
 dynNodeManager.assignSet(
   new RealNodeId(DI, 5001), // references a node in the DI standard       
-  deviceNode.nodeId(),          // our dynamic device node
+  deviceNode.nodeId(),      // our dynamic device node
   (ctx, nodeId) -> getUserDeviceIds(ctx.getUsername(), nodeId));
 ```
 
@@ -175,15 +190,133 @@ UaServer server = startProsysUaServer();
 NodeManager diNodeManager = server.getAddressSpace().getNodeManager(DI);
 
 new ProsysDynNodeManagerAdaptor(
-        server, NAMESPACE_URI, List.of(diNodeManager), dynNodeManager);
+      server, NS_URI, NS_VERSION, dynNodeManager, List.of(diNodeManager));
 ```
 
-See the whole source code for the Commercial Kitchen Equipment (OPC 30200) standard in [examples](examples/prosys/opc30200/src/main/java/com/connectedcooking/opcua/dynamicnodemanager/examples/prosys/opc30200/ProsysOpc30200Server.java). 
+See the whole source code for the Commercial Kitchen Equipment (OPC 30200) standard in [examples](examples/prosys/opc30200/src/main/java/com/connectedcooking/opcua/dynamicnodemanager/examples/prosys/opc30200/ProsysOpc30200Server.java).
+
+### Dynamic Node Definitions
+
+Dynamic nodes are specified by a set of definition objects that is vendor-independent. That is, we can use the very same dynamic node definitions with different SDKs just by switching the adaptors:
+
+```java
+var dynNodeManager = setupDynNodeDefinitions();
+
+// integration with the Prosys Server SDK:
+var prosysServer = startProsysServer();
+new ProsysDynNodeManagerAdaptor(prosysServer, ns, dynNodeManager);
+
+// integration with the Eclipse Milo Server SDK:
+var miloServer = startMiloServer();
+new MiloDynNodeManagerAdaptor(miloServer, ns, dynNodeManager);
+```
+
+#### Dynamic vs. Real Node IDs
+
+A dynamic node ID is a core attribute of a dynamic node. It is a compound of a namespace index and a string pattern. The pattern is a base for a node ID identifier when resolved to a concrete browsable node ID. It contains zero or more placeholders closed in angle brackets `<>` to be replaces with concrete parameters.
+
+Dynamic and resolved node IDs are represented with the classes `DynNodeId` and `RealNodeId` respectively:
+
+```java
+DynNodeId dynNodeId = new DynNodeId("Device<ID>");
+RealNodeId realNodeId = dynNodeId.toReal(123);
+
+"Device123".equals(realNodeId.identifier()); // true
+```
+
+The dynamic node manager search for dynamic node IDs matching the requested real node ID and return the first found dynamic node with resolved ID from request parameters.
+
+All nodes that are not managed by the dynamic node manager must be referenced by real node IDs.
+
+#### Partial Node IDs
+
+Partial node IDs are dynamic node IDs that are not unique in the namespace and cannot exist without a parent node with a unique node ID. Partial node IDs are prefixed with the parent node ID (or IDs when the parent node ID is partial as well) separated by a slash `/`.
+
+```java
+new PartialNodeId("Device<SerNum>/Errors/Err<ID>/Msg");
+```
+
+#### Dynamic Nodes Builders
+
+The dynamic node manager provides a convenient way to create dynamic node definition via fluent builders:
+
+```java
+var dynNode = dynNodeManager.nodeBuilder()
+    .object("MyNode")
+    .registerAndGet();
+```
+
+The above listed code is equivalent to the following definition withou usage of builders:
+
+```java
+var dynAttrs = new DynAttributeManager();
+dynAttrs.setNodeId((ctx, nid, dnode) -> new RealNodeId("MyNode));
+dynAttrs.setNodeClass((ctx, nid, dnode) -> DynAttributes.NodeClasses.Object);
+dynAttrs.setBrowseName((ctx, nid, dnode) -> new DynQualifiedName("MyNode"));
+dynAttrs.setDisplayName((ctx, nid, dnode) -> new DynLocalizedText("MyNode"));
+
+var dynRefs = new DynReferenceManager();
+dynRefs.add(HasTypeDefinition, (ctx, nid, dnode) -> new RealNodeId(0, 58));   // BaseObjectType
+
+var dynNodeId = new DynNodeId("MyNode");
+
+var dynNode = new BaseDynNode(dynNodeId, null, dynAttrs, dynRefs);
+
+dynNodeManager.registerNode(dynNode);
+```
+
+#### Dynamic Object Components
+
+```java                
+dynNodeManager.nodeBuilder()
+    .childObject("ChidNode")
+    .asComponent(parentNode)
+    .register();
+```
+
+Such a child node will have a composed node ID `MyNode/ChidNode`.
+
+#### Dynamic Variables and Properties
+
+```java
+dynNodeManager.nodeBuilder()
+    .childVariable("MyVariable")
+    .asComponent(parentNode)
+    .value((ctx, nid, dnode) -> 123)
+    .register();
+
+dynNodeManager.nodeBuilder()
+    .childVariable("MyProperty")
+    .asProperty(parentNode)
+    .value("Test")
+    .register();
+```
+
+#### Assigning Dynamic Nodes
+
+To create a starting point for browsing we have to assign a dynamic node to a standard real node e.g. the Objects folder:
+
+```java
+var objectsNodeId = new RealNodeId(0, 85);
+
+var dynNodeId = new DynNodeId("Device<ID>");
+
+dynNodeManager.assign(objectsNodeId, dynNodeId, (ctx, nid) -> nid.toReal());
+```
+
+## Metrics
+
+There are basic micrometer.io metrics included:
+
+- Counter `dynNodeManager.hasNode`
+- Counter `dynNodeManager.hasNode.hits`
+- Timer `dynNodeManager.readValue`
+- Timer `dynNodeManager.readNonValue`
 
 ## Limitations
 
 - Java version >= 11.
-- Writing values not supported.
+- Writing attributes not supported.
 - Method execution not supported.
 - Historizing not supported.
 - Event notifications not supported.
@@ -234,7 +367,5 @@ The dynamic node ID, attributes, and references are resolved to concrete ones up
 
 ### TODO
 
-- IdType
-- Writing values
 - EventNotifier
 - Milo adaptor (for Milo 2.0)

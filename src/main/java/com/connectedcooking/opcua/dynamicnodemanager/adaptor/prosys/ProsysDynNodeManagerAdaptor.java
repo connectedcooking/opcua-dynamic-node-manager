@@ -1,6 +1,7 @@
 package com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys;
 
 import com.connectedcooking.opcua.dynamicnodemanager.core.*;
+import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.BasicValueDataTypes;
 import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.DynLocalizedText;
 import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.DynQualifiedName;
 import com.prosysopc.ua.StatusException;
@@ -14,15 +15,22 @@ import com.prosysopc.ua.stack.common.NamespaceTable;
 import com.prosysopc.ua.stack.common.ServiceResultException;
 import com.prosysopc.ua.stack.core.*;
 import com.prosysopc.ua.stack.utils.NumericRange;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Timer;
+import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Function;
+
+import static com.connectedcooking.opcua.dynamicnodemanager.core.datatype.BasicTypeDefinitions.NamespaceMetadataType;
 
 /**
  * Prosys adaptor for Dynamic NodeManager.
@@ -31,12 +39,19 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
 
     private static Logger log = LoggerFactory.getLogger(ProsysDynNodeManagerAdaptor.class);
 
+    private final MeterRegistry meterRegistry;
+
     private final DynNodeManager dynNodeManager;
 
     private final NamespaceTable namespaceTable;
     private final NodeManagerTable opcuaNodeManagerTable;
 
     private final int namespaceIndex;
+
+    private final Counter counterHasNode;
+    private final Counter counterHasNodeHits;
+    private final Timer timerReadValue;
+    private final Timer timerReadNonValue;
 
     /**
      * Creates a new adaptor.
@@ -45,18 +60,7 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
      * @param namespaceUri the dynamic node manager namespace URI
      */
     public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri) {
-        this(server, namespaceUri, null, new DynNodeManager());
-    }
-
-    /**
-     * Creates a new adaptor.
-     *
-     * @param server                  the Prosys server
-     * @param namespaceUri            the dynamic node manager namespace URI
-     * @param nodeManagersToIntercept the other node managers to intercept by the adaptor
-     */
-    public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri, Collection<NodeManager> nodeManagersToIntercept) {
-        this(server, namespaceUri, nodeManagersToIntercept, new DynNodeManager());
+        this(server, namespaceUri, new DynNodeManager());
     }
 
     /**
@@ -67,7 +71,19 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
      * @param dynNodeManager the dynamic node manager to use
      */
     public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri, DynNodeManager dynNodeManager) {
-        this(server, namespaceUri, null, dynNodeManager);
+        this(server, namespaceUri, "1.0", dynNodeManager);
+    }
+
+    /**
+     * Creates a new adaptor.
+     *
+     * @param server           the Prosys server
+     * @param namespaceUri     the dynamic node manager namespace URI
+     * @param namespaceVersion the dynamic node manager namespace version
+     * @param dynNodeManager   the dynamic node manager to use
+     */
+    public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri, String namespaceVersion, DynNodeManager dynNodeManager) {
+        this(server, namespaceUri, namespaceVersion, dynNodeManager, null);
     }
 
     /**
@@ -75,15 +91,43 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
      *
      * @param server                  the Prosys server
      * @param namespaceUri            the dynamic node manager namespace URI
-     * @param nodeManagersToIntercept the other node managers to intercept by the adaptor
+     * @param namespaceVersion        the dynamic node manager namespace version
      * @param dynNodeManager          the dynamic node manager to use
+     * @param nodeManagersToIntercept the other node managers to intercept by the adaptor
      */
-    public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri, Collection<NodeManager> nodeManagersToIntercept, DynNodeManager dynNodeManager) {
+    public ProsysDynNodeManagerAdaptor(UaServer server, String namespaceUri, String namespaceVersion, DynNodeManager dynNodeManager, Collection<NodeManager> nodeManagersToIntercept) {
+        this(server, namespaceUri, namespaceVersion, dynNodeManager, nodeManagersToIntercept, new SimpleMeterRegistry());
+    }
+
+    /**
+     * Creates a new adaptor.
+     *
+     * @param server                  the Prosys server
+     * @param namespaceUri            the dynamic node manager namespace URI
+     * @param namespaceVersion        the dynamic node manager namespace version
+     * @param dynNodeManager          the dynamic node manager to use
+     * @param nodeManagersToIntercept the other node managers to intercept by the adaptor
+     * @param meterRegistry           the meter registry
+     */
+    public ProsysDynNodeManagerAdaptor(
+            UaServer server,
+            String namespaceUri,
+            String namespaceVersion,
+            DynNodeManager dynNodeManager,
+            Collection<NodeManager> nodeManagersToIntercept,
+            MeterRegistry meterRegistry
+    ) {
         super(server, namespaceUri);
         this.dynNodeManager = dynNodeManager;
         this.namespaceTable = server.getNamespaceTable();
         this.opcuaNodeManagerTable = server.getNodeManagerUaServer().getNodeManagerTable();
         this.namespaceIndex = getNamespaceIndex();
+        this.meterRegistry = meterRegistry;
+
+        this.counterHasNode = Counter.builder("dynNodeManager.hasNode").register(meterRegistry);
+        this.counterHasNodeHits = Counter.builder("dynNodeManager.hasNode.hits").register(meterRegistry);
+        this.timerReadValue = Timer.builder("dynNodeManager.readValue").register(meterRegistry);
+        this.timerReadNonValue = Timer.builder("dynNodeManager.readNonValue").register(meterRegistry);
 
         new DynamicIoManager(this);
 
@@ -92,12 +136,77 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
         if (nodeManagersToIntercept != null) {
             nodeManagersToIntercept.forEach(nm -> nm.addListener(dynamicNodeManagerListener));
         }
+
+        addIntoServerNamespaces(server, namespaceUri, namespaceVersion, dynamicNodeManagerListener);
+    }
+
+    private void addIntoServerNamespaces(UaServer server, String namespaceUri, String namespaceVersion, DynamicNodeManagerListener dynamicNodeManagerListener) {
+        if (namespaceVersion == null) {
+            return;
+        }
+        server.getNodeManagerRoot().addListener(dynamicNodeManagerListener);
+        var nsNode = dynNodeManager.nodeBuilder()
+                .object("NamespaceMetadata", namespaceUri, NamespaceMetadataType)
+                .registerAndGet();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("NamespaceUri")
+                .asProperty(nsNode)
+                .value(namespaceUri)
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("NamespaceVersion")
+                .asProperty(nsNode)
+                .value(namespaceVersion)
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("NamespacePublicationDate")
+                .asProperty(nsNode)
+                .value(ZonedDateTime.now().truncatedTo(ChronoUnit.DAYS))
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("IsNamespaceSubset")
+                .asProperty(nsNode)
+                .value(false)
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("StaticNodeIdTypes")
+                .asProperty(nsNode)
+                .value(new com.prosysopc.ua.stack.core.IdType[]{com.prosysopc.ua.stack.core.IdType.Numeric}, BasicValueDataTypes.IdType)
+                .arrayDimensions(new Integer[]{1})
+                .valueRank(DynAttributes.ValueRanks.OneDimension)
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("StaticNumericNodeIdRange")
+                .asProperty(nsNode)
+                .dataType(BasicValueDataTypes.NumericRange)
+                .arrayDimensions(new Integer[]{0})
+                .valueRank(DynAttributes.ValueRanks.OneDimension)
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("StaticStringNodeIdPattern")
+                .asProperty(nsNode)
+                .dataType(BasicValueDataTypes.String)
+                .register();
+
+        dynNodeManager.assign(new RealNodeId(0, 11715), nsNode.nodeId(), new RealNodeId(namespaceIndex, "NamespaceMetadata"));
     }
 
     @Override
     public boolean hasNode(NodeId nodeId) {
-        return namespaceIndex == nodeId.getNamespaceIndex()
+        counterHasNode.increment();
+        var hit = namespaceIndex == nodeId.getNamespaceIndex()
                 && nodeId.getValue() instanceof String && dynNodeManager.hasNode((String) nodeId.getValue());
+        if (hit) {
+            counterHasNodeHits.increment();
+        }
+        return hit;
     }
 
     @Override
@@ -254,6 +363,23 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
         protected void readNonValue(ServiceContext serviceContext, Object operationContext, NodeId nodeId, UaNode node,
                                     UnsignedInteger attributeId, DataValue dataValue) throws StatusException {
             log.debug("readNonValue: {}, attributeId {}", nodeId, attributeId);
+            try {
+                timerReadNonValue.record(() -> {
+                    try {
+                        readNonValueInternal(serviceContext, operationContext, nodeId, attributeId, dataValue);
+                    } catch (StatusException se) {
+                        throw new RuntimeException(se);
+                    }
+                });
+            } catch (RuntimeException e) {
+                if (e.getCause() instanceof  StatusException) {
+                    throw (StatusException) e.getCause();
+                }
+            }
+        }
+
+        private void readNonValueInternal(ServiceContext serviceContext, Object operationContext, NodeId nodeId,
+                                    UnsignedInteger attributeId, DataValue dataValue) throws StatusException {
             var request = TypeUtils.toDynRequest(nodeId, serviceContext);
             if (!dynNodeManager.canBrowse(request)) {
                 dataValue.setValue(new Variant(null));
@@ -331,6 +457,23 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
         @Override
         protected void readValue(ServiceContext serviceContext, Object operationContext, NodeId nodeId, UaValueNode node,
                                  NumericRange indexRange, TimestampsToReturn timestampsToReturn, DateTime minTimestamp, DataValue dataValue) throws StatusException {
+            log.debug("readValue: {}", nodeId);
+            try {
+                timerReadValue.record(() -> {
+                    try {
+                        readValueInternal(serviceContext, nodeId, indexRange, minTimestamp, dataValue);
+                    } catch (StatusException se) {
+                        throw new RuntimeException(se);
+                    }
+                });
+            } catch (RuntimeException e) {
+                if (e.getCause() instanceof  StatusException) {
+                    throw (StatusException) e.getCause();
+                }
+            }
+        }
+
+        private void readValueInternal(ServiceContext serviceContext, NodeId nodeId, NumericRange indexRange, DateTime minTimestamp, DataValue dataValue) throws StatusException {
             log.debug("readValue: {}", nodeId);
             var request = TypeUtils.toDynRequest(nodeId, serviceContext);
             if (!dynNodeManager.canBrowse(request)) {

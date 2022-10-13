@@ -16,7 +16,6 @@
 
         <prosys.version>4.9.0-43</prosys.version>
         <slf4j.version>1.7.36</slf4j.version>
-        <bouncycastle.version>1.71</bouncycastle.version>
         <jupiter.version>5.9.1</jupiter.version>
         <mockito.version>4.8.0</mockito.version>
 
@@ -36,23 +35,8 @@
                 <version>${prosys.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcprov-jdk15to18</artifactId>
-                <version>${bouncycastle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcpkix-jdk15to18</artifactId>
-                <version>${bouncycastle.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
 

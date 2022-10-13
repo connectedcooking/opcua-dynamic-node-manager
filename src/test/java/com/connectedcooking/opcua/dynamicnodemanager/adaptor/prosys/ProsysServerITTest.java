@@ -32,6 +32,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 class ProsysServerITTest {
 
     private static final String NAMESPACE_URI = "http://connectedcooking.com/OPCUA/Test/";
+    private static final String NAMESPACE_VERSION = "1.0-SNAPSHOT";
 
     private static final String SET_NODE_ID = "DeviceSet";
 
@@ -71,7 +72,7 @@ class ProsysServerITTest {
 
         // init server - dynamic node manager
         dynNodeManager = new DynNodeManager();
-        prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, List.of(server.getNodeManagerRoot()), dynNodeManager);
+        prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, NAMESPACE_VERSION, dynNodeManager, List.of(server.getNodeManagerRoot()));
         nsIndex = prosysAdaptor.getNamespaceIndex();
 
         // create client
@@ -79,12 +80,11 @@ class ProsysServerITTest {
         client.setApplicationIdentity(new ApplicationIdentity());
         client.setSecurityMode(SecurityMode.NONE);
         client.setUserIdentity(new UserIdentity(USERNAME, PASSWORD));
+
+        setupDynamicNodeManager();
     }
 
-    @BeforeEach
-    void setupDynamicNodeManager() {
-        dynNodeManager.deregisterAll();
-
+    static void setupDynamicNodeManager() {
         var objects = new RealNodeId(ObjectIdentifiers.ObjectsFolder.getNamespaceIndex(), ObjectIdentifiers.ObjectsFolder.getValue());
 
         var deviceSetAttrs = new DynAttributeManager();
@@ -152,6 +152,19 @@ class ProsysServerITTest {
         var index = namespaces.getIndex(NAMESPACE_URI);
 
         assertThat(index).isEqualTo(2);
+    }
+
+    @Test
+    void reads_namespace_metadata() throws Exception {
+        var valueUri = client.readValue(new NodeId(nsIndex, "NamespaceMetadata/NamespaceUri"));
+        var valueVersion = client.readValue(new NodeId(nsIndex, "NamespaceMetadata/NamespaceVersion"));
+
+        assertAll(
+                () -> assertThat(valueUri.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
+                () -> assertThat(valueUri.getValue().getValue()).isEqualTo(NAMESPACE_URI),
+                () -> assertThat(valueVersion.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
+                () -> assertThat(valueVersion.getValue().getValue()).isEqualTo(NAMESPACE_VERSION)
+        );
     }
 
     @Test

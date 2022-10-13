@@ -1,5 +1,8 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.simple;
 
+import com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys.ProsysDynNodeManagerAdaptor;
+import com.connectedcooking.opcua.dynamicnodemanager.core.DynNodeManager;
+import com.connectedcooking.opcua.dynamicnodemanager.core.RealNodeId;
 import com.prosysopc.ua.ApplicationIdentity;
 import com.prosysopc.ua.UserTokenPolicies;
 import com.prosysopc.ua.server.UaServer;
@@ -9,9 +12,6 @@ import com.prosysopc.ua.stack.core.ApplicationDescription;
 import com.prosysopc.ua.stack.core.ApplicationType;
 import com.prosysopc.ua.stack.core.ObjectIdentifiers;
 import com.prosysopc.ua.stack.transport.security.SecurityMode;
-import com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys.ProsysDynNodeManagerAdaptor;
-import com.connectedcooking.opcua.dynamicnodemanager.core.DynNodeManager;
-import com.connectedcooking.opcua.dynamicnodemanager.core.RealNodeId;
 
 import java.time.*;
 import java.util.Date;
@@ -24,6 +24,7 @@ import static java.util.stream.Collectors.toList;
 public class ProsysSimpleServer {
 
     public static final String NAMESPACE_URI = "http://connectedcooking.com/OPCUA/Simple/";
+    public static final String NAMESPACE_VERSION = "1.0-SNAPSHOT";
 
     private static final String SET_NODE_ID = "DeviceSet";
     private static final String DEVICE_NODE_ID = "Device_<Id>";
@@ -52,7 +53,7 @@ public class ProsysSimpleServer {
     private void initialize() {
         var rootNodeManager = server.getNodeManagerRoot();
         var dynNodeManager = new DynNodeManager();
-        var prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, List.of(rootNodeManager), dynNodeManager);
+        var prosysAdaptor = new ProsysDynNodeManagerAdaptor(server, NAMESPACE_URI, NAMESPACE_VERSION, dynNodeManager, List.of(rootNodeManager));
 
         var device = dynNodeManager.nodeBuilder()
                 .object(DEVICE_NODE_ID)

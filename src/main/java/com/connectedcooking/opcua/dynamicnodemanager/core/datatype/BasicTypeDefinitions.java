@@ -14,4 +14,6 @@ public interface BasicTypeDefinitions {
     RealNodeId PropertyType = new RealNodeId(0, 68);
 
     RealNodeId AnalogItemType = new RealNodeId(0, 2368);
+
+    RealNodeId NamespaceMetadataType = new RealNodeId(0, 11616);
 }

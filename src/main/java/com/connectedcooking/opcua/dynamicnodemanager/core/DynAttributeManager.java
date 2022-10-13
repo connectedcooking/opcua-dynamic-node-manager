@@ -111,13 +111,13 @@ public class DynAttributeManager implements DynAttributes {
 
     @Override
     public DynResponse<Integer> writeMask(DynRequest req) {
-        // writing not supported
+        // writing attributes not supported
         return new DynResponse<>(DynResponse.StatusCodes.Good, 0);
     }
 
     @Override
     public DynResponse<Integer> userWriteMask(DynRequest req) {
-        // writing not supported
+        // writing attributes not supported
         return new DynResponse<>(DynResponse.StatusCodes.Good, 0);
     }
 
@@ -143,7 +143,7 @@ public class DynAttributeManager implements DynAttributes {
 
     @Override
     public DynResponse<EventNotifiers[]> eventNotifier(DynRequest req) {
-        // not supported
+        // TODO not supported yet
         return new DynResponse<>(DynResponse.StatusCodes.Good, new EventNotifiers[0]);
     }
 
@@ -264,13 +264,13 @@ public class DynAttributeManager implements DynAttributes {
 
     @Override
     public DynResponse<Boolean> isExecutable(DynRequest req) {
-        // not supported
+        // TODO not supported yet
         return new DynResponse<>(DynResponse.StatusCodes.Good, false);
     }
 
     @Override
     public DynResponse<Boolean> isUserExecutable(DynRequest req) {
-        // not supported
+        // TODO not supported yet
         return new DynResponse<>(DynResponse.StatusCodes.Good, false);
     }
 
