@@ -2,7 +2,7 @@
 
 Java library for modeling and integration of dynamic OPC UA information models.
 
-Implements a dynamic node manager that responses dynamically based on the user context.
+It implements a dynamic node manager that responses dynamically based on the user context.
 
 Aims to be easily integrated with [Prosys OPC UA SDK](https://www.prosysopc.com/products/opc-ua-java-sdk/) and [Eclipse Milo™](https://github.com/eclipse/milo) &sup1; OPC UA server SDK libraries.
 
@@ -40,13 +40,13 @@ DynNode device = dynNodeManager.nodeBuilder()
 dynNodeManager.nodeBuilder()
     .childVariable("SerialNumber")
     .asProperty(device) // as a property of the parent
-    .valueById(this::getSernum) // get the value dynamically
+    .valueById(this::getSerialNumber) // get the value dynamically
     .register();
 
 // ...
 
 // retrieve a value based on the request
-String getSernum(UserContext ctx, Long deviceId) {
+String getSerialNumber(UserContext ctx, Long deviceId) {
     if (!login(ctx.getUsername(), ctx.getCredentials())) {
         return null;
     }
@@ -71,23 +71,23 @@ See [examples](examples) for more details.
 
 ## Use Case
 
-OPC UA is designed as an interface allowing a standardized read and write access to current data in automation devices.
+OPC UA is designed as an interface allowing a standardized read and write access to current data of devices for automation.
 
-Today, a lot of cloud-based IoT platforms are around to simplify the access to the data of devices via remote and centralized interfaces. Such platforms can profit of the benefits of OPC UA as well not only by gathering data but also by providing data via standardized OPC UA interfaces.
+Today, a lot of cloud-based IoT platforms are around to simplify the access to data of devices via remote and centralized interfaces. Such platforms can profit from the benefits of OPC UA as well, not only by gathering data but also by providing data via standardized OPC UA interfaces.
 
-Such an approach would mean a little or no changes in the established client processes. The IoT platform would serve as an OPC UA umbrella over heterogeneous data from potentially different sources.
+Such an approach would require only minor or no changes at all in the established client processes. The IoT platform would serve as an OPC UA wrapper for potentially heterogeneous data from different sources.
 
-Another benefit for the operator would be a single set of OPC UA APIs to remotely access all data from multiple device with no need to establish a new connection to each device. 
+The operator (client) would just handle a single set of OPC UA APIs to remotely access all data from multiple device with no need to establish a new connection to each device individually. 
 
 ![Use Case for Dynamic Node Manager](doc/Dynamic-Node-Manager-UseCase.png)
 
-As such a platform is typically a multi-tenant and multi-user system, we need to bring dynamic not only to data but to the information model as well. The obvious requirement is confidentiality of data and meta-data; that means, not only must not a user see data of other users, event the structure (e.g. which device are in possession) must remain confident. The platform cannot simply hide the nodes by a different organization (views), it must ensure no information is available even by guessing node IDs by an unauthorized user.
+As such a platform is typically a multi-tenant and multi-user system, we need to bring dynamic not only to data but also to the information model as well. The obvious requirement is confidentiality of data and meta-data; that means, a user should not see data of other users and also the structure (e.g. which device are in possession) must remain confident. The platform cannot simply hide the nodes by a different organization (views), it must ensure no information is visible to unauthorized users even not by guessing.
 
-Another requirement is the possibility to add and remove nodes dynamically based on the current user session.
+Another requirement is the ability to add and remove nodes dynamically based on the current user session.
 
 ### Example
 
-Consider a cloud OPC UA server providing OPC UA interfaces for kitchen devices based on the Commercial Kitchen Equipment (OPC 30200) standard. The user Alice has two restaurants each with one combi steamer connected to the platform. By browsing the node DeviceSet should display two components of type definition CombiSteamerDeviceType:
+Consider a cloud OPC UA server providing OPC UA interfaces for kitchen devices based on the Commercial Kitchen Equipment (OPC 30200) standard. The user Alice has two restaurants each with one combi steamer connected to the platform. Browsing the node DeviceSet should display two components of type definition CombiSteamerDeviceType:
 
 ```
 DeviceSet
@@ -104,7 +104,7 @@ DeviceSet
 \_ Coffee Machine Kitchen
 ```
 
-The platform must not show any combi steamers to Bob or coffee machines to Alice. That is, valid Node IDs must be different the Alice's session context than in Bob's.
+The platform must not show any combi steamers to Bob or coffee machines to Alice. That means, valid node IDs in Alice's session context must differ from those in Bob's session context.
 
 ## Dynamic Node Manager
 
@@ -137,7 +137,7 @@ boolean hasDevice(String user, Long deviceId) {
 }
 ```
 
-Depending on the return value of `hasDevice` the node is or is not browsable for the current user.
+Depending on the return value of `hasDevice` the node is browsable for the current user or not.
 
 Next, we assign the dynamic Device_&lt;ID&gt; node to the pre-defined DeviceSet node (from the DI namespace):
 ```java
@@ -181,7 +181,7 @@ String getSernum(String user, Long deviceId) {
 }
 ```
 
-Similar for object and variable components.
+Similar to object and variable components.
 
 The last step is to initialize the adaptor for a specific OPC UA SDK, e.g. Prosys. Because we need to intercept calls to the DI information model (to fill DeviceSet dynamically), we need to reference its node manager in the dynamic node manager as well:
 
@@ -197,7 +197,7 @@ See the whole source code for the Commercial Kitchen Equipment (OPC 30200) stand
 
 ### Dynamic Node Definitions
 
-Dynamic nodes are specified by a set of definition objects that is vendor-independent. That is, we can use the very same dynamic node definitions with different SDKs just by switching the adaptors:
+Dynamic nodes are specified by a set of vendor-independent definition objects. Which means, we can use the very same dynamic node definitions with different SDKs just by switching the adaptors:
 
 ```java
 var dynNodeManager = setupDynNodeDefinitions();
@@ -213,7 +213,7 @@ new MiloDynNodeManagerAdaptor(miloServer, ns, dynNodeManager);
 
 #### Dynamic vs. Real Node IDs
 
-A dynamic node ID is a core attribute of a dynamic node. It is a compound of a namespace index and a string pattern. The pattern is a base for a node ID identifier when resolved to a concrete browsable node ID. It contains zero or more placeholders closed in angle brackets `<>` to be replaces with concrete parameters.
+A dynamic node ID is a core attribute of a dynamic node. It is a compound of a namespace index and a string pattern. The pattern will be resolved to the node ID identifier of a concrete browsable node ID. It contains none or several placeholders enclosed in angle brackets `<>`, which are then replaced by concrete parameters.
 
 Dynamic and resolved node IDs are represented with the classes `DynNodeId` and `RealNodeId` respectively:
 
@@ -224,7 +224,7 @@ RealNodeId realNodeId = dynNodeId.toReal(123);
 "Device123".equals(realNodeId.identifier()); // true
 ```
 
-The dynamic node manager search for dynamic node IDs matching the requested real node ID and return the first found dynamic node with resolved ID from request parameters.
+The dynamic node manager searches for dynamic node IDs matching the requested real node ID and returns the first matching dynamic node, containing the resolved ID from request parameters.
 
 All nodes that are not managed by the dynamic node manager must be referenced by real node IDs.
 
@@ -238,7 +238,7 @@ new PartialNodeId("Device<SerNum>/Errors/Err<ID>/Msg");
 
 #### Dynamic Nodes Builders
 
-The dynamic node manager provides a convenient way to create dynamic node definition via fluent builders:
+The dynamic node manager provides a convenient way to create dynamic node definitions via fluent builders:
 
 ```java
 var dynNode = dynNodeManager.nodeBuilder()
@@ -246,7 +246,7 @@ var dynNode = dynNodeManager.nodeBuilder()
     .registerAndGet();
 ```
 
-The above listed code is equivalent to the following definition withou usage of builders:
+The above listed code is equivalent to the following definition without the usage of builders:
 
 ```java
 var dynAttrs = new DynAttributeManager();
@@ -294,7 +294,7 @@ dynNodeManager.nodeBuilder()
 
 #### Assigning Dynamic Nodes
 
-To create a starting point for browsing we have to assign a dynamic node to a standard real node e.g. the Objects folder:
+To create a starting point for browsing nodes we must assign a dynamic node to a standard real node e.g. the Objects folder:
 
 ```java
 var objectsNodeId = new RealNodeId(0, 85);
@@ -316,16 +316,16 @@ There are basic micrometer.io metrics included:
 ## Limitations
 
 - Java version >= 11.
-- Writing attributes not supported.
-- Method execution not supported.
-- Historizing not supported.
-- Event notifications not supported.
-- Only string-based node ID identifiers supported.
+- Writing attributes is not supported.
+- Method execution is not supported.
+- Historizing is not supported.
+- Event notifications are not supported.
+- Only string-based node ID identifiers are supported.
 - Only username authentication is supported.
-- Localization not supported.
-- Role permissions not supported.
+- Localization is not supported.
+- Role permissions is not supported.
 - Only not-abstract symmetric references are supported.
-- Loops in references not supported (`containsNoLoops` is always true).
+- Loops in references are not supported (`containsNoLoops` is always true).
 
 ## Release Notes
 
@@ -341,13 +341,13 @@ No release yet
 
 ### Architecture
 
-The overall architecture of the Dynamic Node Manager consists from three logical components:
+The overall architecture of the dynamic node manager consists of three logical components:
 
-- Vendor Server SDK
+- Vendor server SDK
 - Vendor-specific Adaptor
-- Node Manager with Dynamic Node definitions
+- Node manager with dynamic node definitions
 
-The Adaptor implements the Server Interface to intercept the request to a specific namespace and provides a response by calling the Dynamic Node Manager.
+The adaptor implements the server interface to intercept the request to a specific namespace and provides a response by calling the dynamic node manager.
 
 ![Dynamic Node Manager Architecture](doc/Dynamic-Node-Manager-Architecture.png)
 
@@ -355,11 +355,11 @@ The Adaptor implements the Server Interface to intercept the request to a specif
 
 The Dynamic Node Manager is free of any vendor-specific details and can be used in multiple vendor Adaptors without change.
 
-It holds a set of definitions of Dynamic Nodes which looks up when serving a request.
+It contains a set of definitions of Dynamic Nodes which are looked up when serving a request.
 
-A Dynamic Node with a dynamic node ID, dynamic attribute, and dynamic reference resolvers.
+A dynamic node is a node with a dynamic node ID, dynamic attribute, and dynamic reference resolvers.
 
-The dynamic node ID, attributes, and references are resolved to concrete ones upon the request based on the client context. 
+Dynamic nodes are resolved to concrete nodes based upon the request and the client context. 
 
 ## License
 
