@@ -353,9 +353,9 @@ The adaptor implements the server interface to intercept the request to a specif
 
 #### Dynamic Node Manager
 
-The Dynamic Node Manager is free of any vendor-specific details and can be used in multiple vendor Adaptors without change.
+The dynamic node manager is free of any vendor-specific details and can be used in multiple vendor adaptors without change.
 
-It contains a set of definitions of Dynamic Nodes which are looked up when serving a request.
+It contains a set of definitions of dynamic nodes which are looked up when serving a request.
 
 A dynamic node is a node with a dynamic node ID, dynamic attribute, and dynamic reference resolvers.
 
@@ -368,4 +368,5 @@ Dynamic nodes are resolved to concrete nodes based upon the request and the clie
 ### TODO
 
 - EventNotifier
+- Method execution 
 - Milo adaptor (for Milo 2.0)
