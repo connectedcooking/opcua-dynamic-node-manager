@@ -329,7 +329,8 @@ There are basic micrometer.io metrics included:
 
 ## Release Notes
 
-No release yet
+**0.1.0**
+  - Initial version 
 
 ## Development
 
