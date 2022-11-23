@@ -16,12 +16,12 @@ Add necessary dependencies:
 <dependency>
   <groupId>com.connectedcooking.opcua</groupId>
   <artifactId>opcua-dynamic-node-manager</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 <dependency>
   <groupId>com.prosysopc.ua</groupId>
   <artifactId>prosys-opc-ua-sdk-client-server</artifactId>
-  <version>4.9.0-43</version>
+  <version>4.10.0-58</version>
 </dependency>
 ```
 
@@ -329,8 +329,11 @@ There are basic micrometer.io metrics included:
 
 ## Release Notes
 
+**0.1.1**
+- Update to Prosys 4.10.0-58
+
 **0.1.0**
-  - Initial version 
+  - Initial version
 
 ## Development
 
