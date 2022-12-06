@@ -47,5 +47,6 @@ public interface BasicValueDataTypes {
     RealNodeId NumericRange = new RealNodeId(0, 291);
     RealNodeId Time = new RealNodeId(0, 292);
     RealNodeId Date = new RealNodeId(0, 293);
+    RealNodeId UtcTime = new RealNodeId(0, 294);
     RealNodeId LocaleId = new RealNodeId(0, 295);
 }

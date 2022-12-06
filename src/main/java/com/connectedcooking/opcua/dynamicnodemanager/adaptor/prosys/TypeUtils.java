@@ -353,8 +353,10 @@ class TypeUtils {
             return BasicValueDataTypes.Decimal;
         } else if (value instanceof BigInteger) {
             return BasicValueDataTypes.Integer;
-        } else if (value instanceof Date || value instanceof LocalDateTime || value instanceof ZonedDateTime) {
+        } else if (value instanceof Date || value instanceof LocalDateTime) {
             return BasicValueDataTypes.DateTime;
+        } else if (value instanceof ZonedDateTime) {
+            return BasicValueDataTypes.UtcTime;
         } else if (value instanceof LocalDate) {
             return BasicValueDataTypes.Date;
         } else if (value instanceof LocalTime) {
