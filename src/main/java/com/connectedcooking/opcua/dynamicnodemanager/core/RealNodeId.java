@@ -51,7 +51,17 @@ public class RealNodeId {
      * @param child  the child real node ID
      */
     public RealNodeId(RealNodeId parent, RealNodeId child) {
-        this(parent.identifier + "/" + child.identifier);
+        this(parent.namespaceIndex, parent.identifier + "/" + child.identifier);
+    }
+
+    /**
+     * Creates a new real node ID from a partial real node ID and a path.
+     *
+     * @param parent the parent real node ID
+     * @param child  the child path
+     */
+    public RealNodeId(RealNodeId parent, String child) {
+        this(parent.namespaceIndex, parent.identifier + "/" + child);
     }
 
     /**
