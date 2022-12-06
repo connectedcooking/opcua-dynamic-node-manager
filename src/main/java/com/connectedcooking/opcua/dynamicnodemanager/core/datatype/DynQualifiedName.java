@@ -3,7 +3,7 @@ package com.connectedcooking.opcua.dynamicnodemanager.core.datatype;
 import java.util.Objects;
 
 /**
- * Qualified Name https://reference.opcfoundation.org/v104/Core/DataTypes/QualifiedName/
+ * Qualified Name
  */
 public class DynQualifiedName {
 

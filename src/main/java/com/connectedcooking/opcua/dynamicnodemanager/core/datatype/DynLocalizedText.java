@@ -3,9 +3,20 @@ package com.connectedcooking.opcua.dynamicnodemanager.core.datatype;
 import java.util.Objects;
 
 /**
- * Localized Text https://reference.opcfoundation.org/v104/Core/DataTypes/LocalizedText/
+ * Localized Text
  */
 public class DynLocalizedText {
+
+    private final static DynLocalizedText EMPTY = new DynLocalizedText("");
+
+    /**
+     * Return the empty localized text.
+     *
+     * @return the empty instance
+     */
+    public static DynLocalizedText empty() {
+        return EMPTY;
+    }
 
     private final String value;
 
