@@ -4,7 +4,7 @@
 
     <groupId>com.connectedcooking.opcua</groupId>
     <artifactId>opcua-dynamic-node-manager</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.2-SNAPSHOT</version>
 
     <name>OPC UA Dynamic Node Manager</name>
     <description>Java library for implementing a dynamic node manager that responses dynamically based on the user context.</description>
