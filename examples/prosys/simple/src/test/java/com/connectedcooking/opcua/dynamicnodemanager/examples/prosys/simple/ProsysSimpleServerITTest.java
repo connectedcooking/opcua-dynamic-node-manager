@@ -450,7 +450,7 @@ class ProsysSimpleServerITTest {
 
         assertAll(
                 () -> assertThat(dataType.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
-                () -> assertThat(dataType.getValue().getValue()).isEqualTo(DataTypeIdentifiers.DateTime)
+                () -> assertThat(dataType.getValue().getValue()).isEqualTo(DataTypeIdentifiers.UtcTime)
         );
     }
 
