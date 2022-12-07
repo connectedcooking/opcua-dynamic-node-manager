@@ -51,7 +51,7 @@ public class RealNodeId {
      * @param child  the child real node ID
      */
     public RealNodeId(RealNodeId parent, RealNodeId child) {
-        this(parent.namespaceIndex, parent.identifier + "/" + child.identifier);
+        this(parent.namespaceIndex != null ? parent.namespaceIndex : -1, parent.identifier + "/" + child.identifier);
     }
 
     /**

@@ -12,7 +12,7 @@ public class DynNodeManager {
 
     protected final List<DynNode> nodes = new LinkedList<>();
 
-    protected final Map<RealNodeId, AssignedChild> assignedChildren = new HashMap<>();
+    protected final Map<RealNodeId, Set<AssignedChild>> assignedChildren = new HashMap<>();
     protected final Map<DynNodeId, DynRequest.Full<Boolean>> canBrowse = new HashMap<>();
 
     /**
@@ -104,12 +104,15 @@ public class DynNodeManager {
      * See {@link #assign(RealNodeId, DynNodeId, BiFunction)}
      */
     public void assignSet(RealNodeId parentId, DynNodeId nodeId, BiFunction<UserContext, DynNodeId, Collection<RealNodeId>> fn) {
-        assignedChildren.compute(parentId, (k, fns) -> {
-            if (fns == null) {
-                fns = new AssignedChild(nodeId);
+        assignedChildren.compute(parentId, (k, children) -> {
+            if (children == null) {
+                children = new HashSet<>();
             }
-            fns.fns.add(fn);
-            return fns;
+            var child = new AssignedChild(nodeId);
+            child.fns.add(fn);
+
+            children.add(child);
+            return children;
         });
     }
 
@@ -125,8 +128,11 @@ public class DynNodeManager {
         if (assignedChildren != null) {
             var assigned = assignedChildren.get(parentId);
             if (assigned != null) {
-                assigned.fns.forEach(fn -> fn.apply(userContext, assigned.childNodeId)
-                        .forEach(rid -> references.add(new DynReference.HasComponentRef(parentId, rid))));
+                for (var child: assigned) {
+                    child.fns.forEach(fn ->
+                            fn.apply(userContext, child.childNodeId).forEach(rid ->
+                                    references.add(new DynReference.HasComponentRef(parentId, rid))));
+                }
             }
         }
         return Collections.unmodifiableList(references);

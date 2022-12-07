@@ -16,7 +16,7 @@ Add necessary dependencies:
 <dependency>
   <groupId>com.connectedcooking.opcua</groupId>
   <artifactId>opcua-dynamic-node-manager</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
 </dependency>
 <dependency>
   <groupId>com.prosysopc.ua</groupId>
@@ -328,6 +328,13 @@ There are basic micrometer.io metrics included:
 - Loops in references are not supported (`containsNoLoops` is always true).
 
 ## Release Notes
+
+**0.1.3**
+- Fix assigning of multiple dynamic nodes
+
+**0.1.2**
+- Map `UtcTime` for `ZonedDateTime` implicitly
+- Add a new ctor to `RealNodeId`
 
 **0.1.1**
 - Update to Prosys 4.10.0-58
