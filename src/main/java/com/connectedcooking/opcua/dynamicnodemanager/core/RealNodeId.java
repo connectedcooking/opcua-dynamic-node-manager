@@ -10,7 +10,7 @@ import java.util.Objects;
  */
 public class RealNodeId {
 
-    private final Integer namespaceIndex;
+    private final Integer namespaceIndex;   // `null` means the current namespace
     private final Object identifier;
 
     /**
@@ -19,9 +19,9 @@ public class RealNodeId {
      * @param namespaceIndex the namespace index
      * @param identifier     the identifier
      */
-    public RealNodeId(int namespaceIndex, Object identifier) {
+    public RealNodeId(Integer namespaceIndex, Object identifier) {
         this.identifier = identifier;
-        this.namespaceIndex = namespaceIndex > -1 ? namespaceIndex : null;
+        this.namespaceIndex = namespaceIndex != null && namespaceIndex > -1 ? namespaceIndex : null;
     }
 
     /**
@@ -51,7 +51,7 @@ public class RealNodeId {
      * @param child  the child real node ID
      */
     public RealNodeId(RealNodeId parent, RealNodeId child) {
-        this(parent.namespaceIndex != null ? parent.namespaceIndex : -1, parent.identifier + "/" + child.identifier);
+        this(parent.namespaceIndex, parent.identifier + "/" + child.identifier);
     }
 
     /**

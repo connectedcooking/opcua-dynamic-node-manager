@@ -546,8 +546,9 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
         private void setServerTimestamp(DateTime minTimestamp, DataValue dataValue) {
             if (dataValue.getServerTimestamp() == null ||
                     (minTimestamp != null && dataValue.getServerTimestamp().getMilliSeconds() < minTimestamp.getMilliSeconds())) {
-                long currentTime = DateTime.currentTime().getMilliSeconds();
-                dataValue.setServerTimestamp(new DateTime(currentTime * 10000L));
+                var currentTime = DateTime.currentTime();
+                dataValue.setServerTimestamp(currentTime);
+                dataValue.setSourceTimestamp(currentTime);
             }
         }
 
