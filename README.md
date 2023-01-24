@@ -327,21 +327,6 @@ There are basic micrometer.io metrics included:
 - Only not-abstract symmetric references are supported.
 - Loops in references are not supported (`containsNoLoops` is always true).
 
-## Release Notes
-
-**0.1.3**
-- Fix assigning of multiple dynamic nodes
-
-**0.1.2**
-- Map `UtcTime` for `ZonedDateTime` implicitly
-- Add a new ctor to `RealNodeId`
-
-**0.1.1**
-- Update to Prosys 4.10.0-58
-
-**0.1.0**
-  - Initial version
-
 ## Development
 
 ### Build
