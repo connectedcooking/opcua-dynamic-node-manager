@@ -21,7 +21,7 @@ Add necessary dependencies:
 <dependency>
   <groupId>com.prosysopc.ua</groupId>
   <artifactId>prosys-opc-ua-sdk-client-server</artifactId>
-  <version>4.10.0-58</version>
+  <version>4.10.4-14</version>
 </dependency>
 ```
 

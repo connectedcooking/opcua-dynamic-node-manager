@@ -16,7 +16,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <prosys.version>4.10.0-58</prosys.version>
+        <prosys.version>4.10.4-14</prosys.version>
         <bouncycastle.version>1.71</bouncycastle.version>
         <micrometer.version>1.9.5</micrometer.version>
         <slf4j.version>1.7.36</slf4j.version>
