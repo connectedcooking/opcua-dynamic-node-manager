@@ -3,7 +3,7 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
-public interface DIIds extends DIReferenceTypeIds, DIObjectIds, DIVariableIds, DIMethodIds, DIObjectTypeIds, DIDataTypeIds, DIVariableTypeIds {
+public interface DIIds extends DIReferenceTypeIds, DIObjectIds, DIVariableIds, DIMethodIds, DIObjectTypeIds, DIVariableTypeIds, DIDataTypeIds {
 }

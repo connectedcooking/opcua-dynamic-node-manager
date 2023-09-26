@@ -5,54 +5,54 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:34
+ * Generated on 2023-09-26 10:56:54
  */
 public interface CommercialKitchenEquipmentDataTypeIds {
-  ExpandedNodeId BeverageSMLEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initBeverageSMLEnumeration();
+  ExpandedNodeId BeverageSMLEnumeration = CommercialKitchenEquipmentUaIds.BeverageSMLEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId ChamberModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initChamberModeEnumeration();
+  ExpandedNodeId ChamberModeEnumeration = CommercialKitchenEquipmentUaIds.ChamberModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initCoffeeMachineModeEnumeration();
+  ExpandedNodeId CoffeeMachineModeEnumeration = CommercialKitchenEquipmentUaIds.CoffeeMachineModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId CombiSteamerModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initCombiSteamerModeEnumeration();
+  ExpandedNodeId CombiSteamerModeEnumeration = CommercialKitchenEquipmentUaIds.CombiSteamerModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId CookingKettleModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initCookingKettleModeEnumeration();
+  ExpandedNodeId CookingKettleModeEnumeration = CommercialKitchenEquipmentUaIds.CookingKettleModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId CurrentStateEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initCurrentStateEnumeration();
+  ExpandedNodeId CurrentStateEnumeration = CommercialKitchenEquipmentUaIds.CurrentStateEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId EnergySourceEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initEnergySourceEnumeration();
+  ExpandedNodeId EnergySourceEnumeration = CommercialKitchenEquipmentUaIds.EnergySourceEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId FryerModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initFryerModeEnumeration();
+  ExpandedNodeId FryerModeEnumeration = CommercialKitchenEquipmentUaIds.FryerModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId FryingPanModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initFryingPanModeEnumeration();
+  ExpandedNodeId FryingPanModeEnumeration = CommercialKitchenEquipmentUaIds.FryingPanModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId GrillingZoneStateEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initGrillingZoneStateEnumeration();
+  ExpandedNodeId GrillingZoneStateEnumeration = CommercialKitchenEquipmentUaIds.GrillingZoneStateEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId HygieneModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initHygieneModeEnumeration();
+  ExpandedNodeId HygieneModeEnumeration = CommercialKitchenEquipmentUaIds.HygieneModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId MultiFunctionPanModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initMultiFunctionPanModeEnumeration();
+  ExpandedNodeId MultiFunctionPanModeEnumeration = CommercialKitchenEquipmentUaIds.MultiFunctionPanModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId OperatingModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initOperatingModeEnumeration();
+  ExpandedNodeId OperatingModeEnumeration = CommercialKitchenEquipmentUaIds.OperatingModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId OperationModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initOperationModeEnumeration();
+  ExpandedNodeId OperationModeEnumeration = CommercialKitchenEquipmentUaIds.OperationModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId PastaCookerModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initPastaCookerModeEnumeration();
+  ExpandedNodeId PastaCookerModeEnumeration = CommercialKitchenEquipmentUaIds.PastaCookerModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId PlatenPositionStateEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initPlatenPositionStateEnumeration();
+  ExpandedNodeId PlatenPositionStateEnumeration = CommercialKitchenEquipmentUaIds.PlatenPositionStateEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId PressureCookingKettleModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initPressureCookingKettleModeEnumeration();
+  ExpandedNodeId PressureCookingKettleModeEnumeration = CommercialKitchenEquipmentUaIds.PressureCookingKettleModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId ProgramModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initProgramModeEnumeration();
+  ExpandedNodeId ProgramModeEnumeration = CommercialKitchenEquipmentUaIds.ProgramModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId SignalModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initSignalModeEnumeration();
+  ExpandedNodeId SignalModeEnumeration = CommercialKitchenEquipmentUaIds.SignalModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId SpecialCookingModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initSpecialCookingModeEnumeration();
+  ExpandedNodeId SpecialCookingModeEnumeration = CommercialKitchenEquipmentUaIds.SpecialCookingModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId SpecialFunctionModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initSpecialFunctionModeEnumeration();
+  ExpandedNodeId SpecialFunctionModeEnumeration = CommercialKitchenEquipmentUaIds.SpecialFunctionModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId StatusEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initStatusEnumeration();
+  ExpandedNodeId StatusEnumeration = CommercialKitchenEquipmentUaIds.StatusEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId TrayModeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initTrayModeEnumeration();
+  ExpandedNodeId TrayModeEnumeration = CommercialKitchenEquipmentUaIds.TrayModeEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId TrayTypeEnumeration = CommercialKitchenEquipmentDataTypeIdsInit.initTrayTypeEnumeration();
+  ExpandedNodeId TrayTypeEnumeration = CommercialKitchenEquipmentUaIds.TrayTypeEnumeration.asExpandedNodeId();
 }

@@ -5,12 +5,12 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public interface DIReferenceTypeIds {
-  ExpandedNodeId ConnectsTo = DIReferenceTypeIdsInit.initConnectsTo();
+  ExpandedNodeId ConnectsTo = DIUaIds.ConnectsTo.asExpandedNodeId();
 
-  ExpandedNodeId ConnectsToParent = DIReferenceTypeIdsInit.initConnectsToParent();
+  ExpandedNodeId ConnectsToParent = DIUaIds.ConnectsToParent.asExpandedNodeId();
 
-  ExpandedNodeId IsOnline = DIReferenceTypeIdsInit.initIsOnline();
+  ExpandedNodeId IsOnline = DIUaIds.IsOnline.asExpandedNodeId();
 }

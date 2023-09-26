@@ -2,14 +2,10 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.server;
 
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DICommonInformationModel;
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIDataTypeDictionaryHelper;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DISerializers;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DeviceHealthEnumeration;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.FetchResultDataType;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.ParameterResultDataType;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.SoftwareVersionFileType;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.TransferResultDataDataType;
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.TransferResultErrorDataType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.objecttypes.server.DIServerObjectTypesInformationModel;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.variabletypes.server.DIServerVariableTypesInformationModel;
 import com.prosysopc.ua.server.ServerCodegenModel;
 import com.prosysopc.ua.server.ServerCodegenModelProvider;
 import java.lang.Override;
@@ -19,54 +15,17 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public class DIServerInformationModel implements ServerCodegenModelProvider {
   public static final ServerCodegenModel MODEL;
 
   static {
     ServerCodegenModel.Builder b = ServerCodegenModel.builder();
-    b.addClass(TopologyElementTypeNode.class);
-    b.addClass(IVendorNameplateTypeNode.class);
-    b.addClass(ITagNameplateTypeNode.class);
-    b.addClass(IDeviceHealthTypeNode.class);
-    b.addClass(ISupportInfoTypeNode.class);
-    b.addClass(ComponentTypeNode.class);
-    b.addClass(DeviceTypeNode.class);
-    b.addClass(SoftwareTypeNode.class);
-    b.addClass(BlockTypeNode.class);
-    b.addClass(DeviceHealthDiagnosticAlarmTypeNode.class);
-    b.addClass(FailureAlarmTypeNode.class);
-    b.addClass(CheckFunctionAlarmTypeNode.class);
-    b.addClass(OffSpecAlarmTypeNode.class);
-    b.addClass(MaintenanceRequiredAlarmTypeNode.class);
-    b.addClass(ConfigurableObjectTypeNode.class);
-    b.addClass(FunctionalGroupTypeNode.class);
-    b.addClass(ProtocolTypeNode.class);
-    b.addClass(UIElementTypeNode.class);
-    b.addClass(NetworkTypeNode.class);
-    b.addClass(ConnectionPointTypeNode.class);
-    b.addClass(TransferServicesTypeNode.class);
-    b.addClass(LockingServicesTypeNode.class);
-    b.addClass(SoftwareUpdateTypeNode.class);
-    b.addClass(SoftwareLoadingTypeNode.class);
-    b.addClass(PackageLoadingTypeNode.class);
-    b.addClass(DirectLoadingTypeNode.class);
-    b.addClass(CachedLoadingTypeNode.class);
-    b.addClass(FileSystemLoadingTypeNode.class);
-    b.addClass(SoftwareVersionTypeNode.class);
-    b.addClass(PrepareForUpdateStateMachineTypeNode.class);
-    b.addClass(InstallationStateMachineTypeNode.class);
-    b.addClass(PowerCycleStateMachineTypeNode.class);
-    b.addClass(ConfirmationStateMachineTypeNode.class);
-    b.addSerializers(DISerializers.SERIALIZERS);
+    b.addAll(DIServerObjectTypesInformationModel.MODEL);
+    b.addAll(DIServerVariableTypesInformationModel.MODEL);
     b.setDataTypeDictionary(DIDataTypeDictionaryHelper.createDataTypeDictionary());
-    b.addStructureSpecification(FetchResultDataType.SPECIFICATION);
-    b.addStructureSpecification(TransferResultErrorDataType.SPECIFICATION);
-    b.addStructureSpecification(TransferResultDataDataType.SPECIFICATION);
-    b.addStructureSpecification(ParameterResultDataType.SPECIFICATION);
-    b.addEnumerationSpecification(DeviceHealthEnumeration.SPECIFICATION);
-    b.addEnumerationSpecification(SoftwareVersionFileType.SPECIFICATION);
+    b.addAll(DICommonInformationModel.MODEL);
     MODEL = b.build();
   }
 

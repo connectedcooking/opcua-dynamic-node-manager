@@ -5,76 +5,76 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:34
+ * Generated on 2023-09-26 10:56:54
  */
 public interface CommercialKitchenEquipmentObjectTypeIds {
-  ExpandedNodeId BatchInformationType = CommercialKitchenEquipmentObjectTypeIdsInit.initBatchInformationType();
+  ExpandedNodeId BatchInformationType = CommercialKitchenEquipmentUaIds.BatchInformationType.asExpandedNodeId();
 
-  ExpandedNodeId KitchenDeviceHAConfigType = CommercialKitchenEquipmentObjectTypeIdsInit.initKitchenDeviceHAConfigType();
+  ExpandedNodeId KitchenDeviceHAConfigType = CommercialKitchenEquipmentUaIds.KitchenDeviceHAConfigType.asExpandedNodeId();
 
-  ExpandedNodeId KitchenDeviceParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initKitchenDeviceParameterType();
+  ExpandedNodeId KitchenDeviceParameterType = CommercialKitchenEquipmentUaIds.KitchenDeviceParameterType.asExpandedNodeId();
 
-  ExpandedNodeId ChamberType = CommercialKitchenEquipmentObjectTypeIdsInit.initChamberType();
+  ExpandedNodeId ChamberType = CommercialKitchenEquipmentUaIds.ChamberType.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initCoffeeMachineParameterType();
+  ExpandedNodeId CoffeeMachineParameterType = CommercialKitchenEquipmentUaIds.CoffeeMachineParameterType.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineRecipeParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initCoffeeMachineRecipeParameterType();
+  ExpandedNodeId CoffeeMachineRecipeParameterType = CommercialKitchenEquipmentUaIds.CoffeeMachineRecipeParameterType.asExpandedNodeId();
 
-  ExpandedNodeId CombiSteamerParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initCombiSteamerParameterType();
+  ExpandedNodeId CombiSteamerParameterType = CommercialKitchenEquipmentUaIds.CombiSteamerParameterType.asExpandedNodeId();
 
-  ExpandedNodeId CookingKettleParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initCookingKettleParameterType();
+  ExpandedNodeId CookingKettleParameterType = CommercialKitchenEquipmentUaIds.CookingKettleParameterType.asExpandedNodeId();
 
-  ExpandedNodeId CookingZoneParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initCookingZoneParameterType();
+  ExpandedNodeId CookingZoneParameterType = CommercialKitchenEquipmentUaIds.CookingZoneParameterType.asExpandedNodeId();
 
-  ExpandedNodeId DishWashingMachineProgramParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initDishWashingMachineProgramParameterType();
+  ExpandedNodeId DishWashingMachineProgramParameterType = CommercialKitchenEquipmentUaIds.DishWashingMachineProgramParameterType.asExpandedNodeId();
 
-  ExpandedNodeId FryerParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryerParameterType();
+  ExpandedNodeId FryerParameterType = CommercialKitchenEquipmentUaIds.FryerParameterType.asExpandedNodeId();
 
-  ExpandedNodeId FryingAndGrillingParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryingAndGrillingParameterType();
+  ExpandedNodeId FryingAndGrillingParameterType = CommercialKitchenEquipmentUaIds.FryingAndGrillingParameterType.asExpandedNodeId();
 
-  ExpandedNodeId FryingPanParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryingPanParameterType();
+  ExpandedNodeId FryingPanParameterType = CommercialKitchenEquipmentUaIds.FryingPanParameterType.asExpandedNodeId();
 
-  ExpandedNodeId IceMachineParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initIceMachineParameterType();
+  ExpandedNodeId IceMachineParameterType = CommercialKitchenEquipmentUaIds.IceMachineParameterType.asExpandedNodeId();
 
-  ExpandedNodeId MicrowaveCombiOvenParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initMicrowaveCombiOvenParameterType();
+  ExpandedNodeId MicrowaveCombiOvenParameterType = CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenParameterType.asExpandedNodeId();
 
-  ExpandedNodeId MultiFunctionPanParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initMultiFunctionPanParameterType();
+  ExpandedNodeId MultiFunctionPanParameterType = CommercialKitchenEquipmentUaIds.MultiFunctionPanParameterType.asExpandedNodeId();
 
-  ExpandedNodeId PastaCookerParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initPastaCookerParameterType();
+  ExpandedNodeId PastaCookerParameterType = CommercialKitchenEquipmentUaIds.PastaCookerParameterType.asExpandedNodeId();
 
-  ExpandedNodeId PressureCookingKettleParameterType = CommercialKitchenEquipmentObjectTypeIdsInit.initPressureCookingKettleParameterType();
+  ExpandedNodeId PressureCookingKettleParameterType = CommercialKitchenEquipmentUaIds.PressureCookingKettleParameterType.asExpandedNodeId();
 
-  ExpandedNodeId TrayType = CommercialKitchenEquipmentObjectTypeIdsInit.initTrayType();
+  ExpandedNodeId TrayType = CommercialKitchenEquipmentUaIds.TrayType.asExpandedNodeId();
 
-  ExpandedNodeId CommercialKitchenDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initCommercialKitchenDeviceType();
+  ExpandedNodeId CommercialKitchenDeviceType = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initCoffeeMachineDeviceType();
+  ExpandedNodeId CoffeeMachineDeviceType = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId CombiSteamerDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initCombiSteamerDeviceType();
+  ExpandedNodeId CombiSteamerDeviceType = CommercialKitchenEquipmentUaIds.CombiSteamerDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId CookingKettleDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initCookingKettleDeviceType();
+  ExpandedNodeId CookingKettleDeviceType = CommercialKitchenEquipmentUaIds.CookingKettleDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId CookingZoneDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initCookingZoneDeviceType();
+  ExpandedNodeId CookingZoneDeviceType = CommercialKitchenEquipmentUaIds.CookingZoneDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId DishWashingMachineDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initDishWashingMachineDeviceType();
+  ExpandedNodeId DishWashingMachineDeviceType = CommercialKitchenEquipmentUaIds.DishWashingMachineDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId FryerDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryerDeviceType();
+  ExpandedNodeId FryerDeviceType = CommercialKitchenEquipmentUaIds.FryerDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId FryingAndGrillingDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryingAndGrillingDeviceType();
+  ExpandedNodeId FryingAndGrillingDeviceType = CommercialKitchenEquipmentUaIds.FryingAndGrillingDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId FryingPanDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initFryingPanDeviceType();
+  ExpandedNodeId FryingPanDeviceType = CommercialKitchenEquipmentUaIds.FryingPanDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId IceMachineDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initIceMachineDeviceType();
+  ExpandedNodeId IceMachineDeviceType = CommercialKitchenEquipmentUaIds.IceMachineDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId MicrowaveCombiOvenDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initMicrowaveCombiOvenDeviceType();
+  ExpandedNodeId MicrowaveCombiOvenDeviceType = CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId MultiFunctionPanDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initMultiFunctionPanDeviceType();
+  ExpandedNodeId MultiFunctionPanDeviceType = CommercialKitchenEquipmentUaIds.MultiFunctionPanDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId OvenDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initOvenDeviceType();
+  ExpandedNodeId OvenDeviceType = CommercialKitchenEquipmentUaIds.OvenDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId PastaCookerDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initPastaCookerDeviceType();
+  ExpandedNodeId PastaCookerDeviceType = CommercialKitchenEquipmentUaIds.PastaCookerDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId PressureCookingKettleDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initPressureCookingKettleDeviceType();
+  ExpandedNodeId PressureCookingKettleDeviceType = CommercialKitchenEquipmentUaIds.PressureCookingKettleDeviceType.asExpandedNodeId();
 
-  ExpandedNodeId ServeryCounterDeviceType = CommercialKitchenEquipmentObjectTypeIdsInit.initServeryCounterDeviceType();
+  ExpandedNodeId ServeryCounterDeviceType = CommercialKitchenEquipmentUaIds.ServeryCounterDeviceType.asExpandedNodeId();
 }

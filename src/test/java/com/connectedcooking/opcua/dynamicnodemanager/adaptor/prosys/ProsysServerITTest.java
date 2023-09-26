@@ -23,6 +23,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -68,6 +69,7 @@ class ProsysServerITTest {
         appDescription.setProductUri("https://connectedcooking.com/opcua");
         appDescription.setApplicationType(ApplicationType.Server);
         server.setApplicationIdentity(ApplicationIdentity.createCertificate(appDescription, "Test", 512));
+
         server.start();
 
         // init server - dynamic node manager
@@ -80,6 +82,7 @@ class ProsysServerITTest {
         client.setApplicationIdentity(new ApplicationIdentity());
         client.setSecurityMode(SecurityMode.NONE);
         client.setUserIdentity(new UserIdentity(USERNAME, PASSWORD));
+        client.setTimeout(10, TimeUnit.MINUTES);
 
         setupDynamicNodeManager();
     }
@@ -177,13 +180,13 @@ class ProsysServerITTest {
     void browses_objects_node() throws Exception {
         var references = client.getAddressSpace().browse(ObjectIdentifiers.ObjectsFolder);
 
-        assertThat(references).hasSize(3);
+        assertThat(references).hasSize(4);
 
         var displayNames = references.stream()
                 .map(ReferenceDescription::getDisplayName)
                 .map(LocalizedText::getText)
                 .collect(Collectors.toSet());
-        assertThat(displayNames).contains("Server", "Aliases", "DeviceSet");
+        assertThat(displayNames).contains("Server", "Aliases", "DeviceSet", "Locations");
     }
 
     @Test

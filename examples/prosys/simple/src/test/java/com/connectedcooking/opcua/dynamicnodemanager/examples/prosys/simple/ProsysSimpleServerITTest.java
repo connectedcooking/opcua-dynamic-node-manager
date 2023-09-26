@@ -86,13 +86,13 @@ class ProsysSimpleServerITTest {
     void browses_objects_node() throws Exception {
         var references = client.getAddressSpace().browse(ObjectIdentifiers.ObjectsFolder);
 
-        assertThat(references).hasSize(3);
+        assertThat(references).hasSize(4);
 
         var displayNames = references.stream()
                 .map(ReferenceDescription::getDisplayName)
                 .map(LocalizedText::getText)
                 .collect(Collectors.toSet());
-        assertThat(displayNames).contains("Server", "Aliases", "DeviceSet");
+        assertThat(displayNames).contains("Server", "Aliases", "DeviceSet", "Locations");
     }
 
     @Test
@@ -215,7 +215,7 @@ class ProsysSimpleServerITTest {
         assertAll(
                 () -> assertThat(userAccessLevel.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
                 () -> assertThat(userAccessLevel.getValue().getValue()).isEqualTo(
-                        AccessLevelType.of(AccessLevelType.CurrentRead, AccessLevelType.CurrentWrite).getAsBuiltInType())
+                        AccessLevelType.of(AccessLevelType.Options.CurrentRead, AccessLevelType.Options.CurrentWrite).getValue())
         );
     }
 
@@ -418,7 +418,7 @@ class ProsysSimpleServerITTest {
 
         assertAll(
                 () -> assertThat(value.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
-                () -> assertThat(((DateTime) value.getValue().getValue()).getLocalCalendar().toZonedDateTime().toLocalDateTime()).isEqualTo(
+                () -> assertThat(LocalDateTime.ofInstant(((DateTime) value.getValue().getValue()).toInstant(), ZoneId.systemDefault())).isEqualTo(
                         LocalDateTime.of(2022, 06, 03, 11, 25, 01, 00))
         );
     }
@@ -439,7 +439,7 @@ class ProsysSimpleServerITTest {
 
         assertAll(
                 () -> assertThat(value.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
-                () -> assertThat(((DateTime) value.getValue().getValue()).getLocalCalendar().toZonedDateTime()).isEqualTo(
+                () -> assertThat(ZonedDateTime.ofInstant(((DateTime) value.getValue().getValue()).toInstant(), ZoneId.systemDefault())).isEqualTo(
                         ZonedDateTime.of(2022, 06, 03, 11, 25, 01, 00, ZoneId.of("Europe/Berlin")))
         );
     }
@@ -455,23 +455,23 @@ class ProsysSimpleServerITTest {
     }
 
     @Test
-    void reads_locaDateNode_value() throws Exception {
+    void reads_localDateNode_value() throws Exception {
         var value = client.readValue(new NodeId(server.getNsIndex(), "Device_1/LocalDateNode"));
 
         assertAll(
                 () -> assertThat(value.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
-                () -> assertThat(((DateTime) value.getValue().getValue()).getLocalCalendar().toZonedDateTime().toLocalDate()).isEqualTo(
+                () -> assertThat(LocalDate.ofInstant(((DateTime) value.getValue().getValue()).toInstant(), ZoneId.systemDefault())).isEqualTo(
                         LocalDate.of(2022, 06, 03))
         );
     }
 
     @Test
-    void reads_locaDateNode_attribute_dataType() throws Exception {
+    void reads_localDateNode_attribute_dataType() throws Exception {
         var dataType = client.readAttribute(new NodeId(server.getNsIndex(), "Device_1/LocalDateNode"), Attributes.DataType);
 
         assertAll(
                 () -> assertThat(dataType.getStatusCode().getValue().getValue()).isEqualTo(StatusCodes.Good.getValue()),
-                () -> assertThat(dataType.getValue().getValue()).isEqualTo(DataTypeIdentifiers.Date)
+                () -> assertThat(dataType.getValue().getValue()).isEqualTo(DataTypeIdentifiers.DateTime)
         );
     }
 

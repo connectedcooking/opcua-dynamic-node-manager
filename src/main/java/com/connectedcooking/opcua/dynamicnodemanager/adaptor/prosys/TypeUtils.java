@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 /**
  * Bunch of converting utilities.
@@ -92,67 +91,78 @@ class TypeUtils {
 
     public static UnsignedByte toAccessLevel(DynAttributes.AccessLevels[] accessLevel) {
         return AccessLevelType.of(Arrays.stream(accessLevel)
-                .map(TypeUtils::toAccessLevel)
-                .collect(Collectors.toSet())
-                .toArray(new AccessLevelType[0])).getAsBuiltInType();
+                .map(TypeUtils::toAccessLevel).distinct().toArray(AccessLevelType.Options[]::new)).getValue();
     }
 
-    public static AccessLevelType toAccessLevel(DynAttributes.AccessLevels accessLevel) {
+    private static AccessLevelType.Options toAccessLevel(DynAttributes.AccessLevels accessLevel) {
         switch (accessLevel) {
             case CurrentRead:
-                return AccessLevelType.CurrentRead;
+                return AccessLevelType.Options.CurrentRead;
             case CurrentWrite:
-                return AccessLevelType.CurrentWrite;
+                return AccessLevelType.Options.CurrentWrite;
             case HistoryRead:
-                return AccessLevelType.HistoryRead;
+                return AccessLevelType.Options.HistoryRead;
             case HistoryWrite:
-                return AccessLevelType.HistoryWrite;
+                return AccessLevelType.Options.HistoryWrite;
             case SemanticChange:
-                return AccessLevelType.SemanticChange;
+                return AccessLevelType.Options.SemanticChange;
             case StatusWrite:
-                return AccessLevelType.StatusWrite;
+                return AccessLevelType.Options.StatusWrite;
             case TimestampWrite:
-                return AccessLevelType.TimestampWrite;
+                return AccessLevelType.Options.TimestampWrite;
         }
         throw new IllegalArgumentException("Cannot convert AccessLevel " + accessLevel);
     }
 
     public static UnsignedShort toAccessRestriction(DynAttributes.AccessRestrictions[] accessRestrictions) {
         return AccessRestrictionType.of(Arrays.stream(accessRestrictions)
-                .map(TypeUtils::toAccessRestriction)
-                .collect(Collectors.toSet())
-                .toArray(new AccessRestrictionType[0])).getAsBuiltInType();
+                .map(TypeUtils::toAccessRestriction).distinct().toArray(AccessRestrictionType.Options[]::new)).getValue();
     }
 
-    public static AccessRestrictionType toAccessRestriction(DynAttributes.AccessRestrictions accessRestriction) {
+    private static AccessRestrictionType.Options toAccessRestriction(DynAttributes.AccessRestrictions accessRestriction) {
         switch (accessRestriction) {
             case SigningRequired:
-                return AccessRestrictionType.SigningRequired;
+                return AccessRestrictionType.Options.SigningRequired;
             case EncryptionRequired:
-                return AccessRestrictionType.EncryptionRequired;
+                return AccessRestrictionType.Options.EncryptionRequired;
             case SessionRequired:
-                return AccessRestrictionType.SessionRequired;
+                return AccessRestrictionType.Options.SessionRequired;
         }
         throw new IllegalArgumentException("Cannot convert AccessRestriction " + accessRestriction);
     }
 
     public static UnsignedInteger toAccessLevelExs(DynAttributes.AccessLevelExs[] accessLevelExs) {
         return AccessLevelExType.of(Arrays.stream(accessLevelExs)
-                .map(TypeUtils::toAccessLevelExs)
-                .collect(Collectors.toSet())
-                .toArray(new AccessLevelExType[0])).getAsBuiltInType();
+                .map(TypeUtils::toAccessLevelExs).distinct().toArray(AccessLevelExType.Options[]::new)).getValue();
     }
 
-    public static AccessLevelExType toAccessLevelExs(DynAttributes.AccessLevelExs accessLevelEx) {
+    private static AccessLevelExType.Options toAccessLevelExs(DynAttributes.AccessLevelExs accessLevelEx) {
         switch (accessLevelEx) {
             case NonatomicRead:
-                return AccessLevelExType.NonatomicRead;
+                return AccessLevelExType.Options.NonatomicRead;
             case NonatomicWrite:
-                return AccessLevelExType.NonatomicWrite;
+                return AccessLevelExType.Options.NonatomicWrite;
             case WriteFullArrayOnly:
-                return AccessLevelExType.WriteFullArrayOnly;
+                return AccessLevelExType.Options.WriteFullArrayOnly;
         }
         throw new IllegalArgumentException("Cannot convert AccessLevelExs " + accessLevelEx);
+    }
+
+    public static UnsignedByte toEventNotifiers(DynAttributes.EventNotifiers[] eventNotifiers) {
+        return EventNotifierType.of(Arrays.stream(eventNotifiers)
+                .map(TypeUtils::toEventNotifier).distinct().toArray(EventNotifierType.Options[]::new)).getValue();
+    }
+
+    private static EventNotifierType.Options toEventNotifier(DynAttributes.EventNotifiers eventNotifier) {
+        switch (eventNotifier) {
+            case SubscribeToEvents:
+                return EventNotifierType.Options.SubscribeToEvents;
+            case HistoryRead:
+                return EventNotifierType.Options.HistoryRead;
+            case HistoryWrite:
+                return EventNotifierType.Options.HistoryWrite;
+        }
+        throw new IllegalArgumentException("Cannot convert EventNotifier " + eventNotifier);
     }
 
     public static NodeId toReferenceTypeId(DynReferences.Types type) {
@@ -275,25 +285,6 @@ class TypeUtils {
         return StatusCodes.Bad;
     }
 
-    static UnsignedByte toEventNotifiers(DynAttributes.EventNotifiers[] eventNotifiers) {
-        return EventNotifierType.of(Arrays.stream(eventNotifiers)
-                .map(TypeUtils::toEventNotifier)
-                .collect(Collectors.toSet())
-                .toArray(new EventNotifierType[0])).getAsBuiltInType();
-    }
-
-    static EventNotifierType toEventNotifier(DynAttributes.EventNotifiers eventNotifier) {
-        switch (eventNotifier) {
-            case SubscribeToEvents:
-                return EventNotifierType.SubscribeToEvents;
-            case HistoryRead:
-                return EventNotifierType.HistoryRead;
-            case HistoryWrite:
-                return EventNotifierType.HistoryWrite;
-        }
-        throw new IllegalArgumentException("Cannot convert EventNotifier " + eventNotifier);
-    }
-
     static int toValueRank(DynAttributes.ValueRanks valueRank) {
         switch (valueRank) {
             case Any:
@@ -353,12 +344,10 @@ class TypeUtils {
             return BasicValueDataTypes.Decimal;
         } else if (value instanceof BigInteger) {
             return BasicValueDataTypes.Integer;
-        } else if (value instanceof Date || value instanceof LocalDateTime) {
+        } else if (value instanceof Date || value instanceof LocalDate || value instanceof LocalDateTime) {
             return BasicValueDataTypes.DateTime;
         } else if (value instanceof ZonedDateTime) {
             return BasicValueDataTypes.UtcTime;
-        } else if (value instanceof LocalDate) {
-            return BasicValueDataTypes.Date;
         } else if (value instanceof LocalTime) {
             return BasicValueDataTypes.Time;
         } else if (value instanceof Duration) {
