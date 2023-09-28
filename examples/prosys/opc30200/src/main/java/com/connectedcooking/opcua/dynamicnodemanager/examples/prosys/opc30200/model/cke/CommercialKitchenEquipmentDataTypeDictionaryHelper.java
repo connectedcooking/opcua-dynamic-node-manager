@@ -2,44 +2,62 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.BeverageSMLEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.ChamberModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.CoffeeMachineModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.CombiSteamerModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.CookingKettleModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.CurrentStateEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.EnergySourceEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.FryerModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.FryingPanModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.GrillingZoneStateEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.HygieneModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.MultiFunctionPanModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.OperatingModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.OperationModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.PastaCookerModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.PlatenPositionStateEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.PressureCookingKettleModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.ProgramModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.SignalModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.SpecialCookingModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.SpecialFunctionModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.StatusEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.TrayModeEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes.TrayTypeEnumeration;
 import com.prosysopc.ua.typedictionary.GeneratedDataTypeDictionary;
-import java.lang.String;
 
 /**
- * Generated on 2022-10-10 10:21:34
+ * Generated on 2023-09-26 10:56:54
  */
 public class CommercialKitchenEquipmentDataTypeDictionaryHelper {
   public static GeneratedDataTypeDictionary createDataTypeDictionary() {
     GeneratedDataTypeDictionary r = new GeneratedDataTypeDictionary("http://opcfoundation.org/UA/CommercialKitchenEquipment/");
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3014"), "BeverageSMLEnumeration", BeverageSMLEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3008"), "ChamberModeEnumeration", ChamberModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3015"), "CoffeeMachineModeEnumeration", CoffeeMachineModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3006"), "CombiSteamerModeEnumeration", CombiSteamerModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3010"), "CookingKettleModeEnumeration", CookingKettleModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3021"), "CurrentStateEnumeration", CurrentStateEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3002"), "EnergySourceEnumeration", EnergySourceEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3003"), "FryerModeEnumeration", FryerModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3005"), "FryingPanModeEnumeration", FryingPanModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3025"), "GrillingZoneStateEnumeration", GrillingZoneStateEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3017"), "HygieneModeEnumeration", HygieneModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3011"), "MultiFunctionPanModeEnumeration", MultiFunctionPanModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3023"), "OperatingModeEnumeration", OperatingModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3018"), "OperationModeEnumeration", OperationModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3013"), "PastaCookerModeEnumeration", PastaCookerModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3022"), "PlatenPositionStateEnumeration", PlatenPositionStateEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3009"), "PressureCookingKettleModeEnumeration", PressureCookingKettleModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3016"), "ProgramModeEnumeration", ProgramModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3004"), "SignalModeEnumeration", SignalModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3007"), "SpecialCookingModeEnumeration", SpecialCookingModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3012"), "SpecialFunctionModeEnumeration", SpecialFunctionModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3024"), "StatusEnumeration", StatusEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3019"), "TrayModeEnumeration", TrayModeEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3020"), "TrayTypeEnumeration", TrayTypeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.BeverageSMLEnumeration, "BeverageSMLEnumeration", BeverageSMLEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.ChamberModeEnumeration, "ChamberModeEnumeration", ChamberModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.CoffeeMachineModeEnumeration, "CoffeeMachineModeEnumeration", CoffeeMachineModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.CombiSteamerModeEnumeration, "CombiSteamerModeEnumeration", CombiSteamerModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.CookingKettleModeEnumeration, "CookingKettleModeEnumeration", CookingKettleModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.CurrentStateEnumeration, "CurrentStateEnumeration", CurrentStateEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.EnergySourceEnumeration, "EnergySourceEnumeration", EnergySourceEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.FryerModeEnumeration, "FryerModeEnumeration", FryerModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.FryingPanModeEnumeration, "FryingPanModeEnumeration", FryingPanModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.GrillingZoneStateEnumeration, "GrillingZoneStateEnumeration", GrillingZoneStateEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.HygieneModeEnumeration, "HygieneModeEnumeration", HygieneModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.MultiFunctionPanModeEnumeration, "MultiFunctionPanModeEnumeration", MultiFunctionPanModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.OperatingModeEnumeration, "OperatingModeEnumeration", OperatingModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.OperationModeEnumeration, "OperationModeEnumeration", OperationModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.PastaCookerModeEnumeration, "PastaCookerModeEnumeration", PastaCookerModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.PlatenPositionStateEnumeration, "PlatenPositionStateEnumeration", PlatenPositionStateEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.PressureCookingKettleModeEnumeration, "PressureCookingKettleModeEnumeration", PressureCookingKettleModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.ProgramModeEnumeration, "ProgramModeEnumeration", ProgramModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.SignalModeEnumeration, "SignalModeEnumeration", SignalModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.SpecialCookingModeEnumeration, "SpecialCookingModeEnumeration", SpecialCookingModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.SpecialFunctionModeEnumeration, "SpecialFunctionModeEnumeration", SpecialFunctionModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.StatusEnumeration, "StatusEnumeration", StatusEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.TrayModeEnumeration, "TrayModeEnumeration", TrayModeEnumeration.class);
+    r.addTypeInformation(CommercialKitchenEquipmentUaIds.TrayTypeEnumeration, "TrayTypeEnumeration", TrayTypeEnumeration.class);
     return r;
-  }
-
-  private static ExpandedNodeId eni(String id) {
-    return ExpandedNodeId.parseExpandedNodeId(id);
   }
 }

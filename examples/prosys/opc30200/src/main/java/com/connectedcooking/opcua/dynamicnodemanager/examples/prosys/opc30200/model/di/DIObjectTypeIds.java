@@ -5,70 +5,86 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public interface DIObjectTypeIds {
-  ExpandedNodeId TopologyElementType = DIObjectTypeIdsInit.initTopologyElementType();
+  ExpandedNodeId TopologyElementType = DIUaIds.TopologyElementType.asExpandedNodeId();
 
-  ExpandedNodeId IVendorNameplateType = DIObjectTypeIdsInit.initIVendorNameplateType();
+  ExpandedNodeId IVendorNameplateType = DIUaIds.IVendorNameplateType.asExpandedNodeId();
 
-  ExpandedNodeId ITagNameplateType = DIObjectTypeIdsInit.initITagNameplateType();
+  ExpandedNodeId ITagNameplateType = DIUaIds.ITagNameplateType.asExpandedNodeId();
 
-  ExpandedNodeId IDeviceHealthType = DIObjectTypeIdsInit.initIDeviceHealthType();
+  ExpandedNodeId IDeviceHealthType = DIUaIds.IDeviceHealthType.asExpandedNodeId();
 
-  ExpandedNodeId ISupportInfoType = DIObjectTypeIdsInit.initISupportInfoType();
+  ExpandedNodeId ISupportInfoType = DIUaIds.ISupportInfoType.asExpandedNodeId();
 
-  ExpandedNodeId ComponentType = DIObjectTypeIdsInit.initComponentType();
+  ExpandedNodeId ComponentType = DIUaIds.ComponentType.asExpandedNodeId();
 
-  ExpandedNodeId DeviceType = DIObjectTypeIdsInit.initDeviceType();
+  ExpandedNodeId DeviceType = DIUaIds.DeviceType.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareType = DIObjectTypeIdsInit.initSoftwareType();
+  ExpandedNodeId SoftwareType = DIUaIds.SoftwareType.asExpandedNodeId();
 
-  ExpandedNodeId BlockType = DIObjectTypeIdsInit.initBlockType();
+  ExpandedNodeId BlockType = DIUaIds.BlockType.asExpandedNodeId();
 
-  ExpandedNodeId DeviceHealthDiagnosticAlarmType = DIObjectTypeIdsInit.initDeviceHealthDiagnosticAlarmType();
+  ExpandedNodeId DeviceHealthDiagnosticAlarmType = DIUaIds.DeviceHealthDiagnosticAlarmType.asExpandedNodeId();
 
-  ExpandedNodeId FailureAlarmType = DIObjectTypeIdsInit.initFailureAlarmType();
+  ExpandedNodeId FailureAlarmType = DIUaIds.FailureAlarmType.asExpandedNodeId();
 
-  ExpandedNodeId CheckFunctionAlarmType = DIObjectTypeIdsInit.initCheckFunctionAlarmType();
+  ExpandedNodeId CheckFunctionAlarmType = DIUaIds.CheckFunctionAlarmType.asExpandedNodeId();
 
-  ExpandedNodeId OffSpecAlarmType = DIObjectTypeIdsInit.initOffSpecAlarmType();
+  ExpandedNodeId OffSpecAlarmType = DIUaIds.OffSpecAlarmType.asExpandedNodeId();
 
-  ExpandedNodeId MaintenanceRequiredAlarmType = DIObjectTypeIdsInit.initMaintenanceRequiredAlarmType();
+  ExpandedNodeId MaintenanceRequiredAlarmType = DIUaIds.MaintenanceRequiredAlarmType.asExpandedNodeId();
 
-  ExpandedNodeId ConfigurableObjectType = DIObjectTypeIdsInit.initConfigurableObjectType();
+  ExpandedNodeId ConfigurableObjectType = DIUaIds.ConfigurableObjectType.asExpandedNodeId();
 
-  ExpandedNodeId FunctionalGroupType = DIObjectTypeIdsInit.initFunctionalGroupType();
+  ExpandedNodeId BaseLifetimeIndicationType = DIUaIds.BaseLifetimeIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId ProtocolType = DIObjectTypeIdsInit.initProtocolType();
+  ExpandedNodeId TimeIndicationType = DIUaIds.TimeIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId NetworkType = DIObjectTypeIdsInit.initNetworkType();
+  ExpandedNodeId NumberOfPartsIndicationType = DIUaIds.NumberOfPartsIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId ConnectionPointType = DIObjectTypeIdsInit.initConnectionPointType();
+  ExpandedNodeId NumberOfUsagesIndicationType = DIUaIds.NumberOfUsagesIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId TransferServicesType = DIObjectTypeIdsInit.initTransferServicesType();
+  ExpandedNodeId LengthIndicationType = DIUaIds.LengthIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId LockingServicesType = DIObjectTypeIdsInit.initLockingServicesType();
+  ExpandedNodeId DiameterIndicationType = DIUaIds.DiameterIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType = DIObjectTypeIdsInit.initSoftwareUpdateType();
+  ExpandedNodeId SubstanceVolumeIndicationType = DIUaIds.SubstanceVolumeIndicationType.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareLoadingType = DIObjectTypeIdsInit.initSoftwareLoadingType();
+  ExpandedNodeId FunctionalGroupType = DIUaIds.FunctionalGroupType.asExpandedNodeId();
 
-  ExpandedNodeId PackageLoadingType = DIObjectTypeIdsInit.initPackageLoadingType();
+  ExpandedNodeId ProtocolType = DIUaIds.ProtocolType.asExpandedNodeId();
 
-  ExpandedNodeId DirectLoadingType = DIObjectTypeIdsInit.initDirectLoadingType();
+  ExpandedNodeId IOperationCounterType = DIUaIds.IOperationCounterType.asExpandedNodeId();
 
-  ExpandedNodeId CachedLoadingType = DIObjectTypeIdsInit.initCachedLoadingType();
+  ExpandedNodeId NetworkType = DIUaIds.NetworkType.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType = DIObjectTypeIdsInit.initFileSystemLoadingType();
+  ExpandedNodeId ConnectionPointType = DIUaIds.ConnectionPointType.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareVersionType = DIObjectTypeIdsInit.initSoftwareVersionType();
+  ExpandedNodeId TransferServicesType = DIUaIds.TransferServicesType.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType = DIObjectTypeIdsInit.initPrepareForUpdateStateMachineType();
+  ExpandedNodeId LockingServicesType = DIUaIds.LockingServicesType.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType = DIObjectTypeIdsInit.initInstallationStateMachineType();
+  ExpandedNodeId SoftwareUpdateType = DIUaIds.SoftwareUpdateType.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType = DIObjectTypeIdsInit.initPowerCycleStateMachineType();
+  ExpandedNodeId SoftwareLoadingType = DIUaIds.SoftwareLoadingType.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType = DIObjectTypeIdsInit.initConfirmationStateMachineType();
+  ExpandedNodeId PackageLoadingType = DIUaIds.PackageLoadingType.asExpandedNodeId();
+
+  ExpandedNodeId DirectLoadingType = DIUaIds.DirectLoadingType.asExpandedNodeId();
+
+  ExpandedNodeId CachedLoadingType = DIUaIds.CachedLoadingType.asExpandedNodeId();
+
+  ExpandedNodeId FileSystemLoadingType = DIUaIds.FileSystemLoadingType.asExpandedNodeId();
+
+  ExpandedNodeId SoftwareVersionType = DIUaIds.SoftwareVersionType.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType = DIUaIds.PrepareForUpdateStateMachineType.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType = DIUaIds.InstallationStateMachineType.asExpandedNodeId();
+
+  ExpandedNodeId PowerCycleStateMachineType = DIUaIds.PowerCycleStateMachineType.asExpandedNodeId();
+
+  ExpandedNodeId ConfirmationStateMachineType = DIUaIds.ConfirmationStateMachineType.asExpandedNodeId();
 }

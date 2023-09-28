@@ -92,7 +92,7 @@ class ProsysOpc30200ServerITTest {
                 .map(ReferenceDescription::getDisplayName)
                 .map(LocalizedText::getText)
                 .collect(Collectors.toSet());
-        assertThat(displayNames).containsExactlyInAnyOrder("Server", "Aliases", "DeviceSet", "NetworkSet", "DeviceTopology");
+        assertThat(displayNames).containsExactlyInAnyOrder("Server", "Aliases", "DeviceSet", "NetworkSet", "DeviceTopology", "Locations");
     }
 
     @Test

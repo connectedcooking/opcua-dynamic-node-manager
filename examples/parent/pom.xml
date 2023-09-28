@@ -14,12 +14,15 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <prosys.version>4.10.4-14</prosys.version>
-        <slf4j.version>1.7.36</slf4j.version>
-        <jupiter.version>5.9.1</jupiter.version>
-        <mockito.version>4.8.0</mockito.version>
+        <dynamicnodemanager.version>0.2.0-SNAPSHOT</dynamicnodemanager.version>
 
-        <logback.version>1.4.3</logback.version>
+        <prosys.version>5.0.0-95</prosys.version>
+        <slf4j.version>2.0.9</slf4j.version>
+        <jupiter.version>5.10.0</jupiter.version>
+        <mockito.version>5.5.0</mockito.version>
+        <assertj.version>3.24.2</assertj.version>
+
+        <logback.version>1.4.11</logback.version>
     </properties>
 
     <dependencyManagement>
@@ -27,7 +30,7 @@
             <dependency>
                 <groupId>com.connectedcooking.opcua</groupId>
                 <artifactId>opcua-dynamic-node-manager</artifactId>
-                <version>0.1.4-SNAPSHOT</version>
+                <version>${dynamicnodemanager.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.prosysopc.ua</groupId>
@@ -49,7 +52,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.23.1</version>
+                <version>${assertj.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>

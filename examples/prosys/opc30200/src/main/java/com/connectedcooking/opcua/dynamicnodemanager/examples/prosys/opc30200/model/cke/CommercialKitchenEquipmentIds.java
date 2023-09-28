@@ -3,7 +3,7 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
 /**
- * Generated on 2022-10-10 10:21:34
+ * Generated on 2023-09-26 10:56:54
  */
-public interface CommercialKitchenEquipmentIds extends CommercialKitchenEquipmentDataTypeIds, CommercialKitchenEquipmentVariableIds, CommercialKitchenEquipmentObjectTypeIds, CommercialKitchenEquipmentObjectIds {
+public interface CommercialKitchenEquipmentIds extends CommercialKitchenEquipmentVariableIds, CommercialKitchenEquipmentDataTypeIds, CommercialKitchenEquipmentObjectTypeIds, CommercialKitchenEquipmentObjectIds {
 }

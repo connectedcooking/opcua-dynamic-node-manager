@@ -5,84 +5,96 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public interface DIMethodIds {
-  ExpandedNodeId TopologyElementType_Lock_BreakLock = DIMethodIdsInit.initTopologyElementType_Lock_BreakLock();
+  ExpandedNodeId TopologyElementType_Lock_BreakLock = DIUaIds.TopologyElementType_Lock_BreakLock.asExpandedNodeId();
 
-  ExpandedNodeId TopologyElementType_Lock_InitLock = DIMethodIdsInit.initTopologyElementType_Lock_InitLock();
+  ExpandedNodeId TopologyElementType_Lock_InitLock = DIUaIds.TopologyElementType_Lock_InitLock.asExpandedNodeId();
 
-  ExpandedNodeId TopologyElementType_Lock_RenewLock = DIMethodIdsInit.initTopologyElementType_Lock_RenewLock();
+  ExpandedNodeId TopologyElementType_Lock_RenewLock = DIUaIds.TopologyElementType_Lock_RenewLock.asExpandedNodeId();
 
-  ExpandedNodeId TopologyElementType_Lock_ExitLock = DIMethodIdsInit.initTopologyElementType_Lock_ExitLock();
+  ExpandedNodeId TopologyElementType_Lock_ExitLock = DIUaIds.TopologyElementType_Lock_ExitLock.asExpandedNodeId();
 
-  ExpandedNodeId NetworkType_Lock_BreakLock = DIMethodIdsInit.initNetworkType_Lock_BreakLock();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_Read = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Read.asExpandedNodeId();
 
-  ExpandedNodeId NetworkType_Lock_ExitLock = DIMethodIdsInit.initNetworkType_Lock_ExitLock();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_Write = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Write.asExpandedNodeId();
 
-  ExpandedNodeId NetworkType_Lock_InitLock = DIMethodIdsInit.initNetworkType_Lock_InitLock();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_Open = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Open.asExpandedNodeId();
 
-  ExpandedNodeId NetworkType_Lock_RenewLock = DIMethodIdsInit.initNetworkType_Lock_RenewLock();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_Close = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Close.asExpandedNodeId();
 
-  ExpandedNodeId TransferServicesType_TransferToDevice = DIMethodIdsInit.initTransferServicesType_TransferToDevice();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition.asExpandedNodeId();
 
-  ExpandedNodeId TransferServicesType_TransferFromDevice = DIMethodIdsInit.initTransferServicesType_TransferFromDevice();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId_SetPosition = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId_SetPosition.asExpandedNodeId();
 
-  ExpandedNodeId TransferServicesType_FetchTransferResultData = DIMethodIdsInit.initTransferServicesType_FetchTransferResultData();
+  ExpandedNodeId NetworkType_Lock_BreakLock = DIUaIds.NetworkType_Lock_BreakLock.asExpandedNodeId();
 
-  ExpandedNodeId LockingServicesType_BreakLock = DIMethodIdsInit.initLockingServicesType_BreakLock();
+  ExpandedNodeId NetworkType_Lock_RenewLock = DIUaIds.NetworkType_Lock_RenewLock.asExpandedNodeId();
 
-  ExpandedNodeId LockingServicesType_InitLock = DIMethodIdsInit.initLockingServicesType_InitLock();
+  ExpandedNodeId NetworkType_Lock_InitLock = DIUaIds.NetworkType_Lock_InitLock.asExpandedNodeId();
 
-  ExpandedNodeId LockingServicesType_RenewLock = DIMethodIdsInit.initLockingServicesType_RenewLock();
+  ExpandedNodeId NetworkType_Lock_ExitLock = DIUaIds.NetworkType_Lock_ExitLock.asExpandedNodeId();
 
-  ExpandedNodeId LockingServicesType_ExitLock = DIMethodIdsInit.initLockingServicesType_ExitLock();
+  ExpandedNodeId TransferServicesType_TransferToDevice = DIUaIds.TransferServicesType_TransferToDevice.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Confirmation_Confirm = DIMethodIdsInit.initSoftwareUpdateType_Confirmation_Confirm();
+  ExpandedNodeId TransferServicesType_TransferFromDevice = DIUaIds.TransferServicesType_TransferFromDevice.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Parameters_CloseAndCommit = DIMethodIdsInit.initSoftwareUpdateType_Parameters_CloseAndCommit();
+  ExpandedNodeId TransferServicesType_FetchTransferResultData = DIUaIds.TransferServicesType_FetchTransferResultData.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Installation_Resume = DIMethodIdsInit.initSoftwareUpdateType_Installation_Resume();
+  ExpandedNodeId LockingServicesType_RenewLock = DIUaIds.LockingServicesType_RenewLock.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_PrepareForUpdate_Abort = DIMethodIdsInit.initSoftwareUpdateType_PrepareForUpdate_Abort();
+  ExpandedNodeId LockingServicesType_InitLock = DIUaIds.LockingServicesType_InitLock.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_PrepareForUpdate_Prepare = DIMethodIdsInit.initSoftwareUpdateType_PrepareForUpdate_Prepare();
+  ExpandedNodeId LockingServicesType_ExitLock = DIUaIds.LockingServicesType_ExitLock.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Parameters_GenerateFileForWrite = DIMethodIdsInit.initSoftwareUpdateType_Parameters_GenerateFileForWrite();
+  ExpandedNodeId LockingServicesType_BreakLock = DIUaIds.LockingServicesType_BreakLock.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Parameters_GenerateFileForRead = DIMethodIdsInit.initSoftwareUpdateType_Parameters_GenerateFileForRead();
+  ExpandedNodeId SoftwareUpdateType_Confirmation_Confirm = DIUaIds.SoftwareUpdateType_Confirmation_Confirm.asExpandedNodeId();
 
-  ExpandedNodeId PackageLoadingType_FileTransfer_CloseAndCommit = DIMethodIdsInit.initPackageLoadingType_FileTransfer_CloseAndCommit();
+  ExpandedNodeId SoftwareUpdateType_Parameters_GenerateFileForWrite = DIUaIds.SoftwareUpdateType_Parameters_GenerateFileForWrite.asExpandedNodeId();
 
-  ExpandedNodeId PackageLoadingType_FileTransfer_GenerateFileForWrite = DIMethodIdsInit.initPackageLoadingType_FileTransfer_GenerateFileForWrite();
+  ExpandedNodeId SoftwareUpdateType_Parameters_CloseAndCommit = DIUaIds.SoftwareUpdateType_Parameters_CloseAndCommit.asExpandedNodeId();
 
-  ExpandedNodeId PackageLoadingType_FileTransfer_GenerateFileForRead = DIMethodIdsInit.initPackageLoadingType_FileTransfer_GenerateFileForRead();
+  ExpandedNodeId SoftwareUpdateType_PrepareForUpdate_Prepare = DIUaIds.SoftwareUpdateType_PrepareForUpdate_Prepare.asExpandedNodeId();
 
-  ExpandedNodeId CachedLoadingType_GetUpdateBehavior = DIMethodIdsInit.initCachedLoadingType_GetUpdateBehavior();
+  ExpandedNodeId SoftwareUpdateType_Parameters_GenerateFileForRead = DIUaIds.SoftwareUpdateType_Parameters_GenerateFileForRead.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_FileSystem_CreateDirectory = DIMethodIdsInit.initFileSystemLoadingType_FileSystem_CreateDirectory();
+  ExpandedNodeId SoftwareUpdateType_PrepareForUpdate_Abort = DIUaIds.SoftwareUpdateType_PrepareForUpdate_Abort.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_FileSystem_MoveOrCopy = DIMethodIdsInit.initFileSystemLoadingType_FileSystem_MoveOrCopy();
+  ExpandedNodeId SoftwareUpdateType_Installation_Resume = DIUaIds.SoftwareUpdateType_Installation_Resume.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_GetUpdateBehavior = DIMethodIdsInit.initFileSystemLoadingType_GetUpdateBehavior();
+  ExpandedNodeId PackageLoadingType_FileTransfer_CloseAndCommit = DIUaIds.PackageLoadingType_FileTransfer_CloseAndCommit.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_FileSystem_DeleteFileSystemObject = DIMethodIdsInit.initFileSystemLoadingType_FileSystem_DeleteFileSystemObject();
+  ExpandedNodeId PackageLoadingType_FileTransfer_GenerateFileForWrite = DIUaIds.PackageLoadingType_FileTransfer_GenerateFileForWrite.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_FileSystem_CreateFile = DIMethodIdsInit.initFileSystemLoadingType_FileSystem_CreateFile();
+  ExpandedNodeId PackageLoadingType_FileTransfer_GenerateFileForRead = DIUaIds.PackageLoadingType_FileTransfer_GenerateFileForRead.asExpandedNodeId();
 
-  ExpandedNodeId FileSystemLoadingType_ValidateFiles = DIMethodIdsInit.initFileSystemLoadingType_ValidateFiles();
+  ExpandedNodeId CachedLoadingType_GetUpdateBehavior = DIUaIds.CachedLoadingType_GetUpdateBehavior.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_Prepare = DIMethodIdsInit.initPrepareForUpdateStateMachineType_Prepare();
+  ExpandedNodeId FileSystemLoadingType_FileSystem_MoveOrCopy = DIUaIds.FileSystemLoadingType_FileSystem_MoveOrCopy.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_Resume = DIMethodIdsInit.initPrepareForUpdateStateMachineType_Resume();
+  ExpandedNodeId FileSystemLoadingType_FileSystem_CreateFile = DIUaIds.FileSystemLoadingType_FileSystem_CreateFile.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_Abort = DIMethodIdsInit.initPrepareForUpdateStateMachineType_Abort();
+  ExpandedNodeId FileSystemLoadingType_FileSystem_DeleteFileSystemObject = DIUaIds.FileSystemLoadingType_FileSystem_DeleteFileSystemObject.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallFiles = DIMethodIdsInit.initInstallationStateMachineType_InstallFiles();
+  ExpandedNodeId FileSystemLoadingType_ValidateFiles = DIUaIds.FileSystemLoadingType_ValidateFiles.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallSoftwarePackage = DIMethodIdsInit.initInstallationStateMachineType_InstallSoftwarePackage();
+  ExpandedNodeId FileSystemLoadingType_FileSystem_CreateDirectory = DIUaIds.FileSystemLoadingType_FileSystem_CreateDirectory.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_Resume = DIMethodIdsInit.initInstallationStateMachineType_Resume();
+  ExpandedNodeId FileSystemLoadingType_GetUpdateBehavior = DIUaIds.FileSystemLoadingType_GetUpdateBehavior.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_Confirm = DIMethodIdsInit.initConfirmationStateMachineType_Confirm();
+  ExpandedNodeId PrepareForUpdateStateMachineType_Abort = DIUaIds.PrepareForUpdateStateMachineType_Abort.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_Prepare = DIUaIds.PrepareForUpdateStateMachineType_Prepare.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_Resume = DIUaIds.PrepareForUpdateStateMachineType_Resume.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_InstallSoftwarePackage = DIUaIds.InstallationStateMachineType_InstallSoftwarePackage.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_InstallFiles = DIUaIds.InstallationStateMachineType_InstallFiles.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_Resume = DIUaIds.InstallationStateMachineType_Resume.asExpandedNodeId();
+
+  ExpandedNodeId ConfirmationStateMachineType_Confirm = DIUaIds.ConfirmationStateMachineType_Confirm.asExpandedNodeId();
 }

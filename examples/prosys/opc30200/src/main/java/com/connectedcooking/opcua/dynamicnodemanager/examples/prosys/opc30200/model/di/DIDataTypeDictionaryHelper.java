@@ -2,27 +2,28 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.DeviceHealthEnumeration;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.FetchResultDataType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.ParameterResultDataType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.SoftwareVersionFileType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.TransferResultDataDataType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.TransferResultErrorDataType;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes.UpdateBehavior;
 import com.prosysopc.ua.typedictionary.GeneratedDataTypeDictionary;
-import java.lang.String;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public class DIDataTypeDictionaryHelper {
   public static GeneratedDataTypeDictionary createDataTypeDictionary() {
     GeneratedDataTypeDictionary r = new GeneratedDataTypeDictionary("http://opcfoundation.org/UA/DI/");
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=6244"), "DeviceHealthEnumeration", DeviceHealthEnumeration.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=6522"), "FetchResultDataType", FetchResultDataType.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=15888"), "TransferResultErrorDataType", TransferResultErrorDataType.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=15889"), "TransferResultDataDataType", TransferResultDataDataType.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=6525"), "ParameterResultDataType", ParameterResultDataType.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=331"), "SoftwareVersionFileType", SoftwareVersionFileType.class);
-    r.addTypeInformation(eni("nsu=http://opcfoundation.org/UA/DI/;i=333"), "UpdateBehavior", UpdateBehavior.class);
+    r.addTypeInformation(DIUaIds.DeviceHealthEnumeration, "DeviceHealthEnumeration", DeviceHealthEnumeration.class);
+    r.addTypeInformation(DIUaIds.FetchResultDataType, "FetchResultDataType", FetchResultDataType.class);
+    r.addTypeInformation(DIUaIds.TransferResultErrorDataType, "TransferResultErrorDataType", TransferResultErrorDataType.class);
+    r.addTypeInformation(DIUaIds.TransferResultDataDataType, "TransferResultDataDataType", TransferResultDataDataType.class);
+    r.addTypeInformation(DIUaIds.ParameterResultDataType, "ParameterResultDataType", ParameterResultDataType.class);
+    r.addTypeInformation(DIUaIds.SoftwareVersionFileType, "SoftwareVersionFileType", SoftwareVersionFileType.class);
+    r.addTypeInformation(DIUaIds.UpdateBehavior, "UpdateBehavior", UpdateBehavior.class);
     return r;
-  }
-
-  private static ExpandedNodeId eni(String id) {
-    return ExpandedNodeId.parseExpandedNodeId(id);
   }
 }

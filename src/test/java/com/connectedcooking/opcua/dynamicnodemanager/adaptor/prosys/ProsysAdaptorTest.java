@@ -293,7 +293,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.AccessLevel, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(dataValue.getValue().getValue().toString()).isEqualTo(AccessLevelType.CurrentRead.toString())
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelType.of(AccessLevelType.Options.CurrentRead).getValue())
         );
     }
 
@@ -309,7 +309,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.UserAccessLevel, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelType.CurrentRead.getAsBuiltInType())
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelType.of(AccessLevelType.Options.CurrentRead).getValue())
         );
     }
 
@@ -327,7 +327,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.UserAccessLevel, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(((UnsignedByte) dataValue.getValue().getValue()).getValue()).isEqualTo(0)
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelType.of(/*empty*/).getValue())
         );
     }
 
@@ -545,7 +545,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.EventNotifier, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(EventNotifierType.SubscribeToEvents.getAsBuiltInType())
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(EventNotifierType.of(EventNotifierType.Options.SubscribeToEvents).getValue())
         );
     }
 
@@ -657,7 +657,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.AccessRestrictions, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessRestrictionType.EncryptionRequired.getAsBuiltInType())
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessRestrictionType.of(AccessRestrictionType.Options.EncryptionRequired).getValue())
         );
     }
 
@@ -673,7 +673,7 @@ class ProsysAdaptorTest {
                 new NodeId(NS_INDEX, NODE_ID), Attributes.AccessLevelEx, null, DateTime.currentTime());
         assertAll(
                 () -> assertThat(dataValue.getStatusCode().getValue()).isEqualTo(StatusCodes.Good),
-                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelExType.NonatomicRead.getAsBuiltInType())
+                () -> assertThat(dataValue.getValue().getValue()).isEqualTo(AccessLevelExType.of(AccessLevelExType.Options.NonatomicRead).getValue())
         );
     }
 

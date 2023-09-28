@@ -5,20 +5,20 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 
 /**
- * Generated on 2022-10-10 10:21:30
+ * Generated on 2023-09-26 10:56:50
  */
 public interface DIDataTypeIds {
-  ExpandedNodeId DeviceHealthEnumeration = DIDataTypeIdsInit.initDeviceHealthEnumeration();
+  ExpandedNodeId DeviceHealthEnumeration = DIUaIds.DeviceHealthEnumeration.asExpandedNodeId();
 
-  ExpandedNodeId FetchResultDataType = DIDataTypeIdsInit.initFetchResultDataType();
+  ExpandedNodeId FetchResultDataType = DIUaIds.FetchResultDataType.asExpandedNodeId();
 
-  ExpandedNodeId TransferResultErrorDataType = DIDataTypeIdsInit.initTransferResultErrorDataType();
+  ExpandedNodeId TransferResultErrorDataType = DIUaIds.TransferResultErrorDataType.asExpandedNodeId();
 
-  ExpandedNodeId TransferResultDataDataType = DIDataTypeIdsInit.initTransferResultDataDataType();
+  ExpandedNodeId TransferResultDataDataType = DIUaIds.TransferResultDataDataType.asExpandedNodeId();
 
-  ExpandedNodeId ParameterResultDataType = DIDataTypeIdsInit.initParameterResultDataType();
+  ExpandedNodeId ParameterResultDataType = DIUaIds.ParameterResultDataType.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareVersionFileType = DIDataTypeIdsInit.initSoftwareVersionFileType();
+  ExpandedNodeId SoftwareVersionFileType = DIUaIds.SoftwareVersionFileType.asExpandedNodeId();
 
-  ExpandedNodeId UpdateBehavior = DIDataTypeIdsInit.initUpdateBehavior();
+  ExpandedNodeId UpdateBehavior = DIUaIds.UpdateBehavior.asExpandedNodeId();
 }
