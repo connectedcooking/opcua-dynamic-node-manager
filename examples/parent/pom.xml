@@ -14,15 +14,15 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <dynamicnodemanager.version>0.2.1-SNAPSHOT</dynamicnodemanager.version>
+        <dynamicnodemanager.version>0.2.2-SNAPSHOT</dynamicnodemanager.version>
 
-        <prosys.version>5.0.2-105</prosys.version>
-        <slf4j.version>2.0.9</slf4j.version>
-        <jupiter.version>5.10.0</jupiter.version>
-        <mockito.version>5.5.0</mockito.version>
-        <assertj.version>3.24.2</assertj.version>
+        <prosys.version>5.1.0-116</prosys.version>
+        <slf4j.version>2.0.11</slf4j.version>
+        <jupiter.version>5.10.1</jupiter.version>
+        <mockito.version>5.9.0</mockito.version>
+        <assertj.version>3.25.1</assertj.version>
 
-        <logback.version>1.4.11</logback.version>
+        <logback.version>1.4.14</logback.version>
     </properties>
 
     <dependencyManagement>

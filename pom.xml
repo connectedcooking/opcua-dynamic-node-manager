@@ -4,7 +4,7 @@
 
     <groupId>com.connectedcooking.opcua</groupId>
     <artifactId>opcua-dynamic-node-manager</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.2-SNAPSHOT</version>
 
     <name>OPC UA Dynamic Node Manager</name>
     <description>Java library for implementing a dynamic node manager that responses dynamically based on the user context.</description>
@@ -16,13 +16,13 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <prosys.version>5.0.2-105</prosys.version>
-        <bouncycastle.version>1.76</bouncycastle.version>
-        <micrometer.version>1.11.4</micrometer.version>
-        <slf4j.version>2.0.9</slf4j.version>
-        <jupiter.version>5.10.0</jupiter.version>
-        <mockito.version>5.5.0</mockito.version>
-        <assertj.version>3.24.2</assertj.version>
+        <prosys.version>5.1.0-116</prosys.version>
+        <bouncycastle.version>1.77</bouncycastle.version>
+        <micrometer.version>1.12.2</micrometer.version>
+        <slf4j.version>2.0.11</slf4j.version>
+        <jupiter.version>5.10.1</jupiter.version>
+        <mockito.version>5.9.0</mockito.version>
+        <assertj.version>3.25.1</assertj.version>
     </properties>
 
     <dependencies>
