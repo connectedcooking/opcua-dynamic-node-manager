@@ -5,6 +5,7 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.AbstractOptionSetDataType;
 import com.prosysopc.ua.BitField;
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.InternalWeakInternedCache;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UInt32OptionSetDataType;
@@ -21,7 +22,7 @@ import java.lang.String;
 import java.util.BitSet;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=333")
 public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Options, UnsignedInteger, UpdateBehavior, UpdateBehavior.Builder> implements UInt32OptionSetDataType<UpdateBehavior.Options> {
@@ -63,6 +64,7 @@ public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Opt
     b.addOptions(Options.values());
     b.setBuilderSupplier(Builder::new);
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(UpdateBehavior.class, SPECIFICATION);
   }
 
   private UpdateBehavior(BitField delegate) {

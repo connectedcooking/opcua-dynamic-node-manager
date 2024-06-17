@@ -21,7 +21,7 @@ import com.prosysopc.ua.types.opcua.server.FileDirectoryTypeNode;
 import java.lang.Override;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=192")
 public abstract class FileSystemLoadingTypeNodeBase extends SoftwareLoadingTypeNode implements FileSystemLoadingType {

@@ -2,8 +2,21 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
+import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 public interface CommercialKitchenEquipmentIds extends CommercialKitchenEquipmentVariableIds, CommercialKitchenEquipmentDataTypeIds, CommercialKitchenEquipmentObjectTypeIds, CommercialKitchenEquipmentObjectIds {
+  static Set<ExpandedNodeId> allIdentifiers() {
+    Set<ExpandedNodeId> r = new HashSet<>();
+    r.addAll(CommercialKitchenEquipmentVariableIds.allVariableIdentifiers());
+    r.addAll(CommercialKitchenEquipmentDataTypeIds.allDataTypeIdentifiers());
+    r.addAll(CommercialKitchenEquipmentObjectTypeIds.allObjectTypeIdentifiers());
+    r.addAll(CommercialKitchenEquipmentObjectIds.allObjectIdentifiers());
+    return Collections.unmodifiableSet(r);
+  }
 }

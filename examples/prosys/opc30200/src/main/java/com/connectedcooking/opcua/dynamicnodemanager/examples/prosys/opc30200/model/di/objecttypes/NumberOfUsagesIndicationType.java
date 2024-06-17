@@ -7,7 +7,7 @@ import com.prosysopc.ua.TypeDefinitionId;
 /**
  * Indicates counting the process steps the entity has been used or can still be used for (for example usages of a punching tool).
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=476")
 public interface NumberOfUsagesIndicationType extends BaseLifetimeIndicationType {

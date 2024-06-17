@@ -18,7 +18,7 @@ import java.lang.Override;
 /**
  * General structure of a Protocol ObjectType
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1006")
 public abstract class ProtocolTypeNodeBase extends BaseObjectTypeNode implements ProtocolType {

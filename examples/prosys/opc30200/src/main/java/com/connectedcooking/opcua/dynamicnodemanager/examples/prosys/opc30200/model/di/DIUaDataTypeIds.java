@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
 import com.prosysopc.ua.UaNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 public interface DIUaDataTypeIds {
   UaNodeId DeviceHealthEnumeration = DIUaDataTypeIdsInit.initDeviceHealthEnumeration();
@@ -21,4 +22,8 @@ public interface DIUaDataTypeIds {
   UaNodeId SoftwareVersionFileType = DIUaDataTypeIdsInit.initSoftwareVersionFileType();
 
   UaNodeId UpdateBehavior = DIUaDataTypeIdsInit.initUpdateBehavior();
+
+  static Set<UaNodeId> allDataTypeIdentifiers() {
+    return InternalDIUaDataTypeIdsHelper.ALL_DATATYPE_IDENTIFIERS;
+  }
 }

@@ -4,29 +4,32 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.prosysopc.ua.UaNodeId;
 
+/**
+ * Generated on 2024-06-17 14:43:47
+ */
 class DIUaMethodIdsInit {
-  static UaNodeId initTopologyElementType_Lock_BreakLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6173L);
+  static UaNodeId initTopologyElementType_Lock_ExitLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6171L);
   }
 
   static UaNodeId initTopologyElementType_Lock_InitLock() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6166L);
   }
 
+  static UaNodeId initTopologyElementType_Lock_BreakLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6173L);
+  }
+
   static UaNodeId initTopologyElementType_Lock_RenewLock() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6169L);
   }
 
-  static UaNodeId initTopologyElementType_Lock_ExitLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6171L);
-  }
-
-  static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_Read() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 63L);
-  }
-
   static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_Write() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 66L);
+  }
+
+  static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 68L);
   }
 
   static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_Open() {
@@ -37,24 +40,24 @@ class DIUaMethodIdsInit {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 39L);
   }
 
-  static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 68L);
-  }
-
   static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_SetPosition() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 71L);
   }
 
-  static UaNodeId initNetworkType_Lock_BreakLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6306L);
+  static UaNodeId initISupportInfoType_DocumentationFiles_DocumentFileId_Read() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 63L);
+  }
+
+  static UaNodeId initNetworkType_Lock_InitLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6299L);
   }
 
   static UaNodeId initNetworkType_Lock_RenewLock() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6302L);
   }
 
-  static UaNodeId initNetworkType_Lock_InitLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6299L);
+  static UaNodeId initNetworkType_Lock_BreakLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6306L);
   }
 
   static UaNodeId initNetworkType_Lock_ExitLock() {
@@ -73,52 +76,48 @@ class DIUaMethodIdsInit {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6531L);
   }
 
-  static UaNodeId initLockingServicesType_RenewLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6396L);
-  }
-
   static UaNodeId initLockingServicesType_InitLock() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6393L);
-  }
-
-  static UaNodeId initLockingServicesType_ExitLock() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6398L);
   }
 
   static UaNodeId initLockingServicesType_BreakLock() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6400L);
   }
 
-  static UaNodeId initSoftwareUpdateType_Confirmation_Confirm() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 112L);
+  static UaNodeId initLockingServicesType_ExitLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6398L);
+  }
+
+  static UaNodeId initLockingServicesType_RenewLock() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6396L);
   }
 
   static UaNodeId initSoftwareUpdateType_Parameters_GenerateFileForWrite() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 127L);
   }
 
-  static UaNodeId initSoftwareUpdateType_Parameters_CloseAndCommit() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 130L);
-  }
-
   static UaNodeId initSoftwareUpdateType_PrepareForUpdate_Prepare() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 19L);
-  }
-
-  static UaNodeId initSoftwareUpdateType_Parameters_GenerateFileForRead() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 124L);
   }
 
   static UaNodeId initSoftwareUpdateType_PrepareForUpdate_Abort() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 20L);
   }
 
+  static UaNodeId initSoftwareUpdateType_Parameters_GenerateFileForRead() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 124L);
+  }
+
   static UaNodeId initSoftwareUpdateType_Installation_Resume() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 61L);
   }
 
-  static UaNodeId initPackageLoadingType_FileTransfer_CloseAndCommit() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 148L);
+  static UaNodeId initSoftwareUpdateType_Parameters_CloseAndCommit() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 130L);
+  }
+
+  static UaNodeId initSoftwareUpdateType_Confirmation_Confirm() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 112L);
   }
 
   static UaNodeId initPackageLoadingType_FileTransfer_GenerateFileForWrite() {
@@ -129,36 +128,36 @@ class DIUaMethodIdsInit {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 142L);
   }
 
+  static UaNodeId initPackageLoadingType_FileTransfer_CloseAndCommit() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 148L);
+  }
+
   static UaNodeId initCachedLoadingType_GetUpdateBehavior() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 189L);
-  }
-
-  static UaNodeId initFileSystemLoadingType_FileSystem_MoveOrCopy() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 203L);
-  }
-
-  static UaNodeId initFileSystemLoadingType_FileSystem_CreateFile() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 198L);
-  }
-
-  static UaNodeId initFileSystemLoadingType_FileSystem_DeleteFileSystemObject() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 201L);
-  }
-
-  static UaNodeId initFileSystemLoadingType_ValidateFiles() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 209L);
-  }
-
-  static UaNodeId initFileSystemLoadingType_FileSystem_CreateDirectory() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 195L);
   }
 
   static UaNodeId initFileSystemLoadingType_GetUpdateBehavior() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 206L);
   }
 
-  static UaNodeId initPrepareForUpdateStateMachineType_Abort() {
-    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 229L);
+  static UaNodeId initFileSystemLoadingType_FileSystem_CreateDirectory() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 195L);
+  }
+
+  static UaNodeId initFileSystemLoadingType_FileSystem_DeleteFileSystemObject() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 201L);
+  }
+
+  static UaNodeId initFileSystemLoadingType_FileSystem_CreateFile() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 198L);
+  }
+
+  static UaNodeId initFileSystemLoadingType_ValidateFiles() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 209L);
+  }
+
+  static UaNodeId initFileSystemLoadingType_FileSystem_MoveOrCopy() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 203L);
   }
 
   static UaNodeId initPrepareForUpdateStateMachineType_Prepare() {
@@ -167,6 +166,10 @@ class DIUaMethodIdsInit {
 
   static UaNodeId initPrepareForUpdateStateMachineType_Resume() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 230L);
+  }
+
+  static UaNodeId initPrepareForUpdateStateMachineType_Abort() {
+    return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 229L);
   }
 
   static UaNodeId initInstallationStateMachineType_InstallSoftwarePackage() {

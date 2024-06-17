@@ -2,8 +2,24 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
+import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
-public interface DIIds extends DIReferenceTypeIds, DIObjectIds, DIVariableIds, DIMethodIds, DIObjectTypeIds, DIVariableTypeIds, DIDataTypeIds {
+public interface DIIds extends DIReferenceTypeIds, DIVariableIds, DIObjectIds, DIObjectTypeIds, DIMethodIds, DIVariableTypeIds, DIDataTypeIds {
+  static Set<ExpandedNodeId> allIdentifiers() {
+    Set<ExpandedNodeId> r = new HashSet<>();
+    r.addAll(DIReferenceTypeIds.allReferenceTypeIdentifiers());
+    r.addAll(DIVariableIds.allVariableIdentifiers());
+    r.addAll(DIObjectIds.allObjectIdentifiers());
+    r.addAll(DIObjectTypeIds.allObjectTypeIdentifiers());
+    r.addAll(DIMethodIds.allMethodIdentifiers());
+    r.addAll(DIVariableTypeIds.allVariableTypeIdentifiers());
+    r.addAll(DIDataTypeIds.allDataTypeIdentifiers());
+    return Collections.unmodifiableSet(r);
+  }
 }

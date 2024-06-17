@@ -20,7 +20,7 @@ import java.lang.Override;
 /**
  * Defines the basic information components for all configurable elements in a device topology
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1001")
 public abstract class TopologyElementTypeNodeBase extends BaseObjectTypeNode implements TopologyElementType {

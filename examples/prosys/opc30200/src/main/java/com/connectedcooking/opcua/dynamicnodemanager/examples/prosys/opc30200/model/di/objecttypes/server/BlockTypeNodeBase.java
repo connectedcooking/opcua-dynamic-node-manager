@@ -25,7 +25,7 @@ import java.lang.RuntimeException;
 /**
  * Adds the concept of Blocks needed for block-oriented FieldDevices
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1003")
 public abstract class BlockTypeNodeBase extends TopologyElementTypeNode implements BlockType {

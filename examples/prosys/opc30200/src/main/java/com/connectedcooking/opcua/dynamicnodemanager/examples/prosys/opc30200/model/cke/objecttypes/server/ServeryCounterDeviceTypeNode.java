@@ -7,7 +7,7 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1028")
 public class ServeryCounterDeviceTypeNode extends ServeryCounterDeviceTypeNodeBase {

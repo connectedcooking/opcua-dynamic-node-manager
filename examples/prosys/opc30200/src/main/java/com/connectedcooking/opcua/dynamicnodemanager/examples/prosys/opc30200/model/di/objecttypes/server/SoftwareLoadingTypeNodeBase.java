@@ -23,7 +23,7 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=135")
 public abstract class SoftwareLoadingTypeNodeBase extends BaseObjectTypeNode implements SoftwareLoadingType {

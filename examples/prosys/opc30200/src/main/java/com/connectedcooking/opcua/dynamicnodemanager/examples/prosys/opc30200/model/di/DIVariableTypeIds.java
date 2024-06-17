@@ -3,12 +3,17 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 public interface DIVariableTypeIds {
   ExpandedNodeId LifetimeVariableType = DIUaIds.LifetimeVariableType.asExpandedNodeId();
 
   ExpandedNodeId UIElementType = DIUaIds.UIElementType.asExpandedNodeId();
+
+  static Set<ExpandedNodeId> allVariableTypeIdentifiers() {
+    return InternalDIVariableTypeIdsHelper.ALL_VARIABLETYPE_IDENTIFIERS;
+  }
 }

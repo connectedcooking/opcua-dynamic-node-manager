@@ -4,6 +4,9 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.prosysopc.ua.UaNodeId;
 
+/**
+ * Generated on 2024-06-17 14:43:51
+ */
 class CommercialKitchenEquipmentUaObjectTypeIdsInit {
   static UaNodeId initBatchInformationType() {
     return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 1002L);

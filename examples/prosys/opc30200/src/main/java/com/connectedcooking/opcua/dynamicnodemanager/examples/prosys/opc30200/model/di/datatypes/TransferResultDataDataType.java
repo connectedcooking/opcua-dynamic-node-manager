@@ -2,8 +2,8 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIIds;
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaArrayDimensions;
@@ -26,21 +26,21 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15889")
 public class TransferResultDataDataType extends FetchResultDataType {
   @Deprecated
-  public static final ExpandedNodeId BINARY = DIIds.TransferResultDataDataType_DefaultBinary;
+  public static final ExpandedNodeId BINARY = DIUaIds.TransferResultDataDataType_DefaultBinary.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId XML = DIIds.TransferResultDataDataType_DefaultXml;
+  public static final ExpandedNodeId XML = DIUaIds.TransferResultDataDataType_DefaultXml.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId JSON = DIIds.TransferResultDataDataType_DefaultJson;
+  public static final ExpandedNodeId JSON = DIUaIds.TransferResultDataDataType_DefaultJson.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId ID = DIIds.TransferResultDataDataType;
+  public static final ExpandedNodeId ID = DIUaIds.TransferResultDataDataType.asExpandedNodeId();
 
   public static final StructureSpecification SPECIFICATION;
 
@@ -49,10 +49,10 @@ public class TransferResultDataDataType extends FetchResultDataType {
     b.addField(Fields.SequenceNumber);
     b.addField(Fields.EndOfResults);
     b.addField(Fields.ParameterDefs);
-    b.setBinaryEncodeId(UaNodeId.fromLocal(BINARY));
-    b.setXmlEncodeId(UaNodeId.fromLocal(XML));
-    b.setJsonEncodeId(UaNodeId.fromLocal(JSON));
-    b.setTypeId(UaNodeId.fromLocal(ID));
+    b.setBinaryEncodeId(DIUaIds.TransferResultDataDataType_DefaultBinary);
+    b.setXmlEncodeId(DIUaIds.TransferResultDataDataType_DefaultXml);
+    b.setJsonEncodeId(DIUaIds.TransferResultDataDataType_DefaultJson);
+    b.setTypeId(DIUaIds.TransferResultDataDataType);
     b.addSuperTypeId(DIUaIds.FetchResultDataType);
     b.addSuperTypeId(UaIds.Structure);
     b.setName("TransferResultDataDataType");
@@ -60,6 +60,7 @@ public class TransferResultDataDataType extends FetchResultDataType {
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
     b.setBuilderSupplier(Builder::new);
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(TransferResultDataDataType.class, SPECIFICATION);
   }
 
   private Integer f_sequenceNumber;

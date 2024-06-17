@@ -2,6 +2,7 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.Enumeration;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=331")
 public enum SoftwareVersionFileType implements Enumeration {
@@ -56,6 +57,7 @@ public enum SoftwareVersionFileType implements Enumeration {
       }
     });
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(SoftwareVersionFileType.class, SPECIFICATION);
   }
 
   private final int value;

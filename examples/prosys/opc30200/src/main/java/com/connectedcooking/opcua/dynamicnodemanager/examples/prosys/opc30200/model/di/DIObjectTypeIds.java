@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 public interface DIObjectTypeIds {
   ExpandedNodeId TopologyElementType = DIUaIds.TopologyElementType.asExpandedNodeId();
@@ -87,4 +88,8 @@ public interface DIObjectTypeIds {
   ExpandedNodeId PowerCycleStateMachineType = DIUaIds.PowerCycleStateMachineType.asExpandedNodeId();
 
   ExpandedNodeId ConfirmationStateMachineType = DIUaIds.ConfirmationStateMachineType.asExpandedNodeId();
+
+  static Set<ExpandedNodeId> allObjectTypeIdentifiers() {
+    return InternalDIObjectTypeIdsHelper.ALL_OBJECTTYPE_IDENTIFIERS;
+  }
 }

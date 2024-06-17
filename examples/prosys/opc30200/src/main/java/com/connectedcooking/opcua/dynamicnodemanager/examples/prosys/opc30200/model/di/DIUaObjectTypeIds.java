@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di;
 
 import com.prosysopc.ua.UaNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 public interface DIUaObjectTypeIds {
   UaNodeId TopologyElementType = DIUaObjectTypeIdsInit.initTopologyElementType();
@@ -87,4 +88,8 @@ public interface DIUaObjectTypeIds {
   UaNodeId PowerCycleStateMachineType = DIUaObjectTypeIdsInit.initPowerCycleStateMachineType();
 
   UaNodeId ConfirmationStateMachineType = DIUaObjectTypeIdsInit.initConfirmationStateMachineType();
+
+  static Set<UaNodeId> allObjectTypeIdentifiers() {
+    return InternalDIUaObjectTypeIdsHelper.ALL_OBJECTTYPE_IDENTIFIERS;
+  }
 }

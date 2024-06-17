@@ -2,7 +2,8 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIIds;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaArrayDimensions;
@@ -27,21 +28,21 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6525")
 public class ParameterResultDataType extends AbstractStructure {
   @Deprecated
-  public static final ExpandedNodeId BINARY = DIIds.ParameterResultDataType_DefaultBinary;
+  public static final ExpandedNodeId BINARY = DIUaIds.ParameterResultDataType_DefaultBinary.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId XML = DIIds.ParameterResultDataType_DefaultXml;
+  public static final ExpandedNodeId XML = DIUaIds.ParameterResultDataType_DefaultXml.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId JSON = DIIds.ParameterResultDataType_DefaultJson;
+  public static final ExpandedNodeId JSON = DIUaIds.ParameterResultDataType_DefaultJson.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId ID = DIIds.ParameterResultDataType;
+  public static final ExpandedNodeId ID = DIUaIds.ParameterResultDataType.asExpandedNodeId();
 
   public static final StructureSpecification SPECIFICATION;
 
@@ -50,16 +51,17 @@ public class ParameterResultDataType extends AbstractStructure {
     b.addField(Fields.NodePath);
     b.addField(Fields.StatusCode);
     b.addField(Fields.Diagnostics);
-    b.setBinaryEncodeId(UaNodeId.fromLocal(BINARY));
-    b.setXmlEncodeId(UaNodeId.fromLocal(XML));
-    b.setJsonEncodeId(UaNodeId.fromLocal(JSON));
-    b.setTypeId(UaNodeId.fromLocal(ID));
+    b.setBinaryEncodeId(DIUaIds.ParameterResultDataType_DefaultBinary);
+    b.setXmlEncodeId(DIUaIds.ParameterResultDataType_DefaultXml);
+    b.setJsonEncodeId(DIUaIds.ParameterResultDataType_DefaultJson);
+    b.setTypeId(DIUaIds.ParameterResultDataType);
     b.addSuperTypeId(UaIds.Structure);
     b.setName("ParameterResultDataType");
     b.setJavaClass(ParameterResultDataType.class);
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
     b.setBuilderSupplier(Builder::new);
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(ParameterResultDataType.class, SPECIFICATION);
   }
 
   private QualifiedName[] f_nodePath;

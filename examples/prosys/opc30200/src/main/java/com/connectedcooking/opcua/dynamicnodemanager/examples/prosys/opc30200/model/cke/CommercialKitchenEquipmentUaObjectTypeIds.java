@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
 import com.prosysopc.ua.UaNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 public interface CommercialKitchenEquipmentUaObjectTypeIds {
   UaNodeId BatchInformationType = CommercialKitchenEquipmentUaObjectTypeIdsInit.initBatchInformationType();
@@ -77,4 +78,8 @@ public interface CommercialKitchenEquipmentUaObjectTypeIds {
   UaNodeId PressureCookingKettleDeviceType = CommercialKitchenEquipmentUaObjectTypeIdsInit.initPressureCookingKettleDeviceType();
 
   UaNodeId ServeryCounterDeviceType = CommercialKitchenEquipmentUaObjectTypeIdsInit.initServeryCounterDeviceType();
+
+  static Set<UaNodeId> allObjectTypeIdentifiers() {
+    return InternalCommercialKitchenEquipmentUaObjectTypeIdsHelper.ALL_OBJECTTYPE_IDENTIFIERS;
+  }
 }

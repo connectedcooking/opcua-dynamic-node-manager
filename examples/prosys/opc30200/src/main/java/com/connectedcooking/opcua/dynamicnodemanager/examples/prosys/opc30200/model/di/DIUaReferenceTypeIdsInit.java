@@ -4,6 +4,9 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.prosysopc.ua.UaNodeId;
 
+/**
+ * Generated on 2024-06-17 14:43:47
+ */
 class DIUaReferenceTypeIdsInit {
   static UaNodeId initConnectsTo() {
     return UaNodeId.numeric(DIUaIdsInitHelper.NAMESPACE, 6030L);

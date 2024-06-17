@@ -2,6 +2,7 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes;
 
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.Enumeration;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3011")
 public enum MultiFunctionPanModeEnumeration implements Enumeration {
@@ -95,6 +96,7 @@ public enum MultiFunctionPanModeEnumeration implements Enumeration {
       }
     });
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(MultiFunctionPanModeEnumeration.class, SPECIFICATION);
   }
 
   private final int value;

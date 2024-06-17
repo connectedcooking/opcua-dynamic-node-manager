@@ -24,7 +24,7 @@ import java.lang.RuntimeException;
 /**
  * FolderType is used to organize the Parameters and Methods from the complete set (ParameterSet, MethodSet) with regard to their application
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1005")
 public abstract class FunctionalGroupTypeNodeBase extends FolderTypeNode implements FunctionalGroupType {

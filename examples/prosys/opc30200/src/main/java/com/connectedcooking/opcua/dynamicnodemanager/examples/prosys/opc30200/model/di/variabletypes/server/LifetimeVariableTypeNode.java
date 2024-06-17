@@ -9,7 +9,7 @@ import java.lang.Override;
 /**
  * Remaining lifetime
  * <p>
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=468")
 public class LifetimeVariableTypeNode extends LifetimeVariableTypeNodeBase {

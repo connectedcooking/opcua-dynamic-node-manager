@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 public interface CommercialKitchenEquipmentDataTypeIds {
   ExpandedNodeId BeverageSMLEnumeration = CommercialKitchenEquipmentUaIds.BeverageSMLEnumeration.asExpandedNodeId();
@@ -55,4 +56,8 @@ public interface CommercialKitchenEquipmentDataTypeIds {
   ExpandedNodeId TrayModeEnumeration = CommercialKitchenEquipmentUaIds.TrayModeEnumeration.asExpandedNodeId();
 
   ExpandedNodeId TrayTypeEnumeration = CommercialKitchenEquipmentUaIds.TrayTypeEnumeration.asExpandedNodeId();
+
+  static Set<ExpandedNodeId> allDataTypeIdentifiers() {
+    return InternalCommercialKitchenEquipmentDataTypeIdsHelper.ALL_DATATYPE_IDENTIFIERS;
+  }
 }

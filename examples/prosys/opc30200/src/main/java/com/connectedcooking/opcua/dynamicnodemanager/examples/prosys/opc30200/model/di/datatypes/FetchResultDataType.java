@@ -2,10 +2,10 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIIds;
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaIds;
-import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.Structure;
 import com.prosysopc.ua.stack.utils.AbstractStructure;
@@ -20,23 +20,24 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6522")
 public abstract class FetchResultDataType extends AbstractStructure {
   @Deprecated
-  public static final ExpandedNodeId ID = DIIds.FetchResultDataType;
+  public static final ExpandedNodeId ID = DIUaIds.FetchResultDataType.asExpandedNodeId();
 
   public static final StructureSpecification SPECIFICATION;
 
   static {
     StructureSpecification.Builder<Structure.Builder> b = StructureSpecification.builder();
-    b.setTypeId(UaNodeId.fromLocal(ID));
+    b.setTypeId(DIUaIds.FetchResultDataType);
     b.addSuperTypeId(UaIds.Structure);
     b.setName("FetchResultDataType");
     b.setJavaClass(FetchResultDataType.class);
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(FetchResultDataType.class, SPECIFICATION);
   }
 
   public FetchResultDataType() {

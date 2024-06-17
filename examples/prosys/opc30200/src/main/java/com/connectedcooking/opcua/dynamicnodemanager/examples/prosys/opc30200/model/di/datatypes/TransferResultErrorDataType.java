@@ -2,8 +2,8 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
-import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIIds;
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
+import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaArrayDimensions;
@@ -26,21 +26,21 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15888")
 public class TransferResultErrorDataType extends FetchResultDataType {
   @Deprecated
-  public static final ExpandedNodeId BINARY = DIIds.TransferResultErrorDataType_DefaultBinary;
+  public static final ExpandedNodeId BINARY = DIUaIds.TransferResultErrorDataType_DefaultBinary.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId XML = DIIds.TransferResultErrorDataType_DefaultXml;
+  public static final ExpandedNodeId XML = DIUaIds.TransferResultErrorDataType_DefaultXml.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId JSON = DIIds.TransferResultErrorDataType_DefaultJson;
+  public static final ExpandedNodeId JSON = DIUaIds.TransferResultErrorDataType_DefaultJson.asExpandedNodeId();
 
   @Deprecated
-  public static final ExpandedNodeId ID = DIIds.TransferResultErrorDataType;
+  public static final ExpandedNodeId ID = DIUaIds.TransferResultErrorDataType.asExpandedNodeId();
 
   public static final StructureSpecification SPECIFICATION;
 
@@ -48,10 +48,10 @@ public class TransferResultErrorDataType extends FetchResultDataType {
     StructureSpecification.Builder<Structure.Builder> b = StructureSpecification.builder();
     b.addField(Fields.Status);
     b.addField(Fields.Diagnostics);
-    b.setBinaryEncodeId(UaNodeId.fromLocal(BINARY));
-    b.setXmlEncodeId(UaNodeId.fromLocal(XML));
-    b.setJsonEncodeId(UaNodeId.fromLocal(JSON));
-    b.setTypeId(UaNodeId.fromLocal(ID));
+    b.setBinaryEncodeId(DIUaIds.TransferResultErrorDataType_DefaultBinary);
+    b.setXmlEncodeId(DIUaIds.TransferResultErrorDataType_DefaultXml);
+    b.setJsonEncodeId(DIUaIds.TransferResultErrorDataType_DefaultJson);
+    b.setTypeId(DIUaIds.TransferResultErrorDataType);
     b.addSuperTypeId(DIUaIds.FetchResultDataType);
     b.addSuperTypeId(UaIds.Structure);
     b.setName("TransferResultErrorDataType");
@@ -59,6 +59,7 @@ public class TransferResultErrorDataType extends FetchResultDataType {
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
     b.setBuilderSupplier(Builder::new);
     SPECIFICATION = b.build();
+    InternalUaDataTypeSpecificationMappings.put(TransferResultErrorDataType.class, SPECIFICATION);
   }
 
   private Integer f_status;

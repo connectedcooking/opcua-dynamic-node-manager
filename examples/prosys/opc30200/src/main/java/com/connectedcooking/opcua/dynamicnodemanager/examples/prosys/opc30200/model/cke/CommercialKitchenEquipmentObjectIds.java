@@ -3,22 +3,23 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 public interface CommercialKitchenEquipmentObjectIds {
-  ExpandedNodeId CommercialKitchenDeviceType_InformationConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_InformationConditions.asExpandedNodeId();
-
   ExpandedNodeId CommercialKitchenDeviceType_BatchInformation = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_BatchInformation.asExpandedNodeId();
+
+  ExpandedNodeId CommercialKitchenDeviceType_InformationConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_InformationConditions.asExpandedNodeId();
 
   ExpandedNodeId CommercialKitchenDeviceType_ErrorConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_ErrorConditions.asExpandedNodeId();
 
   ExpandedNodeId CommercialKitchenDeviceType_HACCPValues = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_HACCPValues.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_Parameters.asExpandedNodeId();
-
   ExpandedNodeId CoffeeMachineDeviceType_RecipeName = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_RecipeName.asExpandedNodeId();
+
+  ExpandedNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_Parameters.asExpandedNodeId();
 
   ExpandedNodeId CombiSteamerDeviceType_CombiSteamer = CommercialKitchenEquipmentUaIds.CombiSteamerDeviceType_CombiSteamer.asExpandedNodeId();
 
@@ -47,4 +48,8 @@ public interface CommercialKitchenEquipmentObjectIds {
   ExpandedNodeId PressureCookingKettleDeviceType_PressureCookingKettle = CommercialKitchenEquipmentUaIds.PressureCookingKettleDeviceType_PressureCookingKettle.asExpandedNodeId();
 
   ExpandedNodeId ServeryCounterDeviceType_Tray__No__ = CommercialKitchenEquipmentUaIds.ServeryCounterDeviceType_Tray__No__.asExpandedNodeId();
+
+  static Set<ExpandedNodeId> allObjectIdentifiers() {
+    return InternalCommercialKitchenEquipmentObjectIdsHelper.ALL_OBJECT_IDENTIFIERS;
+  }
 }

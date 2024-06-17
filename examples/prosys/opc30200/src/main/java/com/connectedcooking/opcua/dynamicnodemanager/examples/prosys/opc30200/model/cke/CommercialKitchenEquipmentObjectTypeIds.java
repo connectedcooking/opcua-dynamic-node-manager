@@ -3,9 +3,10 @@
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke;
 
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
+import java.util.Set;
 
 /**
- * Generated on 2023-09-26 10:56:54
+ * Generated on 2024-06-17 14:43:51
  */
 public interface CommercialKitchenEquipmentObjectTypeIds {
   ExpandedNodeId BatchInformationType = CommercialKitchenEquipmentUaIds.BatchInformationType.asExpandedNodeId();
@@ -77,4 +78,8 @@ public interface CommercialKitchenEquipmentObjectTypeIds {
   ExpandedNodeId PressureCookingKettleDeviceType = CommercialKitchenEquipmentUaIds.PressureCookingKettleDeviceType.asExpandedNodeId();
 
   ExpandedNodeId ServeryCounterDeviceType = CommercialKitchenEquipmentUaIds.ServeryCounterDeviceType.asExpandedNodeId();
+
+  static Set<ExpandedNodeId> allObjectTypeIdentifiers() {
+    return InternalCommercialKitchenEquipmentObjectTypeIdsHelper.ALL_OBJECTTYPE_IDENTIFIERS;
+  }
 }

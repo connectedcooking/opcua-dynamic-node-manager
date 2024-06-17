@@ -24,7 +24,7 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2023-09-26 10:56:50
+ * Generated on 2024-06-17 14:43:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=307")
 public abstract class ConfirmationStateMachineTypeNodeBase extends FiniteStateMachineTypeNode implements ConfirmationStateMachineType {
