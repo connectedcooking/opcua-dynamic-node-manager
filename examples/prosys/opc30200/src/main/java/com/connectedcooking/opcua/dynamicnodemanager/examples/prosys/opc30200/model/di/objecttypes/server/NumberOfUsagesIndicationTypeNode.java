@@ -9,7 +9,7 @@ import java.lang.Override;
 /**
  * Indicates counting the process steps the entity has been used or can still be used for (for example usages of a punching tool).
  * <p>
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=476")
 public class NumberOfUsagesIndicationTypeNode extends NumberOfUsagesIndicationTypeNodeBase {

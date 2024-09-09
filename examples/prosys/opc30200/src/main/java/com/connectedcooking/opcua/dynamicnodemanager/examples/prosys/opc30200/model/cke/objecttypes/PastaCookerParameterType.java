@@ -14,7 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1020")
 public interface PastaCookerParameterType extends KitchenDeviceParameterType {

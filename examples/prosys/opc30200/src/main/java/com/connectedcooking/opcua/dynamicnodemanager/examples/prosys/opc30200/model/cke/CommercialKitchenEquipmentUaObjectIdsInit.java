@@ -5,9 +5,13 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.UaNodeId;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 class CommercialKitchenEquipmentUaObjectIdsInit {
+  static UaNodeId initCommercialKitchenDeviceType_HACCPValues() {
+    return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5004L);
+  }
+
   static UaNodeId initCommercialKitchenDeviceType_BatchInformation() {
     return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5001L);
   }
@@ -20,16 +24,12 @@ class CommercialKitchenEquipmentUaObjectIdsInit {
     return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5002L);
   }
 
-  static UaNodeId initCommercialKitchenDeviceType_HACCPValues() {
-    return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5004L);
+  static UaNodeId initCoffeeMachineDeviceType_Parameters() {
+    return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5013L);
   }
 
   static UaNodeId initCoffeeMachineDeviceType_RecipeName() {
     return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5014L);
-  }
-
-  static UaNodeId initCoffeeMachineDeviceType_Parameters() {
-    return UaNodeId.numeric(CommercialKitchenEquipmentUaIdsInitHelper.NAMESPACE, 5013L);
   }
 
   static UaNodeId initCombiSteamerDeviceType_CombiSteamer() {

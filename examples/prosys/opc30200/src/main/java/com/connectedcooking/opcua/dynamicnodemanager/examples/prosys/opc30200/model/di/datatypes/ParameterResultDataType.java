@@ -23,12 +23,10 @@ import java.lang.IllegalArgumentException;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6525")
 public class ParameterResultDataType extends AbstractStructure {
@@ -170,11 +168,7 @@ public class ParameterResultDataType extends AbstractStructure {
 
   @Override
   public Map<FieldSpecification, Object> toFieldsMap() {
-    Map<FieldSpecification,Object> data = new LinkedHashMap<>();
-    data.put(Fields.NodePath, this.getNodePath());
-    data.put(Fields.StatusCode, this.getStatusCode());
-    data.put(Fields.Diagnostics, this.getDiagnostics());
-    return Collections.unmodifiableMap(data);
+    return StructureUtils.createFieldsMap(this.specification(), new Object[]{this.getNodePath(),this.getStatusCode(),this.getDiagnostics()});
   }
 
   @Override

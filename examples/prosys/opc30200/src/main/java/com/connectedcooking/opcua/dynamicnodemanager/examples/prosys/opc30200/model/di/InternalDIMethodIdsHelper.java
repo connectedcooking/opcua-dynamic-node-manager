@@ -8,57 +8,57 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 class InternalDIMethodIdsHelper {
   public static final Set<ExpandedNodeId> ALL_METHOD_IDENTIFIERS;
 
   static {
     Set<ExpandedNodeId> allIds = new HashSet<ExpandedNodeId>();
-    allIds.add(DIMethodIds.TopologyElementType_Lock_ExitLock);
+    allIds.add(DIMethodIds.TopologyElementType_Lock_RenewLock);
     allIds.add(DIMethodIds.TopologyElementType_Lock_InitLock);
     allIds.add(DIMethodIds.TopologyElementType_Lock_BreakLock);
-    allIds.add(DIMethodIds.TopologyElementType_Lock_RenewLock);
-    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Write);
-    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition);
+    allIds.add(DIMethodIds.TopologyElementType_Lock_ExitLock);
     allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Open);
-    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Close);
     allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_SetPosition);
+    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Write);
     allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Read);
-    allIds.add(DIMethodIds.NetworkType_Lock_InitLock);
-    allIds.add(DIMethodIds.NetworkType_Lock_RenewLock);
+    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_GetPosition);
+    allIds.add(DIMethodIds.ISupportInfoType_DocumentationFiles_DocumentFileId_Close);
     allIds.add(DIMethodIds.NetworkType_Lock_BreakLock);
     allIds.add(DIMethodIds.NetworkType_Lock_ExitLock);
-    allIds.add(DIMethodIds.TransferServicesType_TransferToDevice);
+    allIds.add(DIMethodIds.NetworkType_Lock_InitLock);
+    allIds.add(DIMethodIds.NetworkType_Lock_RenewLock);
     allIds.add(DIMethodIds.TransferServicesType_TransferFromDevice);
     allIds.add(DIMethodIds.TransferServicesType_FetchTransferResultData);
-    allIds.add(DIMethodIds.LockingServicesType_InitLock);
-    allIds.add(DIMethodIds.LockingServicesType_BreakLock);
+    allIds.add(DIMethodIds.TransferServicesType_TransferToDevice);
     allIds.add(DIMethodIds.LockingServicesType_ExitLock);
+    allIds.add(DIMethodIds.LockingServicesType_InitLock);
     allIds.add(DIMethodIds.LockingServicesType_RenewLock);
-    allIds.add(DIMethodIds.SoftwareUpdateType_Parameters_GenerateFileForWrite);
+    allIds.add(DIMethodIds.LockingServicesType_BreakLock);
     allIds.add(DIMethodIds.SoftwareUpdateType_PrepareForUpdate_Prepare);
-    allIds.add(DIMethodIds.SoftwareUpdateType_PrepareForUpdate_Abort);
-    allIds.add(DIMethodIds.SoftwareUpdateType_Parameters_GenerateFileForRead);
-    allIds.add(DIMethodIds.SoftwareUpdateType_Installation_Resume);
     allIds.add(DIMethodIds.SoftwareUpdateType_Parameters_CloseAndCommit);
     allIds.add(DIMethodIds.SoftwareUpdateType_Confirmation_Confirm);
+    allIds.add(DIMethodIds.SoftwareUpdateType_PrepareForUpdate_Abort);
+    allIds.add(DIMethodIds.SoftwareUpdateType_Installation_Resume);
+    allIds.add(DIMethodIds.SoftwareUpdateType_Parameters_GenerateFileForWrite);
+    allIds.add(DIMethodIds.SoftwareUpdateType_Parameters_GenerateFileForRead);
+    allIds.add(DIMethodIds.PackageLoadingType_FileTransfer_CloseAndCommit);
     allIds.add(DIMethodIds.PackageLoadingType_FileTransfer_GenerateFileForWrite);
     allIds.add(DIMethodIds.PackageLoadingType_FileTransfer_GenerateFileForRead);
-    allIds.add(DIMethodIds.PackageLoadingType_FileTransfer_CloseAndCommit);
     allIds.add(DIMethodIds.CachedLoadingType_GetUpdateBehavior);
-    allIds.add(DIMethodIds.FileSystemLoadingType_GetUpdateBehavior);
-    allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_CreateDirectory);
-    allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_DeleteFileSystemObject);
     allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_CreateFile);
     allIds.add(DIMethodIds.FileSystemLoadingType_ValidateFiles);
+    allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_DeleteFileSystemObject);
     allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_MoveOrCopy);
-    allIds.add(DIMethodIds.PrepareForUpdateStateMachineType_Prepare);
-    allIds.add(DIMethodIds.PrepareForUpdateStateMachineType_Resume);
+    allIds.add(DIMethodIds.FileSystemLoadingType_GetUpdateBehavior);
+    allIds.add(DIMethodIds.FileSystemLoadingType_FileSystem_CreateDirectory);
     allIds.add(DIMethodIds.PrepareForUpdateStateMachineType_Abort);
+    allIds.add(DIMethodIds.PrepareForUpdateStateMachineType_Resume);
+    allIds.add(DIMethodIds.PrepareForUpdateStateMachineType_Prepare);
     allIds.add(DIMethodIds.InstallationStateMachineType_InstallSoftwarePackage);
-    allIds.add(DIMethodIds.InstallationStateMachineType_InstallFiles);
     allIds.add(DIMethodIds.InstallationStateMachineType_Resume);
+    allIds.add(DIMethodIds.InstallationStateMachineType_InstallFiles);
     allIds.add(DIMethodIds.ConfirmationStateMachineType_Confirm);
     ALL_METHOD_IDENTIFIERS = Collections.unmodifiableSet(allIds);
   }

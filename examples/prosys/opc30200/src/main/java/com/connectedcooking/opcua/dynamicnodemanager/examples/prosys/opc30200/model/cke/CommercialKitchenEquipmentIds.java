@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 public interface CommercialKitchenEquipmentIds extends CommercialKitchenEquipmentVariableIds, CommercialKitchenEquipmentDataTypeIds, CommercialKitchenEquipmentObjectTypeIds, CommercialKitchenEquipmentObjectIds {
   static Set<ExpandedNodeId> allIdentifiers() {

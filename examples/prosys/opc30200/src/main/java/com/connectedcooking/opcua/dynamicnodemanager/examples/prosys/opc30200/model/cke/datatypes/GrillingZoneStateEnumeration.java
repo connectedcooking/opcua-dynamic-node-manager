@@ -2,11 +2,10 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.datatypes;
 
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.CommercialKitchenEquipmentUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.TypeDefinitionId;
-import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.Enumeration;
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.UnsignedInteger;
 import com.prosysopc.ua.typedictionary.EnumerationSpecification;
 import java.lang.IllegalArgumentException;
@@ -20,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3025")
 public enum GrillingZoneStateEnumeration implements Enumeration {
@@ -48,7 +47,7 @@ public enum GrillingZoneStateEnumeration implements Enumeration {
     EnumerationSpecification.Builder b = EnumerationSpecification.builder();
     b.setName("GrillingZoneStateEnumeration");
     b.setJavaClass(GrillingZoneStateEnumeration.class);
-    b.setTypeId(UaNodeId.fromLocal(ExpandedNodeId.parseExpandedNodeId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3025")));
+    b.setTypeId(CommercialKitchenEquipmentUaIds.GrillingZoneStateEnumeration);
     b.addMapping(0, "Off");
     b.addMapping(1, "Standby");
     b.addMapping(2, "Idle");

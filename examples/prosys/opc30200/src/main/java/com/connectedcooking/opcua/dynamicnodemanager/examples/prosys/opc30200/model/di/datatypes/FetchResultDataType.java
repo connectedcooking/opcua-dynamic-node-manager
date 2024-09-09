@@ -4,6 +4,7 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
+import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaIds;
 import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
@@ -15,12 +16,10 @@ import java.lang.Deprecated;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
 import java.lang.Override;
-import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6522")
 public abstract class FetchResultDataType extends AbstractStructure {
@@ -76,8 +75,7 @@ public abstract class FetchResultDataType extends AbstractStructure {
 
   @Override
   public Map<FieldSpecification, Object> toFieldsMap() {
-    Map<FieldSpecification,Object> data = new LinkedHashMap<>();
-    return Collections.unmodifiableMap(data);
+    return StructureUtils.createFieldsMap(this.specification(), new Object[0]);
   }
 
   @Override

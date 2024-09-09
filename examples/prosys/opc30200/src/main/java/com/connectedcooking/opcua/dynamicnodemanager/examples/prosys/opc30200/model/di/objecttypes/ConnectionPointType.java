@@ -9,7 +9,7 @@ import java.lang.String;
 /**
  * Represents the interface (interface card) of a Device to a Network.
  * <p>
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6308")
 public interface ConnectionPointType extends TopologyElementType {
