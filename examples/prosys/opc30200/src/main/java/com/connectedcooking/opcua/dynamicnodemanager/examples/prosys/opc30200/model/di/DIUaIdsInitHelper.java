@@ -5,8 +5,8 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.UaNamespace;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
-class DIUaIdsInitHelper {
-  static UaNamespace NAMESPACE = UaNamespace.from("http://opcfoundation.org/UA/DI/");
+final class DIUaIdsInitHelper {
+  static final UaNamespace NAMESPACE = UaNamespace.from("http://opcfoundation.org/UA/DI/");
 }

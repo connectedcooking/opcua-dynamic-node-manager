@@ -22,7 +22,7 @@ import java.lang.String;
 import java.util.BitSet;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=333")
 public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Options, UnsignedInteger, UpdateBehavior, UpdateBehavior.Builder> implements UInt32OptionSetDataType<UpdateBehavior.Options> {

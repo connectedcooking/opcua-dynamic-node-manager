@@ -26,7 +26,7 @@ import java.lang.RuntimeException;
 /**
  * Interface defining counters for the duration of operation
  * <p>
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=480")
 public abstract class IOperationCounterTypeNodeBase extends BaseInterfaceTypeNode implements IOperationCounterType {

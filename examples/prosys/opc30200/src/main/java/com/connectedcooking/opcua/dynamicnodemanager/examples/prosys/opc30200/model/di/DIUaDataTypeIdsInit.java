@@ -5,7 +5,7 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 import com.prosysopc.ua.UaNodeId;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 class DIUaDataTypeIdsInit {
   static UaNodeId initDeviceHealthEnumeration() {

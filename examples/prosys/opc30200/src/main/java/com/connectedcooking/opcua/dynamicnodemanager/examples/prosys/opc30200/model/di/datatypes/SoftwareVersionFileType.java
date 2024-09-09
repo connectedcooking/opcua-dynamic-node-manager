@@ -2,11 +2,10 @@
 //
 package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.datatypes;
 
+import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
 import com.prosysopc.ua.TypeDefinitionId;
-import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.Enumeration;
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.UnsignedInteger;
 import com.prosysopc.ua.typedictionary.EnumerationSpecification;
 import java.lang.IllegalArgumentException;
@@ -20,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=331")
 public enum SoftwareVersionFileType implements Enumeration {
@@ -46,7 +45,7 @@ public enum SoftwareVersionFileType implements Enumeration {
     EnumerationSpecification.Builder b = EnumerationSpecification.builder();
     b.setName("SoftwareVersionFileType");
     b.setJavaClass(SoftwareVersionFileType.class);
-    b.setTypeId(UaNodeId.fromLocal(ExpandedNodeId.parseExpandedNodeId("nsu=http://opcfoundation.org/UA/DI/;i=331")));
+    b.setTypeId(DIUaIds.SoftwareVersionFileType);
     b.addMapping(0, "Current");
     b.addMapping(1, "Pending");
     b.addMapping(2, "Fallback");

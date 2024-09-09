@@ -6,20 +6,20 @@ import com.prosysopc.ua.UaNodeId;
 import java.util.Set;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 public interface CommercialKitchenEquipmentUaObjectIds {
+  UaNodeId CommercialKitchenDeviceType_HACCPValues = CommercialKitchenEquipmentUaObjectIdsInit.initCommercialKitchenDeviceType_HACCPValues();
+
   UaNodeId CommercialKitchenDeviceType_BatchInformation = CommercialKitchenEquipmentUaObjectIdsInit.initCommercialKitchenDeviceType_BatchInformation();
 
   UaNodeId CommercialKitchenDeviceType_InformationConditions = CommercialKitchenEquipmentUaObjectIdsInit.initCommercialKitchenDeviceType_InformationConditions();
 
   UaNodeId CommercialKitchenDeviceType_ErrorConditions = CommercialKitchenEquipmentUaObjectIdsInit.initCommercialKitchenDeviceType_ErrorConditions();
 
-  UaNodeId CommercialKitchenDeviceType_HACCPValues = CommercialKitchenEquipmentUaObjectIdsInit.initCommercialKitchenDeviceType_HACCPValues();
+  UaNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaObjectIdsInit.initCoffeeMachineDeviceType_Parameters();
 
   UaNodeId CoffeeMachineDeviceType_RecipeName = CommercialKitchenEquipmentUaObjectIdsInit.initCoffeeMachineDeviceType_RecipeName();
-
-  UaNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaObjectIdsInit.initCoffeeMachineDeviceType_Parameters();
 
   UaNodeId CombiSteamerDeviceType_CombiSteamer = CommercialKitchenEquipmentUaObjectIdsInit.initCombiSteamerDeviceType_CombiSteamer();
 

@@ -13,7 +13,7 @@ import java.lang.String;
 /**
  * FolderType is used to organize the Parameters and Methods from the complete set (ParameterSet, MethodSet) with regard to their application
  * <p>
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1005")
 public interface FunctionalGroupType extends FolderType {

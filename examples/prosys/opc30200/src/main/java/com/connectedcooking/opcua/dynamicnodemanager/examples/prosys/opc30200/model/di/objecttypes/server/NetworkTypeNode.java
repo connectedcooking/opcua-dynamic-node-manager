@@ -9,7 +9,7 @@ import java.lang.Override;
 /**
  * Represents the communication means for Devices that are connected to it.
  * <p>
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6247")
 public class NetworkTypeNode extends NetworkTypeNodeBase {

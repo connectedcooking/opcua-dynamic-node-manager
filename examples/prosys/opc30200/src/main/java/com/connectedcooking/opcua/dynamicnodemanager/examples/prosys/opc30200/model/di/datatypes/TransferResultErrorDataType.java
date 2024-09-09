@@ -21,12 +21,10 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15888")
 public class TransferResultErrorDataType extends FetchResultDataType {
@@ -151,10 +149,7 @@ public class TransferResultErrorDataType extends FetchResultDataType {
 
   @Override
   public Map<FieldSpecification, Object> toFieldsMap() {
-    Map<FieldSpecification,Object> data = new LinkedHashMap<>();
-    data.put(Fields.Status, this.getStatus());
-    data.put(Fields.Diagnostics, this.getDiagnostics());
-    return Collections.unmodifiableMap(data);
+    return StructureUtils.createFieldsMap(this.specification(), new Object[]{this.getStatus(),this.getDiagnostics()});
   }
 
   @Override

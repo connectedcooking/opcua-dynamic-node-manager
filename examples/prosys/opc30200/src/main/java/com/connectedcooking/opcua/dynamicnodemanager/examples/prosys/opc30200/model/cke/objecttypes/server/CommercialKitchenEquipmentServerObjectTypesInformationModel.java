@@ -6,7 +6,7 @@ import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.mo
 import com.prosysopc.ua.server.ServerCodegenModel;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 public class CommercialKitchenEquipmentServerObjectTypesInformationModel {
   public static final ServerCodegenModel MODEL;

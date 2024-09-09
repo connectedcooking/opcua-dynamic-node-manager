@@ -25,7 +25,7 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-06-17 14:43:51
+ * Generated on 2024-09-09 10:35:47
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1030")
 public abstract class CookingZoneDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements CookingZoneDeviceType {

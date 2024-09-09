@@ -6,96 +6,90 @@ import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import java.util.Set;
 
 /**
- * Generated on 2024-06-17 14:43:47
+ * Generated on 2024-09-09 10:35:45
  */
 public interface DIObjectIds {
   ExpandedNodeId TopologyElementType_Identification = DIUaIds.TopologyElementType_Identification.asExpandedNodeId();
 
-  ExpandedNodeId TopologyElementType_Lock = DIUaIds.TopologyElementType_Lock.asExpandedNodeId();
-
-  ExpandedNodeId TopologyElementType_MethodSet = DIUaIds.TopologyElementType_MethodSet.asExpandedNodeId();
-
   ExpandedNodeId TopologyElementType_ParameterSet = DIUaIds.TopologyElementType_ParameterSet.asExpandedNodeId();
+
+  ExpandedNodeId TopologyElementType_Lock = DIUaIds.TopologyElementType_Lock.asExpandedNodeId();
 
   ExpandedNodeId TopologyElementType_GroupIdentifier = DIUaIds.TopologyElementType_GroupIdentifier.asExpandedNodeId();
 
+  ExpandedNodeId TopologyElementType_MethodSet = DIUaIds.TopologyElementType_MethodSet.asExpandedNodeId();
+
   ExpandedNodeId IDeviceHealthType_DeviceHealthAlarms = DIUaIds.IDeviceHealthType_DeviceHealthAlarms.asExpandedNodeId();
 
-  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId.asExpandedNodeId();
-
-  ExpandedNodeId ISupportInfoType_DocumentationFiles = DIUaIds.ISupportInfoType_DocumentationFiles.asExpandedNodeId();
-
-  ExpandedNodeId ISupportInfoType_Documentation = DIUaIds.ISupportInfoType_Documentation.asExpandedNodeId();
-
-  ExpandedNodeId ISupportInfoType_DeviceTypeImage = DIUaIds.ISupportInfoType_DeviceTypeImage.asExpandedNodeId();
+  ExpandedNodeId ISupportInfoType_ProtocolSupport = DIUaIds.ISupportInfoType_ProtocolSupport.asExpandedNodeId();
 
   ExpandedNodeId ISupportInfoType_ImageSet = DIUaIds.ISupportInfoType_ImageSet.asExpandedNodeId();
 
-  ExpandedNodeId ISupportInfoType_ProtocolSupport = DIUaIds.ISupportInfoType_ProtocolSupport.asExpandedNodeId();
+  ExpandedNodeId ISupportInfoType_DocumentationFiles_DocumentFileId = DIUaIds.ISupportInfoType_DocumentationFiles_DocumentFileId.asExpandedNodeId();
+
+  ExpandedNodeId ISupportInfoType_Documentation = DIUaIds.ISupportInfoType_Documentation.asExpandedNodeId();
+
+  ExpandedNodeId ISupportInfoType_DocumentationFiles = DIUaIds.ISupportInfoType_DocumentationFiles.asExpandedNodeId();
+
+  ExpandedNodeId ISupportInfoType_DeviceTypeImage = DIUaIds.ISupportInfoType_DeviceTypeImage.asExpandedNodeId();
+
+  ExpandedNodeId DeviceType_CPIdentifier = DIUaIds.DeviceType_CPIdentifier.asExpandedNodeId();
+
+  ExpandedNodeId DeviceType_ProtocolSupport = DIUaIds.DeviceType_ProtocolSupport.asExpandedNodeId();
+
+  ExpandedNodeId DeviceType_CPIdentifier_NetworkAddress = DIUaIds.DeviceType_CPIdentifier_NetworkAddress.asExpandedNodeId();
+
+  ExpandedNodeId DeviceType_DeviceHealthAlarms = DIUaIds.DeviceType_DeviceHealthAlarms.asExpandedNodeId();
 
   ExpandedNodeId DeviceType_DeviceTypeImage = DIUaIds.DeviceType_DeviceTypeImage.asExpandedNodeId();
 
   ExpandedNodeId DeviceType_ImageSet = DIUaIds.DeviceType_ImageSet.asExpandedNodeId();
 
-  ExpandedNodeId DeviceType_ProtocolSupport = DIUaIds.DeviceType_ProtocolSupport.asExpandedNodeId();
-
   ExpandedNodeId DeviceType_Documentation = DIUaIds.DeviceType_Documentation.asExpandedNodeId();
-
-  ExpandedNodeId DeviceType_DeviceHealthAlarms = DIUaIds.DeviceType_DeviceHealthAlarms.asExpandedNodeId();
-
-  ExpandedNodeId DeviceType_CPIdentifier = DIUaIds.DeviceType_CPIdentifier.asExpandedNodeId();
-
-  ExpandedNodeId DeviceType_CPIdentifier_NetworkAddress = DIUaIds.DeviceType_CPIdentifier_NetworkAddress.asExpandedNodeId();
-
-  ExpandedNodeId ConfigurableObjectType_ObjectIdentifier = DIUaIds.ConfigurableObjectType_ObjectIdentifier.asExpandedNodeId();
 
   ExpandedNodeId ConfigurableObjectType_SupportedTypes = DIUaIds.ConfigurableObjectType_SupportedTypes.asExpandedNodeId();
 
+  ExpandedNodeId ConfigurableObjectType_ObjectIdentifier = DIUaIds.ConfigurableObjectType_ObjectIdentifier.asExpandedNodeId();
+
   ExpandedNodeId FunctionalGroupType_GroupIdentifier = DIUaIds.FunctionalGroupType_GroupIdentifier.asExpandedNodeId();
-
-  ExpandedNodeId NetworkType_CPIdentifier = DIUaIds.NetworkType_CPIdentifier.asExpandedNodeId();
-
-  ExpandedNodeId NetworkType_ProfileIdentifier = DIUaIds.NetworkType_ProfileIdentifier.asExpandedNodeId();
 
   ExpandedNodeId NetworkType_CPIdentifier_NetworkAddress = DIUaIds.NetworkType_CPIdentifier_NetworkAddress.asExpandedNodeId();
 
+  ExpandedNodeId NetworkType_CPIdentifier = DIUaIds.NetworkType_CPIdentifier.asExpandedNodeId();
+
   ExpandedNodeId NetworkType_Lock = DIUaIds.NetworkType_Lock.asExpandedNodeId();
 
-  ExpandedNodeId ConnectionPointType_NetworkIdentifier = DIUaIds.ConnectionPointType_NetworkIdentifier.asExpandedNodeId();
+  ExpandedNodeId NetworkType_ProfileIdentifier = DIUaIds.NetworkType_ProfileIdentifier.asExpandedNodeId();
 
   ExpandedNodeId ConnectionPointType_NetworkAddress = DIUaIds.ConnectionPointType_NetworkAddress.asExpandedNodeId();
 
-  ExpandedNodeId ConnectionPointType_ProfileIdentifier = DIUaIds.ConnectionPointType_ProfileIdentifier.asExpandedNodeId();
+  ExpandedNodeId ConnectionPointType_NetworkIdentifier = DIUaIds.ConnectionPointType_NetworkIdentifier.asExpandedNodeId();
 
-  ExpandedNodeId FetchResultDataType_DefaultJson = DIUaIds.FetchResultDataType_DefaultJson.asExpandedNodeId();
+  ExpandedNodeId ConnectionPointType_ProfileIdentifier = DIUaIds.ConnectionPointType_ProfileIdentifier.asExpandedNodeId();
 
   ExpandedNodeId FetchResultDataType_DefaultBinary = DIUaIds.FetchResultDataType_DefaultBinary.asExpandedNodeId();
 
+  ExpandedNodeId FetchResultDataType_DefaultJson = DIUaIds.FetchResultDataType_DefaultJson.asExpandedNodeId();
+
   ExpandedNodeId FetchResultDataType_DefaultXml = DIUaIds.FetchResultDataType_DefaultXml.asExpandedNodeId();
+
+  ExpandedNodeId TransferResultErrorDataType_DefaultXml = DIUaIds.TransferResultErrorDataType_DefaultXml.asExpandedNodeId();
 
   ExpandedNodeId TransferResultErrorDataType_DefaultBinary = DIUaIds.TransferResultErrorDataType_DefaultBinary.asExpandedNodeId();
 
   ExpandedNodeId TransferResultErrorDataType_DefaultJson = DIUaIds.TransferResultErrorDataType_DefaultJson.asExpandedNodeId();
 
-  ExpandedNodeId TransferResultErrorDataType_DefaultXml = DIUaIds.TransferResultErrorDataType_DefaultXml.asExpandedNodeId();
-
   ExpandedNodeId TransferResultDataDataType_DefaultXml = DIUaIds.TransferResultDataDataType_DefaultXml.asExpandedNodeId();
-
-  ExpandedNodeId TransferResultDataDataType_DefaultBinary = DIUaIds.TransferResultDataDataType_DefaultBinary.asExpandedNodeId();
 
   ExpandedNodeId TransferResultDataDataType_DefaultJson = DIUaIds.TransferResultDataDataType_DefaultJson.asExpandedNodeId();
 
-  ExpandedNodeId ParameterResultDataType_DefaultJson = DIUaIds.ParameterResultDataType_DefaultJson.asExpandedNodeId();
+  ExpandedNodeId TransferResultDataDataType_DefaultBinary = DIUaIds.TransferResultDataDataType_DefaultBinary.asExpandedNodeId();
 
-  ExpandedNodeId ParameterResultDataType_DefaultBinary = DIUaIds.ParameterResultDataType_DefaultBinary.asExpandedNodeId();
+  ExpandedNodeId ParameterResultDataType_DefaultJson = DIUaIds.ParameterResultDataType_DefaultJson.asExpandedNodeId();
 
   ExpandedNodeId ParameterResultDataType_DefaultXml = DIUaIds.ParameterResultDataType_DefaultXml.asExpandedNodeId();
 
-  ExpandedNodeId SoftwareUpdateType_Parameters = DIUaIds.SoftwareUpdateType_Parameters.asExpandedNodeId();
-
-  ExpandedNodeId SoftwareUpdateType_Loading = DIUaIds.SoftwareUpdateType_Loading.asExpandedNodeId();
-
-  ExpandedNodeId SoftwareUpdateType_Installation = DIUaIds.SoftwareUpdateType_Installation.asExpandedNodeId();
+  ExpandedNodeId ParameterResultDataType_DefaultBinary = DIUaIds.ParameterResultDataType_DefaultBinary.asExpandedNodeId();
 
   ExpandedNodeId SoftwareUpdateType_PowerCycle = DIUaIds.SoftwareUpdateType_PowerCycle.asExpandedNodeId();
 
@@ -103,115 +97,121 @@ public interface DIObjectIds {
 
   ExpandedNodeId SoftwareUpdateType_Confirmation = DIUaIds.SoftwareUpdateType_Confirmation.asExpandedNodeId();
 
+  ExpandedNodeId SoftwareUpdateType_Loading = DIUaIds.SoftwareUpdateType_Loading.asExpandedNodeId();
+
+  ExpandedNodeId SoftwareUpdateType_Parameters = DIUaIds.SoftwareUpdateType_Parameters.asExpandedNodeId();
+
+  ExpandedNodeId SoftwareUpdateType_Installation = DIUaIds.SoftwareUpdateType_Installation.asExpandedNodeId();
+
   ExpandedNodeId PackageLoadingType_FileTransfer = DIUaIds.PackageLoadingType_FileTransfer.asExpandedNodeId();
 
   ExpandedNodeId PackageLoadingType_CurrentVersion = DIUaIds.PackageLoadingType_CurrentVersion.asExpandedNodeId();
 
-  ExpandedNodeId CachedLoadingType_FallbackVersion = DIUaIds.CachedLoadingType_FallbackVersion.asExpandedNodeId();
-
   ExpandedNodeId CachedLoadingType_PendingVersion = DIUaIds.CachedLoadingType_PendingVersion.asExpandedNodeId();
+
+  ExpandedNodeId CachedLoadingType_FallbackVersion = DIUaIds.CachedLoadingType_FallbackVersion.asExpandedNodeId();
 
   ExpandedNodeId FileSystemLoadingType_FileSystem = DIUaIds.FileSystemLoadingType_FileSystem.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToIdle_Idle = DIUaIds.PrepareForUpdateStateMachineType_Idle.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle_Idle = DIUaIds.PrepareForUpdateStateMachineType_IdleToPreparing_Idle.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle_Resuming = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_Resuming.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToIdle_Preparing.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_Resuming = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_Resuming.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdate.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_IdleToPreparing_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToIdle_Preparing.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle = DIUaIds.PrepareForUpdateStateMachineType_ResumingToIdle.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToIdle_Preparing.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdate.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_Idle = DIUaIds.PrepareForUpdateStateMachineType_IdleToPreparing_Idle.asExpandedNodeId();
-
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToIdle_Idle = DIUaIds.PrepareForUpdateStateMachineType_IdleToPreparing_Idle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_IdleToPreparing_Idle = DIUaIds.PrepareForUpdateStateMachineType_Idle.asExpandedNodeId();
 
   ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToIdle = DIUaIds.PrepareForUpdateStateMachineType_PreparingToIdle.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_Resuming = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_Resuming.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_PreparedForUpdate.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle_Resuming = DIUaIds.PrepareForUpdateStateMachineType_Resuming.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_Resuming = DIUaIds.PrepareForUpdateStateMachineType_Resuming.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing.asExpandedNodeId();
+
+  ExpandedNodeId PrepareForUpdateStateMachineType_IdleToPreparing_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing.asExpandedNodeId();
 
   ExpandedNodeId PrepareForUpdateStateMachineType_IdleToPreparing = DIUaIds.PrepareForUpdateStateMachineType_IdleToPreparing.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToIdle_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToIdle_Preparing.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle = DIUaIds.PrepareForUpdateStateMachineType_ResumingToIdle.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_IdleToPreparing_Idle = DIUaIds.PrepareForUpdateStateMachineType_IdleToPreparing_Idle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate.asExpandedNodeId();
 
-  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdate.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToIdle_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_IdleToInstalling = DIUaIds.InstallationStateMachineType_IdleToInstalling.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallingToError_Installing = DIUaIds.InstallationStateMachineType_InstallingToIdle_Installing.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_Resuming = DIUaIds.PrepareForUpdateStateMachineType_Resuming.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_IdleToInstalling_Idle = DIUaIds.InstallationStateMachineType_Idle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_ResumingToIdle_Idle = DIUaIds.PrepareForUpdateStateMachineType_Idle.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_ErrorToIdle = DIUaIds.InstallationStateMachineType_ErrorToIdle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_Idle = DIUaIds.PrepareForUpdateStateMachineType_Idle.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallingToIdle = DIUaIds.InstallationStateMachineType_InstallingToIdle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_PreparedForUpdate.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_ErrorToIdle_Idle = DIUaIds.InstallationStateMachineType_Idle.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing = DIUaIds.PrepareForUpdateStateMachineType_PreparingToPreparedForUpdate_Preparing.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_Installing = DIUaIds.InstallationStateMachineType_InstallingToIdle_Installing.asExpandedNodeId();
+  ExpandedNodeId PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_PreparedForUpdate = DIUaIds.PrepareForUpdateStateMachineType_PreparedForUpdateToResuming_PreparedForUpdate.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_InstallingToIdle_Installing = DIUaIds.InstallationStateMachineType_Installing.asExpandedNodeId();
 
   ExpandedNodeId InstallationStateMachineType_InstallingToError = DIUaIds.InstallationStateMachineType_InstallingToError.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_IdleToInstalling_Installing = DIUaIds.InstallationStateMachineType_InstallingToIdle_Installing.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_InstallingToError_Error = DIUaIds.InstallationStateMachineType_ErrorToIdle_Error.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallingToError_Error = DIUaIds.InstallationStateMachineType_Error.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_InstallingToError_Installing = DIUaIds.InstallationStateMachineType_Installing.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallingToIdle_Idle = DIUaIds.InstallationStateMachineType_Idle.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_Idle = DIUaIds.InstallationStateMachineType_IdleToInstalling_Idle.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_ErrorToIdle_Error = DIUaIds.InstallationStateMachineType_Error.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_Error = DIUaIds.InstallationStateMachineType_ErrorToIdle_Error.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_Idle = DIUaIds.InstallationStateMachineType_Idle.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_ErrorToIdle = DIUaIds.InstallationStateMachineType_ErrorToIdle.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_InstallingToIdle_Installing = DIUaIds.InstallationStateMachineType_InstallingToIdle_Installing.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_ErrorToIdle_Idle = DIUaIds.InstallationStateMachineType_IdleToInstalling_Idle.asExpandedNodeId();
 
-  ExpandedNodeId InstallationStateMachineType_Error = DIUaIds.InstallationStateMachineType_Error.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_IdleToInstalling_Installing = DIUaIds.InstallationStateMachineType_Installing.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_IdleToInstalling = DIUaIds.InstallationStateMachineType_IdleToInstalling.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_InstallingToIdle_Idle = DIUaIds.InstallationStateMachineType_IdleToInstalling_Idle.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_NotWaitingForPowerCycle.asExpandedNodeId();
+  ExpandedNodeId InstallationStateMachineType_ErrorToIdle_Error = DIUaIds.InstallationStateMachineType_ErrorToIdle_Error.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_InstallingToIdle = DIUaIds.InstallationStateMachineType_InstallingToIdle.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_Installing = DIUaIds.InstallationStateMachineType_Installing.asExpandedNodeId();
+
+  ExpandedNodeId InstallationStateMachineType_IdleToInstalling_Idle = DIUaIds.InstallationStateMachineType_IdleToInstalling_Idle.asExpandedNodeId();
 
   ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle_WaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycle.asExpandedNodeId();
 
+  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle.asExpandedNodeId();
+
   ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_WaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycle.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_NotWaitingForPowerCycle.asExpandedNodeId();
+  ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_NotWaitingForPowerCycle.asExpandedNodeId();
 
   ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycle.asExpandedNodeId();
 
-  ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle_NotWaitingForPowerCycle.asExpandedNodeId();
+  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycleToWaitingForPowerCycle_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_NotWaitingForPowerCycle.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_WaitingForConfirm.asExpandedNodeId();
+  ExpandedNodeId PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_WaitingForPowerCycleToNotWaitingForPowerCycle.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_WaitingForConfirm.asExpandedNodeId();
+  ExpandedNodeId PowerCycleStateMachineType_NotWaitingForPowerCycle = DIUaIds.PowerCycleStateMachineType_NotWaitingForPowerCycle.asExpandedNodeId();
 
   ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_NotWaitingForConfirm.asExpandedNodeId();
 
   ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm_NotWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_NotWaitingForConfirm.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm.asExpandedNodeId();
-
   ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_NotWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_NotWaitingForConfirm.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm.asExpandedNodeId();
+  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_WaitingForConfirm.asExpandedNodeId();
 
-  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_WaitingForConfirm.asExpandedNodeId();
+  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_WaitingForConfirm.asExpandedNodeId();
+
+  ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_WaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm_WaitingForConfirm.asExpandedNodeId();
+
+  ExpandedNodeId ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_WaitingForConfirmToNotWaitingForConfirm.asExpandedNodeId();
+
+  ExpandedNodeId ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm = DIUaIds.ConfirmationStateMachineType_NotWaitingForConfirmToWaitingForConfirm.asExpandedNodeId();
 
   static Set<ExpandedNodeId> allObjectIdentifiers() {
     return InternalDIObjectIdsHelper.ALL_OBJECT_IDENTIFIERS;
