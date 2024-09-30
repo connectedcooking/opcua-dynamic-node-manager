@@ -656,6 +656,9 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
             if (value instanceof DynLocalizedText) {
                 return new LocalizedText(((DynLocalizedText) value).stringValue());
             }
+            if (value instanceof byte[]) {
+                return ByteString.valueOf((byte[]) value);
+            }
             return value;
         }
     }
