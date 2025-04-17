@@ -25,7 +25,7 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=213")
 public abstract class PrepareForUpdateStateMachineTypeNodeBase extends FiniteStateMachineTypeNode implements PrepareForUpdateStateMachineType {
@@ -37,7 +37,7 @@ public abstract class PrepareForUpdateStateMachineTypeNodeBase extends FiniteSta
 
   private static PrepareForUpdateStateMachineTypeResumeMethod f_resumeMethodImplementation;
 
-  protected PrepareForUpdateStateMachineTypeNodeBase(UaNode.Parameters parameters) {
+  protected PrepareForUpdateStateMachineTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

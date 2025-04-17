@@ -16,13 +16,13 @@ import com.prosysopc.ua.types.opcua.server.InstrumentDiagnosticAlarmTypeNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15143")
 public abstract class DeviceHealthDiagnosticAlarmTypeNodeBase extends InstrumentDiagnosticAlarmTypeNode implements DeviceHealthDiagnosticAlarmType {
   private static GeneratedNodeInitializer<DeviceHealthDiagnosticAlarmTypeNode> f_deviceHealthDiagnosticAlarmTypeNodeInitializer;
 
-  protected DeviceHealthDiagnosticAlarmTypeNodeBase(UaNode.Parameters parameters) {
+  protected DeviceHealthDiagnosticAlarmTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

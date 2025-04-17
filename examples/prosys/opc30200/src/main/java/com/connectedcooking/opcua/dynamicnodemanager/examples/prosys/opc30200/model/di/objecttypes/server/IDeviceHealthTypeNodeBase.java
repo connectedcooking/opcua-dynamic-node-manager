@@ -23,13 +23,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15051")
 public abstract class IDeviceHealthTypeNodeBase extends BaseInterfaceTypeNode implements IDeviceHealthType {
   private static GeneratedNodeInitializer<IDeviceHealthTypeNode> f_iDeviceHealthTypeNodeInitializer;
 
-  protected IDeviceHealthTypeNodeBase(UaNode.Parameters parameters) {
+  protected IDeviceHealthTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

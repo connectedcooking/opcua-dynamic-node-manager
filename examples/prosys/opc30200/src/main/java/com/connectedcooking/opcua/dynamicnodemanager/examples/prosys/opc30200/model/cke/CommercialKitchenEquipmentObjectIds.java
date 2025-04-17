@@ -6,20 +6,20 @@ import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 public interface CommercialKitchenEquipmentObjectIds {
-  ExpandedNodeId CommercialKitchenDeviceType_HACCPValues = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_HACCPValues.asExpandedNodeId();
+  ExpandedNodeId CommercialKitchenDeviceType_InformationConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_InformationConditions.asExpandedNodeId();
 
   ExpandedNodeId CommercialKitchenDeviceType_BatchInformation = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_BatchInformation.asExpandedNodeId();
 
-  ExpandedNodeId CommercialKitchenDeviceType_InformationConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_InformationConditions.asExpandedNodeId();
-
   ExpandedNodeId CommercialKitchenDeviceType_ErrorConditions = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_ErrorConditions.asExpandedNodeId();
 
-  ExpandedNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_Parameters.asExpandedNodeId();
+  ExpandedNodeId CommercialKitchenDeviceType_HACCPValues = CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType_HACCPValues.asExpandedNodeId();
 
   ExpandedNodeId CoffeeMachineDeviceType_RecipeName = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_RecipeName.asExpandedNodeId();
+
+  ExpandedNodeId CoffeeMachineDeviceType_Parameters = CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType_Parameters.asExpandedNodeId();
 
   ExpandedNodeId CombiSteamerDeviceType_CombiSteamer = CommercialKitchenEquipmentUaIds.CombiSteamerDeviceType_CombiSteamer.asExpandedNodeId();
 

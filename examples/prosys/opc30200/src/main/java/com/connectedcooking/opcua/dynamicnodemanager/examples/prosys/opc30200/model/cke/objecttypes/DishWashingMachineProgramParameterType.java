@@ -18,7 +18,7 @@ import java.lang.String;
 import java.util.List;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1025")
 public interface DishWashingMachineProgramParameterType extends KitchenDeviceParameterType {

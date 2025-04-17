@@ -6,7 +6,7 @@ import com.prosysopc.ua.UaNodeId;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 public interface DIUaObjectTypeIds {
   UaNodeId TopologyElementType = DIUaObjectTypeIdsInit.initTopologyElementType();

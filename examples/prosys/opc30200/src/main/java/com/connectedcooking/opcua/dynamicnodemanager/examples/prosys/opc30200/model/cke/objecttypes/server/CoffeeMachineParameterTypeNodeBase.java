@@ -31,13 +31,13 @@ import java.lang.RuntimeException;
 import java.util.List;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1022")
 public abstract class CoffeeMachineParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements CoffeeMachineParameterType {
   private static GeneratedNodeInitializer<CoffeeMachineParameterTypeNode> f_coffeeMachineParameterTypeNodeInitializer;
 
-  protected CoffeeMachineParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected CoffeeMachineParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

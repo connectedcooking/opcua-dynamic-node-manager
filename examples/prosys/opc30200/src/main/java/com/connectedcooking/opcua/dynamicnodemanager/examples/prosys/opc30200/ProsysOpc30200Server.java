@@ -35,7 +35,7 @@ public class ProsysOpc30200Server {
         server.setPort(port);
         server.setServerName("OPCUA/CKE");
         server.getSecurityModes().add(SecurityMode.NONE);
-        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD);
+        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC128RSA15);
         var appDescription = new ApplicationDescription();
         appDescription.setApplicationName(new LocalizedText("CKE Dynamic Server"));
         appDescription.setApplicationUri("urn:connectedcooking:opcua:cke");

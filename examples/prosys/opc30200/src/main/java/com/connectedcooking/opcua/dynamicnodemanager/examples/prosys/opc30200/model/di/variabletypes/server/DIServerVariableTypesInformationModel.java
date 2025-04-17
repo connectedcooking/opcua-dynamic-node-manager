@@ -6,7 +6,7 @@ import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.mo
 import com.prosysopc.ua.server.ServerCodegenModel;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 public class DIServerVariableTypesInformationModel {
   public static final ServerCodegenModel MODEL;
@@ -14,9 +14,9 @@ public class DIServerVariableTypesInformationModel {
   static {
     ServerCodegenModel.Builder b = ServerCodegenModel.builder();
     //LifetimeVariableType, nsu=http://opcfoundation.org/UA/DI/;i=468
-    b.addClass(DIUaIds.LifetimeVariableType, LifetimeVariableTypeNode::new);
+    b.addClass(DIUaIds.LifetimeVariableType, t -> new LifetimeVariableTypeNode(t));
     //UIElementType, nsu=http://opcfoundation.org/UA/DI/;i=6246
-    b.addClass(DIUaIds.UIElementType, UIElementTypeNode::new);
+    b.addClass(DIUaIds.UIElementType, t -> new UIElementTypeNode(t));
     MODEL = b.build();
   }
 }

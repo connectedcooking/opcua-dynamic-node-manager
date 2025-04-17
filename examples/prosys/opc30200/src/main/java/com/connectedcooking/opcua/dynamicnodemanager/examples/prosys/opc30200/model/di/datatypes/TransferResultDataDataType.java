@@ -4,42 +4,28 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
-import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaArrayDimensions;
 import com.prosysopc.ua.UaIds;
 import com.prosysopc.ua.UaNodeId;
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.Structure;
+import com.prosysopc.ua.stack.utils.InternalStructureUtils;
+import com.prosysopc.ua.stack.utils.MultiDimensionArrayUtils;
 import com.prosysopc.ua.typedictionary.FieldSpecification;
 import com.prosysopc.ua.typedictionary.StructureSpecification;
+import com.prosysopc.ua.typedictionary.UaDataTypeSpecification;
 import java.lang.Boolean;
 import java.lang.Class;
-import java.lang.Deprecated;
-import java.lang.IllegalArgumentException;
 import java.lang.Integer;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Map;
+import java.util.function.Supplier;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15889")
 public class TransferResultDataDataType extends FetchResultDataType {
-  @Deprecated
-  public static final ExpandedNodeId BINARY = DIUaIds.TransferResultDataDataType_DefaultBinary.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId XML = DIUaIds.TransferResultDataDataType_DefaultXml.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId JSON = DIUaIds.TransferResultDataDataType_DefaultJson.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId ID = DIUaIds.TransferResultDataDataType.asExpandedNodeId();
-
   public static final StructureSpecification SPECIFICATION;
 
   static {
@@ -51,362 +37,223 @@ public class TransferResultDataDataType extends FetchResultDataType {
     b.setXmlEncodeId(DIUaIds.TransferResultDataDataType_DefaultXml);
     b.setJsonEncodeId(DIUaIds.TransferResultDataDataType_DefaultJson);
     b.setTypeId(DIUaIds.TransferResultDataDataType);
-    b.addSuperTypeId(DIUaIds.FetchResultDataType);
     b.addSuperTypeId(UaIds.Structure);
+    b.addSuperTypeId(DIUaIds.FetchResultDataType);
     b.setName("TransferResultDataDataType");
     b.setJavaClass(TransferResultDataDataType.class);
+    b.setAbstract(false);
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
-    b.setBuilderSupplier(Builder::new);
+    b.setBuilderSupplier(t -> new Builder(t, () -> new TransferResultDataDataType(t)));
     SPECIFICATION = b.build();
     InternalUaDataTypeSpecificationMappings.put(TransferResultDataDataType.class, SPECIFICATION);
   }
 
-  private Integer f_sequenceNumber;
-
-  private Boolean f_endOfResults;
-
-  private ParameterResultDataType[] f_parameterDefs;
-
   public TransferResultDataDataType() {
+    super((UaDataTypeSpecification)SPECIFICATION);
+  }
+
+  protected TransferResultDataDataType(UaDataTypeSpecification specification) {
+    super(specification);
   }
 
   public TransferResultDataDataType(Integer f_sequenceNumber, Boolean f_endOfResults,
       ParameterResultDataType[] f_parameterDefs) {
-    this.f_sequenceNumber = f_sequenceNumber;
-    this.f_endOfResults = f_endOfResults;
-    this.f_parameterDefs = f_parameterDefs;
+    super((UaDataTypeSpecification)SPECIFICATION);
+    this.setSequenceNumber(f_sequenceNumber);
+    this.setEndOfResults(f_endOfResults);
+    this.setParameterDefs(f_parameterDefs);
   }
 
   public Integer getSequenceNumber() {
-    return this.f_sequenceNumber;
+    return this.indexGet(0);
   }
 
-  public void setSequenceNumber(Integer f_sequenceNumber) {
-    this.f_sequenceNumber=f_sequenceNumber;
+  public void setSequenceNumber(Integer value) {
+    this.indexSet(value, 0);
   }
 
   public Boolean getEndOfResults() {
-    return this.f_endOfResults;
+    return this.indexGet(1);
   }
 
-  public void setEndOfResults(Boolean f_endOfResults) {
-    this.f_endOfResults=f_endOfResults;
+  public void setEndOfResults(Boolean value) {
+    this.indexSet(value, 1);
   }
 
   public ParameterResultDataType[] getParameterDefs() {
-    return this.f_parameterDefs;
+    return this.indexGet(2);
   }
 
-  public void setParameterDefs(ParameterResultDataType[] f_parameterDefs) {
-    this.f_parameterDefs=f_parameterDefs;
+  public void setParameterDefs(ParameterResultDataType[] value) {
+    this.indexSet(value, 2);
   }
 
   @Override
   public TransferResultDataDataType clone() {
-    TransferResultDataDataType result = (TransferResultDataDataType) super.clone();
-    result.f_sequenceNumber = StructureUtils.clone(this.f_sequenceNumber);
-    result.f_endOfResults = StructureUtils.clone(this.f_endOfResults);
-    result.f_parameterDefs = StructureUtils.clone(this.f_parameterDefs);
-    return result;
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) return true;
-    if (obj == null) return false;
-    if (getClass() != obj.getClass()) return false;
-    TransferResultDataDataType other = (TransferResultDataDataType) obj;
-    if (!StructureUtils.scalarOrArrayEquals(getSequenceNumber(), other.getSequenceNumber())) {
-      return false;
-    }
-    if (!StructureUtils.scalarOrArrayEquals(getEndOfResults(), other.getEndOfResults())) {
-      return false;
-    }
-    if (!StructureUtils.scalarOrArrayEquals(getParameterDefs(), other.getParameterDefs())) {
-      return false;
-    }
-    return true;
-  }
-
-  @Override
-  public int hashCode() {
-    return StructureUtils.hashCode(this.getSequenceNumber(), this.getEndOfResults(), this.getParameterDefs());
-  }
-
-  @Override
-  public void clear() {
-    super.clear();
-    this.f_sequenceNumber = null;
-    this.f_endOfResults = null;
-    this.f_parameterDefs = null;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getBinaryEncodeId() {
-    return BINARY;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getXmlEncodeId() {
-    return XML;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getJsonEncodeId() {
-    return JSON;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getTypeId() {
-    return ID;
-  }
-
-  @Override
-  public Map<FieldSpecification, Object> toFieldsMap() {
-    return StructureUtils.createFieldsMap(this.specification(), new Object[]{this.getSequenceNumber(),this.getEndOfResults(),this.getParameterDefs()});
-  }
-
-  @Override
-  public StructureSpecification specification() {
-    return SPECIFICATION;
+    return (TransferResultDataDataType) super.clone();
   }
 
   public static Builder builder() {
-    return new Builder();
-  }
-
-  @Override
-  public Object get(FieldSpecification field) {
-    if (Fields.SequenceNumber.equals(field)) {
-      return getSequenceNumber();
-    }
-    if (Fields.EndOfResults.equals(field)) {
-      return getEndOfResults();
-    }
-    if (Fields.ParameterDefs.equals(field)) {
-      return getParameterDefs();
-    }
-    throw new IllegalArgumentException("Unknown field: " + field);
-  }
-
-  @Override
-  public void set(FieldSpecification field, Object value) {
-    if (Fields.SequenceNumber.equals(field)) {
-      setSequenceNumber((Integer) value);
-      return;
-    }
-    if (Fields.EndOfResults.equals(field)) {
-      setEndOfResults((Boolean) value);
-      return;
-    }
-    if (Fields.ParameterDefs.equals(field)) {
-      setParameterDefs((ParameterResultDataType[]) value);
-      return;
-    }
-    throw new IllegalArgumentException("Unknown field: " + field);
+    return new Builder(SPECIFICATION, () -> new TransferResultDataDataType());
   }
 
   @Override
   public Builder toBuilder() {
-    Builder b = TransferResultDataDataType.builder();
-    b.setSequenceNumber(StructureUtils.clone(getSequenceNumber()));
-    b.setEndOfResults(StructureUtils.clone(getEndOfResults()));
-    b.setParameterDefs(StructureUtils.clone(getParameterDefs()));
-    return b;
+    return (Builder) super.toBuilder();
   }
 
   public enum Fields implements FieldSpecification {
-    SequenceNumber("SequenceNumber", Integer.class, false, UaIds.Int32, -1, null, false),
+    SequenceNumber(0, "SequenceNumber", Integer.class, false, UaIds.Int32, -1, null, false, 0),
 
-    EndOfResults("EndOfResults", Boolean.class, false, UaIds.Boolean, -1, null, false),
+    EndOfResults(1, "EndOfResults", Boolean.class, false, UaIds.Boolean, -1, null, false, 0),
 
-    ParameterDefs("ParameterDefs", ParameterResultDataType[].class, false, DIUaIds.ParameterResultDataType, 1, UaArrayDimensions.valueOf(0), false);
+    ParameterDefs(2, "ParameterDefs", ParameterResultDataType[].class, false, DIUaIds.ParameterResultDataType, 1, UaArrayDimensions.valueOf(0), false, 1);
 
-    private final FieldSpecification delegate;
+    private final int fieldIndex;
 
-    Fields(String name, Class<?> javaClass, boolean isOptional, UaNodeId dataTypeId, int valueRank,
-        UaArrayDimensions arrayDimensions, boolean allowSubTypes) {
-      FieldSpecification.Builder b = FieldSpecification.builder();
-      b.setName(name);
-      b.setJavaClass(javaClass);
-      b.setIsOptional(isOptional);
-      b.setDataTypeId(dataTypeId);
-      b.setValueRank(valueRank);
-      b.setArrayDimensions(arrayDimensions);
-      b.setAllowSubTypes(allowSubTypes);
-      this.delegate = b.build();
-    }
+    private final String name;
 
-    /**
-     * @deprecated use 'this' instead, as FieldSpecification as an interface is now implemented directly */
-    @Deprecated
-    public FieldSpecification getSpecification() {
-      return this;
+    private final Class<?> javaClass;
+
+    private final boolean isOptional;
+
+    private final UaNodeId dataTypeId;
+
+    private final int valueRank;
+
+    private final UaArrayDimensions arrayDimensions;
+
+    private final boolean allowSubTypes;
+
+    private final int javaClassDimensions;
+
+    private final Class<?> compositeClass;
+
+    private final UaNodeId encodeTypeId;
+
+    Fields(int fieldIndex, String name, Class<?> javaClass, boolean isOptional, UaNodeId dataTypeId,
+        int valueRank, UaArrayDimensions arrayDimensions, boolean allowSubTypes,
+        int javaClassDimensions) {
+      this.fieldIndex = fieldIndex;
+      this.name = name;
+      this.javaClass = javaClass;
+      this.isOptional = isOptional;
+      this.dataTypeId = dataTypeId;
+      this.valueRank = valueRank;
+      this.arrayDimensions = arrayDimensions;
+      this.allowSubTypes = allowSubTypes;
+      this.javaClassDimensions = javaClassDimensions;
+      this.compositeClass = MultiDimensionArrayUtils.getComponentType(javaClass);
+      this.encodeTypeId = InternalStructureUtils.encodeTypeFor(this.compositeClass, allowSubTypes, dataTypeId);
     }
 
     @Override
     public UaArrayDimensions getArrayDimensions() {
-      return delegate.getArrayDimensions();
+      return arrayDimensions;
+    }
+
+    @Override
+    public Class<?> getCompositeClass() {
+      return compositeClass;
     }
 
     @Override
     public UaNodeId getDataTypeId() {
-      return delegate.getDataTypeId();
+      return dataTypeId;
     }
 
     @Override
     public String getDescription() {
-      return delegate.getDescription();
+      return null;
+    }
+
+    @Override
+    public UaNodeId getEncodeTypeId() {
+      return encodeTypeId;
+    }
+
+    @Override
+    public int getFieldIndex() {
+      return fieldIndex;
     }
 
     @Override
     public Class<?> getJavaClass() {
-      return delegate.getJavaClass();
+      return javaClass;
+    }
+
+    @Override
+    public int getJavaClassDimensions() {
+      return javaClassDimensions;
     }
 
     @Override
     public int getMaxStringLength() {
-      return delegate.getMaxStringLength();
+      return 0;
     }
 
     @Override
     public String getName() {
-      return delegate.getName();
+      return name;
     }
 
     @Override
     public int getValueRank() {
-      return delegate.getValueRank();
+      return valueRank;
     }
 
     @Override
     public boolean isAllowSubTypes() {
-      return delegate.isAllowSubTypes();
+      return allowSubTypes;
     }
 
     @Override
     public boolean isArray() {
-      return delegate.isArray();
+      return javaClassDimensions != 0;
     }
 
     @Override
     public boolean isOptional() {
-      return delegate.isOptional();
+      return isOptional;
     }
   }
 
   public static class Builder extends FetchResultDataType.Builder {
-    private Integer f_sequenceNumber;
-
-    private Boolean f_endOfResults;
-
-    private ParameterResultDataType[] f_parameterDefs;
-
-    protected Builder() {
+    protected Builder(UaDataTypeSpecification specification,
+        Supplier<? extends Structure> emptyInstanceSupplier) {
+      super(specification, emptyInstanceSupplier);
     }
 
     public Integer getSequenceNumber() {
-      return this.f_sequenceNumber;
+      return this.indexGet(0);
     }
 
-    public Builder setSequenceNumber(Integer f_sequenceNumber) {
-      this.f_sequenceNumber=f_sequenceNumber;
+    public Builder setSequenceNumber(Integer value) {
+      this.indexSet(value, 0);
       return this;
     }
 
     public Boolean getEndOfResults() {
-      return this.f_endOfResults;
+      return this.indexGet(1);
     }
 
-    public Builder setEndOfResults(Boolean f_endOfResults) {
-      this.f_endOfResults=f_endOfResults;
+    public Builder setEndOfResults(Boolean value) {
+      this.indexSet(value, 1);
       return this;
     }
 
     public ParameterResultDataType[] getParameterDefs() {
-      return this.f_parameterDefs;
+      return this.indexGet(2);
     }
 
-    public Builder setParameterDefs(ParameterResultDataType[] f_parameterDefs) {
-      this.f_parameterDefs=f_parameterDefs;
+    public Builder setParameterDefs(ParameterResultDataType[] value) {
+      this.indexSet(value, 2);
       return this;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-      if (this == obj) return true;
-      if (obj == null) return false;
-      if (getClass() != obj.getClass()) return false;
-      Builder other = (Builder) obj;
-      if (!StructureUtils.scalarOrArrayEquals(getSequenceNumber(), other.getSequenceNumber())) {
-        return false;
-      }
-      if (!StructureUtils.scalarOrArrayEquals(getEndOfResults(), other.getEndOfResults())) {
-        return false;
-      }
-      if (!StructureUtils.scalarOrArrayEquals(getParameterDefs(), other.getParameterDefs())) {
-        return false;
-      }
-      return true;
-    }
-
-    @Override
-    public int hashCode() {
-      return StructureUtils.hashCode(this.getSequenceNumber(), this.getEndOfResults(), this.getParameterDefs());
-    }
-
-    @Override
-    public Object get(FieldSpecification field) {
-      if (Fields.SequenceNumber.equals(field)) {
-        return getSequenceNumber();
-      }
-      if (Fields.EndOfResults.equals(field)) {
-        return getEndOfResults();
-      }
-      if (Fields.ParameterDefs.equals(field)) {
-        return getParameterDefs();
-      }
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder set(FieldSpecification field, Object value) {
-      if (Fields.SequenceNumber.equals(field)) {
-        setSequenceNumber((Integer) value);
-        return this;
-      }
-      if (Fields.EndOfResults.equals(field)) {
-        setEndOfResults((Boolean) value);
-        return this;
-      }
-      if (Fields.ParameterDefs.equals(field)) {
-        setParameterDefs((ParameterResultDataType[]) value);
-        return this;
-      }
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder clear() {
-      super.clear();
-      this.f_sequenceNumber = null;
-      this.f_endOfResults = null;
-      this.f_parameterDefs = null;
-      return this;
-    }
-
-    @Override
-    public StructureSpecification specification() {
-      return TransferResultDataDataType.SPECIFICATION;
     }
 
     @Override
     public TransferResultDataDataType build() {
-      return new TransferResultDataDataType(f_sequenceNumber, f_endOfResults, f_parameterDefs);
+      return (TransferResultDataDataType)super.build();
     }
   }
 }

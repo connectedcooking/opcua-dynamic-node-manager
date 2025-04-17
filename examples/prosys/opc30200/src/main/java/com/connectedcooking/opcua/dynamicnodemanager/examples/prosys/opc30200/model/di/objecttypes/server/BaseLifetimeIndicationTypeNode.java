@@ -9,11 +9,11 @@ import java.lang.Override;
 /**
  * Base indication type not further defining a semantic
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=473")
 public class BaseLifetimeIndicationTypeNode extends BaseLifetimeIndicationTypeNodeBase {
-  protected BaseLifetimeIndicationTypeNode(UaNode.Parameters parameters) {
+  protected BaseLifetimeIndicationTypeNode(Parameters parameters) {
     super(parameters);
   }
 

@@ -10,7 +10,7 @@ import java.lang.String;
 /**
  * Represents the communication means for Devices that are connected to it.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6247")
 public interface NetworkType extends BaseObjectType {

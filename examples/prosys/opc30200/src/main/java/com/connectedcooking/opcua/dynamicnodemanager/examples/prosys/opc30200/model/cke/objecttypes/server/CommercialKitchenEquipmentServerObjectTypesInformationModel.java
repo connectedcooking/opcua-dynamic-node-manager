@@ -6,7 +6,7 @@ import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.mo
 import com.prosysopc.ua.server.ServerCodegenModel;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 public class CommercialKitchenEquipmentServerObjectTypesInformationModel {
   public static final ServerCodegenModel MODEL;
@@ -14,75 +14,75 @@ public class CommercialKitchenEquipmentServerObjectTypesInformationModel {
   static {
     ServerCodegenModel.Builder b = ServerCodegenModel.builder();
     //BatchInformationType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1002
-    b.addClass(CommercialKitchenEquipmentUaIds.BatchInformationType, BatchInformationTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.BatchInformationType, t -> new BatchInformationTypeNode(t));
     //KitchenDeviceHAConfigType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1003
-    b.addClass(CommercialKitchenEquipmentUaIds.KitchenDeviceHAConfigType, KitchenDeviceHAConfigTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.KitchenDeviceHAConfigType, t -> new KitchenDeviceHAConfigTypeNode(t));
     //KitchenDeviceParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1004
-    b.addClass(CommercialKitchenEquipmentUaIds.KitchenDeviceParameterType, KitchenDeviceParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.KitchenDeviceParameterType, t -> new KitchenDeviceParameterTypeNode(t));
     //ChamberType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1012
-    b.addClass(CommercialKitchenEquipmentUaIds.ChamberType, ChamberTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.ChamberType, t -> new ChamberTypeNode(t));
     //CoffeeMachineParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1022
-    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineParameterType, CoffeeMachineParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineParameterType, t -> new CoffeeMachineParameterTypeNode(t));
     //CoffeeMachineRecipeParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1023
-    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineRecipeParameterType, CoffeeMachineRecipeParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineRecipeParameterType, t -> new CoffeeMachineRecipeParameterTypeNode(t));
     //CombiSteamerParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1010
-    b.addClass(CommercialKitchenEquipmentUaIds.CombiSteamerParameterType, CombiSteamerParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CombiSteamerParameterType, t -> new CombiSteamerParameterTypeNode(t));
     //CookingKettleParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1016
-    b.addClass(CommercialKitchenEquipmentUaIds.CookingKettleParameterType, CookingKettleParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CookingKettleParameterType, t -> new CookingKettleParameterTypeNode(t));
     //CookingZoneParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1029
-    b.addClass(CommercialKitchenEquipmentUaIds.CookingZoneParameterType, CookingZoneParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CookingZoneParameterType, t -> new CookingZoneParameterTypeNode(t));
     //DishWashingMachineProgramParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1025
-    b.addClass(CommercialKitchenEquipmentUaIds.DishWashingMachineProgramParameterType, DishWashingMachineProgramParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.DishWashingMachineProgramParameterType, t -> new DishWashingMachineProgramParameterTypeNode(t));
     //FryerParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1006
-    b.addClass(CommercialKitchenEquipmentUaIds.FryerParameterType, FryerParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryerParameterType, t -> new FryerParameterTypeNode(t));
     //FryingAndGrillingParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1031
-    b.addClass(CommercialKitchenEquipmentUaIds.FryingAndGrillingParameterType, FryingAndGrillingParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryingAndGrillingParameterType, t -> new FryingAndGrillingParameterTypeNode(t));
     //FryingPanParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1008
-    b.addClass(CommercialKitchenEquipmentUaIds.FryingPanParameterType, FryingPanParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryingPanParameterType, t -> new FryingPanParameterTypeNode(t));
     //IceMachineParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1035
-    b.addClass(CommercialKitchenEquipmentUaIds.IceMachineParameterType, IceMachineParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.IceMachineParameterType, t -> new IceMachineParameterTypeNode(t));
     //MicrowaveCombiOvenParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1033
-    b.addClass(CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenParameterType, MicrowaveCombiOvenParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenParameterType, t -> new MicrowaveCombiOvenParameterTypeNode(t));
     //MultiFunctionPanParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1018
-    b.addClass(CommercialKitchenEquipmentUaIds.MultiFunctionPanParameterType, MultiFunctionPanParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.MultiFunctionPanParameterType, t -> new MultiFunctionPanParameterTypeNode(t));
     //PastaCookerParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1020
-    b.addClass(CommercialKitchenEquipmentUaIds.PastaCookerParameterType, PastaCookerParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.PastaCookerParameterType, t -> new PastaCookerParameterTypeNode(t));
     //PressureCookingKettleParameterType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1014
-    b.addClass(CommercialKitchenEquipmentUaIds.PressureCookingKettleParameterType, PressureCookingKettleParameterTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.PressureCookingKettleParameterType, t -> new PressureCookingKettleParameterTypeNode(t));
     //TrayType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1027
-    b.addClass(CommercialKitchenEquipmentUaIds.TrayType, TrayTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.TrayType, t -> new TrayTypeNode(t));
     //CommercialKitchenDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1005
-    b.addClass(CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType, CommercialKitchenDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CommercialKitchenDeviceType, t -> new CommercialKitchenDeviceTypeNode(t));
     //CoffeeMachineDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1024
-    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType, CoffeeMachineDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CoffeeMachineDeviceType, t -> new CoffeeMachineDeviceTypeNode(t));
     //CombiSteamerDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1011
-    b.addClass(CommercialKitchenEquipmentUaIds.CombiSteamerDeviceType, CombiSteamerDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CombiSteamerDeviceType, t -> new CombiSteamerDeviceTypeNode(t));
     //CookingKettleDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1017
-    b.addClass(CommercialKitchenEquipmentUaIds.CookingKettleDeviceType, CookingKettleDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CookingKettleDeviceType, t -> new CookingKettleDeviceTypeNode(t));
     //CookingZoneDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1030
-    b.addClass(CommercialKitchenEquipmentUaIds.CookingZoneDeviceType, CookingZoneDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.CookingZoneDeviceType, t -> new CookingZoneDeviceTypeNode(t));
     //DishWashingMachineDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1026
-    b.addClass(CommercialKitchenEquipmentUaIds.DishWashingMachineDeviceType, DishWashingMachineDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.DishWashingMachineDeviceType, t -> new DishWashingMachineDeviceTypeNode(t));
     //FryerDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1007
-    b.addClass(CommercialKitchenEquipmentUaIds.FryerDeviceType, FryerDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryerDeviceType, t -> new FryerDeviceTypeNode(t));
     //FryingAndGrillingDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1032
-    b.addClass(CommercialKitchenEquipmentUaIds.FryingAndGrillingDeviceType, FryingAndGrillingDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryingAndGrillingDeviceType, t -> new FryingAndGrillingDeviceTypeNode(t));
     //FryingPanDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1009
-    b.addClass(CommercialKitchenEquipmentUaIds.FryingPanDeviceType, FryingPanDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.FryingPanDeviceType, t -> new FryingPanDeviceTypeNode(t));
     //IceMachineDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1036
-    b.addClass(CommercialKitchenEquipmentUaIds.IceMachineDeviceType, IceMachineDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.IceMachineDeviceType, t -> new IceMachineDeviceTypeNode(t));
     //MicrowaveCombiOvenDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1034
-    b.addClass(CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenDeviceType, MicrowaveCombiOvenDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.MicrowaveCombiOvenDeviceType, t -> new MicrowaveCombiOvenDeviceTypeNode(t));
     //MultiFunctionPanDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1019
-    b.addClass(CommercialKitchenEquipmentUaIds.MultiFunctionPanDeviceType, MultiFunctionPanDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.MultiFunctionPanDeviceType, t -> new MultiFunctionPanDeviceTypeNode(t));
     //OvenDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1013
-    b.addClass(CommercialKitchenEquipmentUaIds.OvenDeviceType, OvenDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.OvenDeviceType, t -> new OvenDeviceTypeNode(t));
     //PastaCookerDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1021
-    b.addClass(CommercialKitchenEquipmentUaIds.PastaCookerDeviceType, PastaCookerDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.PastaCookerDeviceType, t -> new PastaCookerDeviceTypeNode(t));
     //PressureCookingKettleDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1015
-    b.addClass(CommercialKitchenEquipmentUaIds.PressureCookingKettleDeviceType, PressureCookingKettleDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.PressureCookingKettleDeviceType, t -> new PressureCookingKettleDeviceTypeNode(t));
     //ServeryCounterDeviceType, nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1028
-    b.addClass(CommercialKitchenEquipmentUaIds.ServeryCounterDeviceType, ServeryCounterDeviceTypeNode::new);
+    b.addClass(CommercialKitchenEquipmentUaIds.ServeryCounterDeviceType, t -> new ServeryCounterDeviceTypeNode(t));
     MODEL = b.build();
   }
 }

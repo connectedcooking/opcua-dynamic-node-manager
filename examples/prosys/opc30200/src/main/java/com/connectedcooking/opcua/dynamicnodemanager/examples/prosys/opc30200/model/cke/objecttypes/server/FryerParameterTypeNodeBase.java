@@ -28,13 +28,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1006")
 public abstract class FryerParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements FryerParameterType {
   private static GeneratedNodeInitializer<FryerParameterTypeNode> f_fryerParameterTypeNodeInitializer;
 
-  protected FryerParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected FryerParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

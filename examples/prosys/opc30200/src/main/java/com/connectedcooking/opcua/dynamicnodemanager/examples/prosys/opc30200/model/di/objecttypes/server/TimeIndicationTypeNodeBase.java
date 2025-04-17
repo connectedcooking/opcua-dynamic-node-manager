@@ -17,13 +17,13 @@ import java.lang.Override;
 /**
  * Indicates the time the entity has been in use or can still be used
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=474")
 public abstract class TimeIndicationTypeNodeBase extends BaseLifetimeIndicationTypeNode implements TimeIndicationType {
   private static GeneratedNodeInitializer<TimeIndicationTypeNode> f_timeIndicationTypeNodeInitializer;
 
-  protected TimeIndicationTypeNodeBase(UaNode.Parameters parameters) {
+  protected TimeIndicationTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

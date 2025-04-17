@@ -7,11 +7,11 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1029")
 public class CookingZoneParameterTypeNode extends CookingZoneParameterTypeNodeBase {
-  protected CookingZoneParameterTypeNode(UaNode.Parameters parameters) {
+  protected CookingZoneParameterTypeNode(Parameters parameters) {
     super(parameters);
   }
 

@@ -6,7 +6,7 @@ import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.types.opcua.FiniteStateMachineType;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=285")
 public interface PowerCycleStateMachineType extends FiniteStateMachineType {

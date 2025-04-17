@@ -9,11 +9,11 @@ import java.lang.Override;
 /**
  * Indicates the abraded diameter, for example of a drill.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=478")
 public class DiameterIndicationTypeNode extends DiameterIndicationTypeNodeBase {
-  protected DiameterIndicationTypeNode(UaNode.Parameters parameters) {
+  protected DiameterIndicationTypeNode(Parameters parameters) {
     super(parameters);
   }
 

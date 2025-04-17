@@ -26,13 +26,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1020")
 public abstract class PastaCookerParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements PastaCookerParameterType {
   private static GeneratedNodeInitializer<PastaCookerParameterTypeNode> f_pastaCookerParameterTypeNodeInitializer;
 
-  protected PastaCookerParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected PastaCookerParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 class InternalCommercialKitchenEquipmentUaDataTypeIdsHelper {
   public static final Set<UaNodeId> ALL_DATATYPE_IDENTIFIERS;

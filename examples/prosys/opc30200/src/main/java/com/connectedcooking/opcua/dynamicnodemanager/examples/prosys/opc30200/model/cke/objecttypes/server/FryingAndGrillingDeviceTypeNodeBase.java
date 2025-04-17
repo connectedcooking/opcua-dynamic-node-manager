@@ -21,13 +21,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1032")
 public abstract class FryingAndGrillingDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements FryingAndGrillingDeviceType {
   private static GeneratedNodeInitializer<FryingAndGrillingDeviceTypeNode> f_fryingAndGrillingDeviceTypeNodeInitializer;
 
-  protected FryingAndGrillingDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected FryingAndGrillingDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

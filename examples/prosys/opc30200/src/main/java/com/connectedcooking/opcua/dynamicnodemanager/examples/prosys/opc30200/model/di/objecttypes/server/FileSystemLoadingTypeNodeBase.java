@@ -21,7 +21,7 @@ import com.prosysopc.ua.types.opcua.server.FileDirectoryTypeNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=192")
 public abstract class FileSystemLoadingTypeNodeBase extends SoftwareLoadingTypeNode implements FileSystemLoadingType {
@@ -31,7 +31,7 @@ public abstract class FileSystemLoadingTypeNodeBase extends SoftwareLoadingTypeN
 
   private static FileSystemLoadingTypeValidateFilesMethod f_validateFilesMethodImplementation;
 
-  protected FileSystemLoadingTypeNodeBase(UaNode.Parameters parameters) {
+  protected FileSystemLoadingTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 
@@ -115,16 +115,16 @@ public abstract class FileSystemLoadingTypeNodeBase extends SoftwareLoadingTypeN
     return (UaMethod) getComponent(browseName);
   }
 
-  protected abstract FileSystemLoadingType.ValidateFilesMethodOutputs onValidateFiles(ServiceContext serviceContext,
+  protected abstract ValidateFilesMethodOutputs onValidateFiles(ServiceContext serviceContext,
       NodeId[] f_nodeIds) throws StatusException;
 
   @Override
-  public FileSystemLoadingType.ValidateFilesMethodOutputs validateFiles(NodeId[] f_nodeIds) throws
+  public ValidateFilesMethodOutputs validateFiles(NodeId[] f_nodeIds) throws
       StatusException {
     return doValidateFiles(ServiceContext.INTERNAL_OPERATION_CONTEXT, f_nodeIds);
   }
 
-  private FileSystemLoadingType.ValidateFilesMethodOutputs doValidateFiles(ServiceContext serviceContext,
+  private ValidateFilesMethodOutputs doValidateFiles(ServiceContext serviceContext,
       NodeId[] f_nodeIds) throws StatusException {
     FileSystemLoadingTypeValidateFilesMethod impl = getValidateFilesMethodImplementation();
     if(impl != null) {

@@ -19,13 +19,13 @@ import java.lang.Override;
 /**
  * Represents the interface (interface card) of a Device to a Network.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6308")
 public abstract class ConnectionPointTypeNodeBase extends TopologyElementTypeNode implements ConnectionPointType {
   private static GeneratedNodeInitializer<ConnectionPointTypeNode> f_connectionPointTypeNodeInitializer;
 
-  protected ConnectionPointTypeNodeBase(UaNode.Parameters parameters) {
+  protected ConnectionPointTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

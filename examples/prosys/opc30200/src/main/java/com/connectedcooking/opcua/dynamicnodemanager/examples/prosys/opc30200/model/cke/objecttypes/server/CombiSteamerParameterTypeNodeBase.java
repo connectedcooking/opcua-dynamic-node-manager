@@ -31,13 +31,13 @@ import java.lang.RuntimeException;
 import java.util.List;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1010")
 public abstract class CombiSteamerParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements CombiSteamerParameterType {
   private static GeneratedNodeInitializer<CombiSteamerParameterTypeNode> f_combiSteamerParameterTypeNodeInitializer;
 
-  protected CombiSteamerParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected CombiSteamerParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

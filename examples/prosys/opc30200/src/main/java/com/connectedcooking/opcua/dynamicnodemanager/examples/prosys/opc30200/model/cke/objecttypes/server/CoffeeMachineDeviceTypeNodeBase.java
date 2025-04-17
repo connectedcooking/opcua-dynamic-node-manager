@@ -17,13 +17,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1024")
 public abstract class CoffeeMachineDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements CoffeeMachineDeviceType {
   private static GeneratedNodeInitializer<CoffeeMachineDeviceTypeNode> f_coffeeMachineDeviceTypeNodeInitializer;
 
-  protected CoffeeMachineDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected CoffeeMachineDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

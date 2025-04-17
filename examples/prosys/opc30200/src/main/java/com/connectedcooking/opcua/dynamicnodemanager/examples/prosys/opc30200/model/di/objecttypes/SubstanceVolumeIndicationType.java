@@ -7,7 +7,7 @@ import com.prosysopc.ua.TypeDefinitionId;
 /**
  * Indicates the volume of a substance, for example of a liquid.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=479")
 public interface SubstanceVolumeIndicationType extends BaseLifetimeIndicationType {

@@ -32,13 +32,13 @@ import java.lang.String;
 import java.util.List;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1025")
 public abstract class DishWashingMachineProgramParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements DishWashingMachineProgramParameterType {
   private static GeneratedNodeInitializer<DishWashingMachineProgramParameterTypeNode> f_dishWashingMachineProgramParameterTypeNodeInitializer;
 
-  protected DishWashingMachineProgramParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected DishWashingMachineProgramParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

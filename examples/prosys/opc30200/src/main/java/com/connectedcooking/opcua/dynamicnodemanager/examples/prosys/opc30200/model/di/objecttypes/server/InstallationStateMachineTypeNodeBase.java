@@ -28,7 +28,7 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=249")
 public abstract class InstallationStateMachineTypeNodeBase extends FiniteStateMachineTypeNode implements InstallationStateMachineType {
@@ -40,7 +40,7 @@ public abstract class InstallationStateMachineTypeNodeBase extends FiniteStateMa
 
   private static InstallationStateMachineTypeResumeMethod f_resumeMethodImplementation;
 
-  protected InstallationStateMachineTypeNodeBase(UaNode.Parameters parameters) {
+  protected InstallationStateMachineTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -24,13 +24,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15048")
 public abstract class ITagNameplateTypeNodeBase extends BaseInterfaceTypeNode implements ITagNameplateType {
   private static GeneratedNodeInitializer<ITagNameplateTypeNode> f_iTagNameplateTypeNodeInitializer;
 
-  protected ITagNameplateTypeNodeBase(UaNode.Parameters parameters) {
+  protected ITagNameplateTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -27,13 +27,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=212")
 public abstract class SoftwareVersionTypeNodeBase extends BaseObjectTypeNode implements SoftwareVersionType {
   private static GeneratedNodeInitializer<SoftwareVersionTypeNode> f_softwareVersionTypeNodeInitializer;
 
-  protected SoftwareVersionTypeNodeBase(UaNode.Parameters parameters) {
+  protected SoftwareVersionTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

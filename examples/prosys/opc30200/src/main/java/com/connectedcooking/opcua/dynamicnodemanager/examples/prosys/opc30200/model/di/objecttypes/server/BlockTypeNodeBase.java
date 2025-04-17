@@ -25,13 +25,13 @@ import java.lang.RuntimeException;
 /**
  * Adds the concept of Blocks needed for block-oriented FieldDevices
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1003")
 public abstract class BlockTypeNodeBase extends TopologyElementTypeNode implements BlockType {
   private static GeneratedNodeInitializer<BlockTypeNode> f_blockTypeNodeInitializer;
 
-  protected BlockTypeNodeBase(UaNode.Parameters parameters) {
+  protected BlockTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

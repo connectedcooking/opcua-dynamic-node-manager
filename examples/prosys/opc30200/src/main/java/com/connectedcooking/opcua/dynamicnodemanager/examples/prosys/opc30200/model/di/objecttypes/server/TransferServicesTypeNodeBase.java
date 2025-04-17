@@ -22,7 +22,7 @@ import java.lang.Integer;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6526")
 public abstract class TransferServicesTypeNodeBase extends BaseObjectTypeNode implements TransferServicesType {
@@ -34,7 +34,7 @@ public abstract class TransferServicesTypeNodeBase extends BaseObjectTypeNode im
 
   private static TransferServicesTypeFetchTransferResultDataMethod f_fetchTransferResultDataMethodImplementation;
 
-  protected TransferServicesTypeNodeBase(UaNode.Parameters parameters) {
+  protected TransferServicesTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 
@@ -80,16 +80,16 @@ public abstract class TransferServicesTypeNodeBase extends BaseObjectTypeNode im
     return (UaMethod) getComponent(browseName);
   }
 
-  protected abstract TransferServicesType.TransferToDeviceMethodOutputs onTransferToDevice(ServiceContext serviceContext)
+  protected abstract TransferToDeviceMethodOutputs onTransferToDevice(ServiceContext serviceContext)
       throws StatusException;
 
   @Override
-  public TransferServicesType.TransferToDeviceMethodOutputs transferToDevice() throws
+  public TransferToDeviceMethodOutputs transferToDevice() throws
       StatusException {
     return doTransferToDevice(ServiceContext.INTERNAL_OPERATION_CONTEXT);
   }
 
-  private TransferServicesType.TransferToDeviceMethodOutputs doTransferToDevice(ServiceContext serviceContext)
+  private TransferToDeviceMethodOutputs doTransferToDevice(ServiceContext serviceContext)
       throws StatusException {
     TransferServicesTypeTransferToDeviceMethod impl = getTransferToDeviceMethodImplementation();
     if(impl != null) {
@@ -114,16 +114,16 @@ public abstract class TransferServicesTypeNodeBase extends BaseObjectTypeNode im
     return (UaMethod) getComponent(browseName);
   }
 
-  protected abstract TransferServicesType.TransferFromDeviceMethodOutputs onTransferFromDevice(ServiceContext serviceContext)
+  protected abstract TransferFromDeviceMethodOutputs onTransferFromDevice(ServiceContext serviceContext)
       throws StatusException;
 
   @Override
-  public TransferServicesType.TransferFromDeviceMethodOutputs transferFromDevice() throws
+  public TransferFromDeviceMethodOutputs transferFromDevice() throws
       StatusException {
     return doTransferFromDevice(ServiceContext.INTERNAL_OPERATION_CONTEXT);
   }
 
-  private TransferServicesType.TransferFromDeviceMethodOutputs doTransferFromDevice(ServiceContext serviceContext)
+  private TransferFromDeviceMethodOutputs doTransferFromDevice(ServiceContext serviceContext)
       throws StatusException {
     TransferServicesTypeTransferFromDeviceMethod impl = getTransferFromDeviceMethodImplementation();
     if(impl != null) {

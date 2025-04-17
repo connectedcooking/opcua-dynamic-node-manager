@@ -8,19 +8,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 class InternalCommercialKitchenEquipmentObjectIdsHelper {
   public static final Set<ExpandedNodeId> ALL_OBJECT_IDENTIFIERS;
 
   static {
     Set<ExpandedNodeId> allIds = new HashSet<ExpandedNodeId>();
-    allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_HACCPValues);
-    allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_BatchInformation);
     allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_InformationConditions);
+    allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_BatchInformation);
     allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_ErrorConditions);
-    allIds.add(CommercialKitchenEquipmentObjectIds.CoffeeMachineDeviceType_Parameters);
+    allIds.add(CommercialKitchenEquipmentObjectIds.CommercialKitchenDeviceType_HACCPValues);
     allIds.add(CommercialKitchenEquipmentObjectIds.CoffeeMachineDeviceType_RecipeName);
+    allIds.add(CommercialKitchenEquipmentObjectIds.CoffeeMachineDeviceType_Parameters);
     allIds.add(CommercialKitchenEquipmentObjectIds.CombiSteamerDeviceType_CombiSteamer);
     allIds.add(CommercialKitchenEquipmentObjectIds.CookingKettleDeviceType_CookingKettle);
     allIds.add(CommercialKitchenEquipmentObjectIds.CookingZoneDeviceType_CookingZone__No__);

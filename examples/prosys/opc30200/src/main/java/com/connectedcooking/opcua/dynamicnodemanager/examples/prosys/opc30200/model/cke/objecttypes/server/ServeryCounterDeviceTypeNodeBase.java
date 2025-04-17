@@ -15,13 +15,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1028")
 public abstract class ServeryCounterDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements ServeryCounterDeviceType {
   private static GeneratedNodeInitializer<ServeryCounterDeviceTypeNode> f_serveryCounterDeviceTypeNodeInitializer;
 
-  protected ServeryCounterDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected ServeryCounterDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

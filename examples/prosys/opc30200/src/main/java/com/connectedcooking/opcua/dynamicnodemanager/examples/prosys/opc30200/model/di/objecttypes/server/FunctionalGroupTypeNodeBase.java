@@ -24,13 +24,13 @@ import java.lang.RuntimeException;
 /**
  * FolderType is used to organize the Parameters and Methods from the complete set (ParameterSet, MethodSet) with regard to their application
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1005")
 public abstract class FunctionalGroupTypeNodeBase extends FolderTypeNode implements FunctionalGroupType {
   private static GeneratedNodeInitializer<FunctionalGroupTypeNode> f_functionalGroupTypeNodeInitializer;
 
-  protected FunctionalGroupTypeNodeBase(UaNode.Parameters parameters) {
+  protected FunctionalGroupTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

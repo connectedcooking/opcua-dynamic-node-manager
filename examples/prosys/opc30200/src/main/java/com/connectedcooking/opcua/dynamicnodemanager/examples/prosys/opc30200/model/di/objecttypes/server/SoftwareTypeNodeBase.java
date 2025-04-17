@@ -23,13 +23,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15106")
 public abstract class SoftwareTypeNodeBase extends ComponentTypeNode implements SoftwareType {
   private static GeneratedNodeInitializer<SoftwareTypeNode> f_softwareTypeNodeInitializer;
 
-  protected SoftwareTypeNodeBase(UaNode.Parameters parameters) {
+  protected SoftwareTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

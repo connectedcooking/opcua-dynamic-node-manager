@@ -26,13 +26,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1016")
 public abstract class CookingKettleParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements CookingKettleParameterType {
   private static GeneratedNodeInitializer<CookingKettleParameterTypeNode> f_cookingKettleParameterTypeNodeInitializer;
 
-  protected CookingKettleParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected CookingKettleParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -15,13 +15,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15292")
 public abstract class FailureAlarmTypeNodeBase extends DeviceHealthDiagnosticAlarmTypeNode implements FailureAlarmType {
   private static GeneratedNodeInitializer<FailureAlarmTypeNode> f_failureAlarmTypeNodeInitializer;
 
-  protected FailureAlarmTypeNodeBase(UaNode.Parameters parameters) {
+  protected FailureAlarmTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

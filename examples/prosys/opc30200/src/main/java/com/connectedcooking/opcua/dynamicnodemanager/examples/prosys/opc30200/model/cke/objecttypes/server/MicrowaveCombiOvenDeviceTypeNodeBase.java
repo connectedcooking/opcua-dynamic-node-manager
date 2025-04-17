@@ -17,13 +17,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1034")
 public abstract class MicrowaveCombiOvenDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements MicrowaveCombiOvenDeviceType {
   private static GeneratedNodeInitializer<MicrowaveCombiOvenDeviceTypeNode> f_microwaveCombiOvenDeviceTypeNodeInitializer;
 
-  protected MicrowaveCombiOvenDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected MicrowaveCombiOvenDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

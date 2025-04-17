@@ -62,7 +62,7 @@ class ProsysServerITTest {
         server.setPort(14840);
         server.setServerName("OPCUA/Test");
         server.getSecurityModes().add(SecurityMode.NONE);
-        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD);
+        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC128RSA15);
         var appDescription = new ApplicationDescription();
         appDescription.setApplicationName(new LocalizedText("TestServer"));
         appDescription.setApplicationUri("urn:test:opcua");

@@ -17,7 +17,7 @@ import java.lang.String;
 /**
  * Defines the basic information components for all configurable elements in a device topology
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1002")
 public interface DeviceType extends ComponentType {

@@ -17,13 +17,13 @@ import java.lang.Override;
 /**
  * Indicates the abraded length, for example of a drill.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=477")
 public abstract class LengthIndicationTypeNodeBase extends BaseLifetimeIndicationTypeNode implements LengthIndicationType {
   private static GeneratedNodeInitializer<LengthIndicationTypeNode> f_lengthIndicationTypeNodeInitializer;
 
-  protected LengthIndicationTypeNodeBase(UaNode.Parameters parameters) {
+  protected LengthIndicationTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -13,11 +13,11 @@ import com.prosysopc.ua.stack.core.StatusCodes;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=192")
 public class FileSystemLoadingTypeNode extends FileSystemLoadingTypeNodeBase {
-  protected FileSystemLoadingTypeNode(UaNode.Parameters parameters) {
+  protected FileSystemLoadingTypeNode(Parameters parameters) {
     super(parameters);
   }
 
@@ -37,7 +37,7 @@ public class FileSystemLoadingTypeNode extends FileSystemLoadingTypeNodeBase {
   }
 
   @Override
-  protected FileSystemLoadingType.ValidateFilesMethodOutputs onValidateFiles(ServiceContext serviceContext,
+  protected ValidateFilesMethodOutputs onValidateFiles(ServiceContext serviceContext,
       NodeId[] f_nodeIds) throws StatusException {
     //Implement the generated method here (and remove the code below) OR set implementation via static method setValidateFilesMethodImplementation 
     throw new StatusException(StatusCodes.Bad_NotImplemented);

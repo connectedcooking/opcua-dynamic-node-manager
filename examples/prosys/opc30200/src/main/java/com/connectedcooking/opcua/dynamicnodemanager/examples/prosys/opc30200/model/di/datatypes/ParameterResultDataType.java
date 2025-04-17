@@ -4,44 +4,30 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
-import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaArrayDimensions;
 import com.prosysopc.ua.UaIds;
 import com.prosysopc.ua.UaNodeId;
 import com.prosysopc.ua.stack.builtintypes.DiagnosticInfo;
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.QualifiedName;
 import com.prosysopc.ua.stack.builtintypes.StatusCode;
 import com.prosysopc.ua.stack.builtintypes.Structure;
-import com.prosysopc.ua.stack.utils.AbstractStructure;
+import com.prosysopc.ua.stack.utils.InternalStructureUtils;
+import com.prosysopc.ua.stack.utils.MultiDimensionArrayUtils;
+import com.prosysopc.ua.typedictionary.DynamicStructure;
 import com.prosysopc.ua.typedictionary.FieldSpecification;
 import com.prosysopc.ua.typedictionary.StructureSpecification;
+import com.prosysopc.ua.typedictionary.UaDataTypeSpecification;
 import java.lang.Class;
-import java.lang.Deprecated;
-import java.lang.IllegalArgumentException;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.util.Map;
+import java.util.function.Supplier;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6525")
-public class ParameterResultDataType extends AbstractStructure {
-  @Deprecated
-  public static final ExpandedNodeId BINARY = DIUaIds.ParameterResultDataType_DefaultBinary.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId XML = DIUaIds.ParameterResultDataType_DefaultXml.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId JSON = DIUaIds.ParameterResultDataType_DefaultJson.asExpandedNodeId();
-
-  @Deprecated
-  public static final ExpandedNodeId ID = DIUaIds.ParameterResultDataType.asExpandedNodeId();
-
+public class ParameterResultDataType extends DynamicStructure {
   public static final StructureSpecification SPECIFICATION;
 
   static {
@@ -56,358 +42,219 @@ public class ParameterResultDataType extends AbstractStructure {
     b.addSuperTypeId(UaIds.Structure);
     b.setName("ParameterResultDataType");
     b.setJavaClass(ParameterResultDataType.class);
+    b.setAbstract(false);
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
-    b.setBuilderSupplier(Builder::new);
+    b.setBuilderSupplier(t -> new Builder(t, () -> new ParameterResultDataType(t)));
     SPECIFICATION = b.build();
     InternalUaDataTypeSpecificationMappings.put(ParameterResultDataType.class, SPECIFICATION);
   }
 
-  private QualifiedName[] f_nodePath;
-
-  private StatusCode f_statusCode;
-
-  private DiagnosticInfo f_diagnostics;
-
   public ParameterResultDataType() {
+    super((UaDataTypeSpecification)SPECIFICATION);
+  }
+
+  protected ParameterResultDataType(UaDataTypeSpecification specification) {
+    super(specification);
   }
 
   public ParameterResultDataType(QualifiedName[] f_nodePath, StatusCode f_statusCode,
       DiagnosticInfo f_diagnostics) {
-    this.f_nodePath = f_nodePath;
-    this.f_statusCode = f_statusCode;
-    this.f_diagnostics = f_diagnostics;
+    super((UaDataTypeSpecification)SPECIFICATION);
+    this.setNodePath(f_nodePath);
+    this.setStatusCode(f_statusCode);
+    this.setDiagnostics(f_diagnostics);
   }
 
   public QualifiedName[] getNodePath() {
-    return this.f_nodePath;
+    return this.indexGet(0);
   }
 
-  public void setNodePath(QualifiedName[] f_nodePath) {
-    this.f_nodePath=f_nodePath;
+  public void setNodePath(QualifiedName[] value) {
+    this.indexSet(value, 0);
   }
 
   public StatusCode getStatusCode() {
-    return this.f_statusCode;
+    return this.indexGet(1);
   }
 
-  public void setStatusCode(StatusCode f_statusCode) {
-    this.f_statusCode=f_statusCode;
+  public void setStatusCode(StatusCode value) {
+    this.indexSet(value, 1);
   }
 
   public DiagnosticInfo getDiagnostics() {
-    return this.f_diagnostics;
+    return this.indexGet(2);
   }
 
-  public void setDiagnostics(DiagnosticInfo f_diagnostics) {
-    this.f_diagnostics=f_diagnostics;
+  public void setDiagnostics(DiagnosticInfo value) {
+    this.indexSet(value, 2);
   }
 
   @Override
   public ParameterResultDataType clone() {
-    ParameterResultDataType result = (ParameterResultDataType) super.clone();
-    result.f_nodePath = StructureUtils.clone(this.f_nodePath);
-    result.f_statusCode = StructureUtils.clone(this.f_statusCode);
-    result.f_diagnostics = StructureUtils.clone(this.f_diagnostics);
-    return result;
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) return true;
-    if (obj == null) return false;
-    if (getClass() != obj.getClass()) return false;
-    ParameterResultDataType other = (ParameterResultDataType) obj;
-    if (!StructureUtils.scalarOrArrayEquals(getNodePath(), other.getNodePath())) {
-      return false;
-    }
-    if (!StructureUtils.scalarOrArrayEquals(getStatusCode(), other.getStatusCode())) {
-      return false;
-    }
-    if (!StructureUtils.scalarOrArrayEquals(getDiagnostics(), other.getDiagnostics())) {
-      return false;
-    }
-    return true;
-  }
-
-  @Override
-  public int hashCode() {
-    return StructureUtils.hashCode(this.getNodePath(), this.getStatusCode(), this.getDiagnostics());
-  }
-
-  @Override
-  public void clear() {
-    super.clear();
-    this.f_nodePath = null;
-    this.f_statusCode = null;
-    this.f_diagnostics = null;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getBinaryEncodeId() {
-    return BINARY;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getXmlEncodeId() {
-    return XML;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getJsonEncodeId() {
-    return JSON;
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getTypeId() {
-    return ID;
-  }
-
-  @Override
-  public Map<FieldSpecification, Object> toFieldsMap() {
-    return StructureUtils.createFieldsMap(this.specification(), new Object[]{this.getNodePath(),this.getStatusCode(),this.getDiagnostics()});
-  }
-
-  @Override
-  public StructureSpecification specification() {
-    return SPECIFICATION;
+    return (ParameterResultDataType) super.clone();
   }
 
   public static Builder builder() {
-    return new Builder();
-  }
-
-  @Override
-  public Object get(FieldSpecification field) {
-    if (Fields.NodePath.equals(field)) {
-      return getNodePath();
-    }
-    if (Fields.StatusCode.equals(field)) {
-      return getStatusCode();
-    }
-    if (Fields.Diagnostics.equals(field)) {
-      return getDiagnostics();
-    }
-    throw new IllegalArgumentException("Unknown field: " + field);
-  }
-
-  @Override
-  public void set(FieldSpecification field, Object value) {
-    if (Fields.NodePath.equals(field)) {
-      setNodePath((QualifiedName[]) value);
-      return;
-    }
-    if (Fields.StatusCode.equals(field)) {
-      setStatusCode((StatusCode) value);
-      return;
-    }
-    if (Fields.Diagnostics.equals(field)) {
-      setDiagnostics((DiagnosticInfo) value);
-      return;
-    }
-    throw new IllegalArgumentException("Unknown field: " + field);
+    return new Builder(SPECIFICATION, () -> new ParameterResultDataType());
   }
 
   @Override
   public Builder toBuilder() {
-    Builder b = ParameterResultDataType.builder();
-    b.setNodePath(StructureUtils.clone(getNodePath()));
-    b.setStatusCode(StructureUtils.clone(getStatusCode()));
-    b.setDiagnostics(StructureUtils.clone(getDiagnostics()));
-    return b;
+    return (Builder) super.toBuilder();
   }
 
   public enum Fields implements FieldSpecification {
-    NodePath("NodePath", QualifiedName[].class, false, UaIds.QualifiedName, 1, UaArrayDimensions.valueOf(0), false),
+    NodePath(0, "NodePath", QualifiedName[].class, false, UaIds.QualifiedName, 1, UaArrayDimensions.valueOf(0), false, 1),
 
-    StatusCode("StatusCode", StatusCode.class, false, UaIds.StatusCode, -1, null, false),
+    StatusCode(1, "StatusCode", StatusCode.class, false, UaIds.StatusCode, -1, null, false, 0),
 
-    Diagnostics("Diagnostics", DiagnosticInfo.class, false, UaIds.DiagnosticInfo, -1, null, false);
+    Diagnostics(2, "Diagnostics", DiagnosticInfo.class, false, UaIds.DiagnosticInfo, -1, null, false, 0);
 
-    private final FieldSpecification delegate;
+    private final int fieldIndex;
 
-    Fields(String name, Class<?> javaClass, boolean isOptional, UaNodeId dataTypeId, int valueRank,
-        UaArrayDimensions arrayDimensions, boolean allowSubTypes) {
-      FieldSpecification.Builder b = FieldSpecification.builder();
-      b.setName(name);
-      b.setJavaClass(javaClass);
-      b.setIsOptional(isOptional);
-      b.setDataTypeId(dataTypeId);
-      b.setValueRank(valueRank);
-      b.setArrayDimensions(arrayDimensions);
-      b.setAllowSubTypes(allowSubTypes);
-      this.delegate = b.build();
-    }
+    private final String name;
 
-    /**
-     * @deprecated use 'this' instead, as FieldSpecification as an interface is now implemented directly */
-    @Deprecated
-    public FieldSpecification getSpecification() {
-      return this;
+    private final Class<?> javaClass;
+
+    private final boolean isOptional;
+
+    private final UaNodeId dataTypeId;
+
+    private final int valueRank;
+
+    private final UaArrayDimensions arrayDimensions;
+
+    private final boolean allowSubTypes;
+
+    private final int javaClassDimensions;
+
+    private final Class<?> compositeClass;
+
+    private final UaNodeId encodeTypeId;
+
+    Fields(int fieldIndex, String name, Class<?> javaClass, boolean isOptional, UaNodeId dataTypeId,
+        int valueRank, UaArrayDimensions arrayDimensions, boolean allowSubTypes,
+        int javaClassDimensions) {
+      this.fieldIndex = fieldIndex;
+      this.name = name;
+      this.javaClass = javaClass;
+      this.isOptional = isOptional;
+      this.dataTypeId = dataTypeId;
+      this.valueRank = valueRank;
+      this.arrayDimensions = arrayDimensions;
+      this.allowSubTypes = allowSubTypes;
+      this.javaClassDimensions = javaClassDimensions;
+      this.compositeClass = MultiDimensionArrayUtils.getComponentType(javaClass);
+      this.encodeTypeId = InternalStructureUtils.encodeTypeFor(this.compositeClass, allowSubTypes, dataTypeId);
     }
 
     @Override
     public UaArrayDimensions getArrayDimensions() {
-      return delegate.getArrayDimensions();
+      return arrayDimensions;
+    }
+
+    @Override
+    public Class<?> getCompositeClass() {
+      return compositeClass;
     }
 
     @Override
     public UaNodeId getDataTypeId() {
-      return delegate.getDataTypeId();
+      return dataTypeId;
     }
 
     @Override
     public String getDescription() {
-      return delegate.getDescription();
+      return null;
+    }
+
+    @Override
+    public UaNodeId getEncodeTypeId() {
+      return encodeTypeId;
+    }
+
+    @Override
+    public int getFieldIndex() {
+      return fieldIndex;
     }
 
     @Override
     public Class<?> getJavaClass() {
-      return delegate.getJavaClass();
+      return javaClass;
+    }
+
+    @Override
+    public int getJavaClassDimensions() {
+      return javaClassDimensions;
     }
 
     @Override
     public int getMaxStringLength() {
-      return delegate.getMaxStringLength();
+      return 0;
     }
 
     @Override
     public String getName() {
-      return delegate.getName();
+      return name;
     }
 
     @Override
     public int getValueRank() {
-      return delegate.getValueRank();
+      return valueRank;
     }
 
     @Override
     public boolean isAllowSubTypes() {
-      return delegate.isAllowSubTypes();
+      return allowSubTypes;
     }
 
     @Override
     public boolean isArray() {
-      return delegate.isArray();
+      return javaClassDimensions != 0;
     }
 
     @Override
     public boolean isOptional() {
-      return delegate.isOptional();
+      return isOptional;
     }
   }
 
-  public static class Builder extends AbstractStructure.Builder {
-    private QualifiedName[] f_nodePath;
-
-    private StatusCode f_statusCode;
-
-    private DiagnosticInfo f_diagnostics;
-
-    protected Builder() {
+  public static class Builder extends DynamicStructure.Builder {
+    protected Builder(UaDataTypeSpecification specification,
+        Supplier<? extends Structure> emptyInstanceSupplier) {
+      super(specification, emptyInstanceSupplier);
     }
 
     public QualifiedName[] getNodePath() {
-      return this.f_nodePath;
+      return this.indexGet(0);
     }
 
-    public Builder setNodePath(QualifiedName[] f_nodePath) {
-      this.f_nodePath=f_nodePath;
+    public Builder setNodePath(QualifiedName[] value) {
+      this.indexSet(value, 0);
       return this;
     }
 
     public StatusCode getStatusCode() {
-      return this.f_statusCode;
+      return this.indexGet(1);
     }
 
-    public Builder setStatusCode(StatusCode f_statusCode) {
-      this.f_statusCode=f_statusCode;
+    public Builder setStatusCode(StatusCode value) {
+      this.indexSet(value, 1);
       return this;
     }
 
     public DiagnosticInfo getDiagnostics() {
-      return this.f_diagnostics;
+      return this.indexGet(2);
     }
 
-    public Builder setDiagnostics(DiagnosticInfo f_diagnostics) {
-      this.f_diagnostics=f_diagnostics;
+    public Builder setDiagnostics(DiagnosticInfo value) {
+      this.indexSet(value, 2);
       return this;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-      if (this == obj) return true;
-      if (obj == null) return false;
-      if (getClass() != obj.getClass()) return false;
-      Builder other = (Builder) obj;
-      if (!StructureUtils.scalarOrArrayEquals(getNodePath(), other.getNodePath())) {
-        return false;
-      }
-      if (!StructureUtils.scalarOrArrayEquals(getStatusCode(), other.getStatusCode())) {
-        return false;
-      }
-      if (!StructureUtils.scalarOrArrayEquals(getDiagnostics(), other.getDiagnostics())) {
-        return false;
-      }
-      return true;
-    }
-
-    @Override
-    public int hashCode() {
-      return StructureUtils.hashCode(this.getNodePath(), this.getStatusCode(), this.getDiagnostics());
-    }
-
-    @Override
-    public Object get(FieldSpecification field) {
-      if (Fields.NodePath.equals(field)) {
-        return getNodePath();
-      }
-      if (Fields.StatusCode.equals(field)) {
-        return getStatusCode();
-      }
-      if (Fields.Diagnostics.equals(field)) {
-        return getDiagnostics();
-      }
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder set(FieldSpecification field, Object value) {
-      if (Fields.NodePath.equals(field)) {
-        setNodePath((QualifiedName[]) value);
-        return this;
-      }
-      if (Fields.StatusCode.equals(field)) {
-        setStatusCode((StatusCode) value);
-        return this;
-      }
-      if (Fields.Diagnostics.equals(field)) {
-        setDiagnostics((DiagnosticInfo) value);
-        return this;
-      }
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder clear() {
-      super.clear();
-      this.f_nodePath = null;
-      this.f_statusCode = null;
-      this.f_diagnostics = null;
-      return this;
-    }
-
-    @Override
-    public StructureSpecification specification() {
-      return ParameterResultDataType.SPECIFICATION;
     }
 
     @Override
     public ParameterResultDataType build() {
-      return new ParameterResultDataType(f_nodePath, f_statusCode, f_diagnostics);
+      return (ParameterResultDataType)super.build();
     }
   }
 }
