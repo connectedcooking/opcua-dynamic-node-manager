@@ -26,13 +26,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15035")
 public abstract class IVendorNameplateTypeNodeBase extends BaseInterfaceTypeNode implements IVendorNameplateType {
   private static GeneratedNodeInitializer<IVendorNameplateTypeNode> f_iVendorNameplateTypeNodeInitializer;
 
-  protected IVendorNameplateTypeNodeBase(UaNode.Parameters parameters) {
+  protected IVendorNameplateTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

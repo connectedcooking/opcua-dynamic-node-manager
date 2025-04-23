@@ -7,11 +7,11 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1032")
 public class FryingAndGrillingDeviceTypeNode extends FryingAndGrillingDeviceTypeNodeBase {
-  protected FryingAndGrillingDeviceTypeNode(UaNode.Parameters parameters) {
+  protected FryingAndGrillingDeviceTypeNode(Parameters parameters) {
     super(parameters);
   }
 

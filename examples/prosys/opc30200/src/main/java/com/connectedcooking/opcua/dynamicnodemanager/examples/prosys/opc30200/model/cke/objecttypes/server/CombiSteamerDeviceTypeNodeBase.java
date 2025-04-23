@@ -23,13 +23,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1011")
 public abstract class CombiSteamerDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements CombiSteamerDeviceType {
   private static GeneratedNodeInitializer<CombiSteamerDeviceTypeNode> f_combiSteamerDeviceTypeNodeInitializer;
 
-  protected CombiSteamerDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected CombiSteamerDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

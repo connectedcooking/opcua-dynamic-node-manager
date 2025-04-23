@@ -13,11 +13,11 @@ import java.lang.Override;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=249")
 public class InstallationStateMachineTypeNode extends InstallationStateMachineTypeNodeBase {
-  protected InstallationStateMachineTypeNode(UaNode.Parameters parameters) {
+  protected InstallationStateMachineTypeNode(Parameters parameters) {
     super(parameters);
   }
 

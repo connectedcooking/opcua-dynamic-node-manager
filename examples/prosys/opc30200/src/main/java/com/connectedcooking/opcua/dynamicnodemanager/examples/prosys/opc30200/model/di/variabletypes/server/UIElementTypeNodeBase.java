@@ -12,13 +12,13 @@ import java.lang.Override;
 /**
  * The base type for all UI Element Types.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6246")
 public abstract class UIElementTypeNodeBase extends BaseDataVariableTypeNode implements UIElementType {
   private static GeneratedNodeInitializer<UIElementTypeNode> f_uIElementTypeNodeInitializer;
 
-  protected UIElementTypeNodeBase(UaNode.Parameters parameters) {
+  protected UIElementTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

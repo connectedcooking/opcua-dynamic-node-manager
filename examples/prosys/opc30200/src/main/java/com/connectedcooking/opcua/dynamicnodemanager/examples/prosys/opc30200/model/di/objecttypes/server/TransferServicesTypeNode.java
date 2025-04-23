@@ -14,11 +14,11 @@ import java.lang.Integer;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6526")
 public class TransferServicesTypeNode extends TransferServicesTypeNodeBase {
-  protected TransferServicesTypeNode(UaNode.Parameters parameters) {
+  protected TransferServicesTypeNode(Parameters parameters) {
     super(parameters);
   }
 
@@ -31,14 +31,14 @@ public class TransferServicesTypeNode extends TransferServicesTypeNodeBase {
   }
 
   @Override
-  protected TransferServicesType.TransferToDeviceMethodOutputs onTransferToDevice(ServiceContext serviceContext)
+  protected TransferToDeviceMethodOutputs onTransferToDevice(ServiceContext serviceContext)
       throws StatusException {
     //Implement the generated method here (and remove the code below) OR set implementation via static method setTransferToDeviceMethodImplementation 
     throw new StatusException(StatusCodes.Bad_NotImplemented);
   }
 
   @Override
-  protected TransferServicesType.TransferFromDeviceMethodOutputs onTransferFromDevice(ServiceContext serviceContext)
+  protected TransferFromDeviceMethodOutputs onTransferFromDevice(ServiceContext serviceContext)
       throws StatusException {
     //Implement the generated method here (and remove the code below) OR set implementation via static method setTransferFromDeviceMethodImplementation 
     throw new StatusException(StatusCodes.Bad_NotImplemented);

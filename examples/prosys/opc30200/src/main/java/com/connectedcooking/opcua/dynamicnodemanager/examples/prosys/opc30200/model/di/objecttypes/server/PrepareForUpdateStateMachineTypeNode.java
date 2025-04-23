@@ -10,11 +10,11 @@ import com.prosysopc.ua.stack.core.StatusCodes;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=213")
 public class PrepareForUpdateStateMachineTypeNode extends PrepareForUpdateStateMachineTypeNodeBase {
-  protected PrepareForUpdateStateMachineTypeNode(UaNode.Parameters parameters) {
+  protected PrepareForUpdateStateMachineTypeNode(Parameters parameters) {
     super(parameters);
   }
 

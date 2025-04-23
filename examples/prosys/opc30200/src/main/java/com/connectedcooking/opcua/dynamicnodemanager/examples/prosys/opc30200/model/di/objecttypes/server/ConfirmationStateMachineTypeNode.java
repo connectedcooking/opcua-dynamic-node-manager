@@ -10,11 +10,11 @@ import com.prosysopc.ua.stack.core.StatusCodes;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=307")
 public class ConfirmationStateMachineTypeNode extends ConfirmationStateMachineTypeNodeBase {
-  protected ConfirmationStateMachineTypeNode(UaNode.Parameters parameters) {
+  protected ConfirmationStateMachineTypeNode(Parameters parameters) {
     super(parameters);
   }
 

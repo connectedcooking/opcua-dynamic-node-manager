@@ -28,13 +28,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1027")
 public abstract class TrayTypeNodeBase extends KitchenDeviceParameterTypeNode implements TrayType {
   private static GeneratedNodeInitializer<TrayTypeNode> f_trayTypeNodeInitializer;
 
-  protected TrayTypeNodeBase(UaNode.Parameters parameters) {
+  protected TrayTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

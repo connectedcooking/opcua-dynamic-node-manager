@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 public class DIServerInformationModel implements ServerCodegenModelProvider {
   public static final ServerCodegenModel MODEL;

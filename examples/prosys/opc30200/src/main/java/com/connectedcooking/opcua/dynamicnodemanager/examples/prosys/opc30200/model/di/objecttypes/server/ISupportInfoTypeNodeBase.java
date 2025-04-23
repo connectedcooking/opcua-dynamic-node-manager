@@ -19,13 +19,13 @@ import com.prosysopc.ua.types.opcua.server.FolderTypeNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15054")
 public abstract class ISupportInfoTypeNodeBase extends BaseInterfaceTypeNode implements ISupportInfoType {
   private static GeneratedNodeInitializer<ISupportInfoTypeNode> f_iSupportInfoTypeNodeInitializer;
 
-  protected ISupportInfoTypeNodeBase(UaNode.Parameters parameters) {
+  protected ISupportInfoTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

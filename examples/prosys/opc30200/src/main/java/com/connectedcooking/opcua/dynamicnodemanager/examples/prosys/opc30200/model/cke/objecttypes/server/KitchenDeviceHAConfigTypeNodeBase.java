@@ -23,13 +23,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1003")
 public abstract class KitchenDeviceHAConfigTypeNodeBase extends HistoricalDataConfigurationTypeNode implements KitchenDeviceHAConfigType {
   private static GeneratedNodeInitializer<KitchenDeviceHAConfigTypeNode> f_kitchenDeviceHAConfigTypeNodeInitializer;
 
-  protected KitchenDeviceHAConfigTypeNodeBase(UaNode.Parameters parameters) {
+  protected KitchenDeviceHAConfigTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -6,7 +6,7 @@ import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.mo
 import com.prosysopc.ua.server.ServerCodegenModel;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 public class DIServerObjectTypesInformationModel {
   public static final ServerCodegenModel MODEL;
@@ -14,85 +14,85 @@ public class DIServerObjectTypesInformationModel {
   static {
     ServerCodegenModel.Builder b = ServerCodegenModel.builder();
     //TopologyElementType, nsu=http://opcfoundation.org/UA/DI/;i=1001
-    b.addClass(DIUaIds.TopologyElementType, TopologyElementTypeNode::new);
+    b.addClass(DIUaIds.TopologyElementType, t -> new TopologyElementTypeNode(t));
     //IVendorNameplateType, nsu=http://opcfoundation.org/UA/DI/;i=15035
-    b.addClass(DIUaIds.IVendorNameplateType, IVendorNameplateTypeNode::new);
+    b.addClass(DIUaIds.IVendorNameplateType, t -> new IVendorNameplateTypeNode(t));
     //ITagNameplateType, nsu=http://opcfoundation.org/UA/DI/;i=15048
-    b.addClass(DIUaIds.ITagNameplateType, ITagNameplateTypeNode::new);
+    b.addClass(DIUaIds.ITagNameplateType, t -> new ITagNameplateTypeNode(t));
     //IDeviceHealthType, nsu=http://opcfoundation.org/UA/DI/;i=15051
-    b.addClass(DIUaIds.IDeviceHealthType, IDeviceHealthTypeNode::new);
+    b.addClass(DIUaIds.IDeviceHealthType, t -> new IDeviceHealthTypeNode(t));
     //ISupportInfoType, nsu=http://opcfoundation.org/UA/DI/;i=15054
-    b.addClass(DIUaIds.ISupportInfoType, ISupportInfoTypeNode::new);
+    b.addClass(DIUaIds.ISupportInfoType, t -> new ISupportInfoTypeNode(t));
     //ComponentType, nsu=http://opcfoundation.org/UA/DI/;i=15063
-    b.addClass(DIUaIds.ComponentType, ComponentTypeNode::new);
+    b.addClass(DIUaIds.ComponentType, t -> new ComponentTypeNode(t));
     //DeviceType, nsu=http://opcfoundation.org/UA/DI/;i=1002
-    b.addClass(DIUaIds.DeviceType, DeviceTypeNode::new);
+    b.addClass(DIUaIds.DeviceType, t -> new DeviceTypeNode(t));
     //SoftwareType, nsu=http://opcfoundation.org/UA/DI/;i=15106
-    b.addClass(DIUaIds.SoftwareType, SoftwareTypeNode::new);
+    b.addClass(DIUaIds.SoftwareType, t -> new SoftwareTypeNode(t));
     //BlockType, nsu=http://opcfoundation.org/UA/DI/;i=1003
-    b.addClass(DIUaIds.BlockType, BlockTypeNode::new);
+    b.addClass(DIUaIds.BlockType, t -> new BlockTypeNode(t));
     //DeviceHealthDiagnosticAlarmType, nsu=http://opcfoundation.org/UA/DI/;i=15143
-    b.addClass(DIUaIds.DeviceHealthDiagnosticAlarmType, DeviceHealthDiagnosticAlarmTypeNode::new);
+    b.addClass(DIUaIds.DeviceHealthDiagnosticAlarmType, t -> new DeviceHealthDiagnosticAlarmTypeNode(t));
     //FailureAlarmType, nsu=http://opcfoundation.org/UA/DI/;i=15292
-    b.addClass(DIUaIds.FailureAlarmType, FailureAlarmTypeNode::new);
+    b.addClass(DIUaIds.FailureAlarmType, t -> new FailureAlarmTypeNode(t));
     //CheckFunctionAlarmType, nsu=http://opcfoundation.org/UA/DI/;i=15441
-    b.addClass(DIUaIds.CheckFunctionAlarmType, CheckFunctionAlarmTypeNode::new);
+    b.addClass(DIUaIds.CheckFunctionAlarmType, t -> new CheckFunctionAlarmTypeNode(t));
     //OffSpecAlarmType, nsu=http://opcfoundation.org/UA/DI/;i=15590
-    b.addClass(DIUaIds.OffSpecAlarmType, OffSpecAlarmTypeNode::new);
+    b.addClass(DIUaIds.OffSpecAlarmType, t -> new OffSpecAlarmTypeNode(t));
     //MaintenanceRequiredAlarmType, nsu=http://opcfoundation.org/UA/DI/;i=15739
-    b.addClass(DIUaIds.MaintenanceRequiredAlarmType, MaintenanceRequiredAlarmTypeNode::new);
+    b.addClass(DIUaIds.MaintenanceRequiredAlarmType, t -> new MaintenanceRequiredAlarmTypeNode(t));
     //ConfigurableObjectType, nsu=http://opcfoundation.org/UA/DI/;i=1004
-    b.addClass(DIUaIds.ConfigurableObjectType, ConfigurableObjectTypeNode::new);
+    b.addClass(DIUaIds.ConfigurableObjectType, t -> new ConfigurableObjectTypeNode(t));
     //BaseLifetimeIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=473
-    b.addClass(DIUaIds.BaseLifetimeIndicationType, BaseLifetimeIndicationTypeNode::new);
+    b.addClass(DIUaIds.BaseLifetimeIndicationType, t -> new BaseLifetimeIndicationTypeNode(t));
     //TimeIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=474
-    b.addClass(DIUaIds.TimeIndicationType, TimeIndicationTypeNode::new);
+    b.addClass(DIUaIds.TimeIndicationType, t -> new TimeIndicationTypeNode(t));
     //NumberOfPartsIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=475
-    b.addClass(DIUaIds.NumberOfPartsIndicationType, NumberOfPartsIndicationTypeNode::new);
+    b.addClass(DIUaIds.NumberOfPartsIndicationType, t -> new NumberOfPartsIndicationTypeNode(t));
     //NumberOfUsagesIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=476
-    b.addClass(DIUaIds.NumberOfUsagesIndicationType, NumberOfUsagesIndicationTypeNode::new);
+    b.addClass(DIUaIds.NumberOfUsagesIndicationType, t -> new NumberOfUsagesIndicationTypeNode(t));
     //LengthIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=477
-    b.addClass(DIUaIds.LengthIndicationType, LengthIndicationTypeNode::new);
+    b.addClass(DIUaIds.LengthIndicationType, t -> new LengthIndicationTypeNode(t));
     //DiameterIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=478
-    b.addClass(DIUaIds.DiameterIndicationType, DiameterIndicationTypeNode::new);
+    b.addClass(DIUaIds.DiameterIndicationType, t -> new DiameterIndicationTypeNode(t));
     //SubstanceVolumeIndicationType, nsu=http://opcfoundation.org/UA/DI/;i=479
-    b.addClass(DIUaIds.SubstanceVolumeIndicationType, SubstanceVolumeIndicationTypeNode::new);
+    b.addClass(DIUaIds.SubstanceVolumeIndicationType, t -> new SubstanceVolumeIndicationTypeNode(t));
     //FunctionalGroupType, nsu=http://opcfoundation.org/UA/DI/;i=1005
-    b.addClass(DIUaIds.FunctionalGroupType, FunctionalGroupTypeNode::new);
+    b.addClass(DIUaIds.FunctionalGroupType, t -> new FunctionalGroupTypeNode(t));
     //ProtocolType, nsu=http://opcfoundation.org/UA/DI/;i=1006
-    b.addClass(DIUaIds.ProtocolType, ProtocolTypeNode::new);
+    b.addClass(DIUaIds.ProtocolType, t -> new ProtocolTypeNode(t));
     //IOperationCounterType, nsu=http://opcfoundation.org/UA/DI/;i=480
-    b.addClass(DIUaIds.IOperationCounterType, IOperationCounterTypeNode::new);
+    b.addClass(DIUaIds.IOperationCounterType, t -> new IOperationCounterTypeNode(t));
     //NetworkType, nsu=http://opcfoundation.org/UA/DI/;i=6247
-    b.addClass(DIUaIds.NetworkType, NetworkTypeNode::new);
+    b.addClass(DIUaIds.NetworkType, t -> new NetworkTypeNode(t));
     //ConnectionPointType, nsu=http://opcfoundation.org/UA/DI/;i=6308
-    b.addClass(DIUaIds.ConnectionPointType, ConnectionPointTypeNode::new);
+    b.addClass(DIUaIds.ConnectionPointType, t -> new ConnectionPointTypeNode(t));
     //TransferServicesType, nsu=http://opcfoundation.org/UA/DI/;i=6526
-    b.addClass(DIUaIds.TransferServicesType, TransferServicesTypeNode::new);
+    b.addClass(DIUaIds.TransferServicesType, t -> new TransferServicesTypeNode(t));
     //LockingServicesType, nsu=http://opcfoundation.org/UA/DI/;i=6388
-    b.addClass(DIUaIds.LockingServicesType, LockingServicesTypeNode::new);
+    b.addClass(DIUaIds.LockingServicesType, t -> new LockingServicesTypeNode(t));
     //SoftwareUpdateType, nsu=http://opcfoundation.org/UA/DI/;i=1
-    b.addClass(DIUaIds.SoftwareUpdateType, SoftwareUpdateTypeNode::new);
+    b.addClass(DIUaIds.SoftwareUpdateType, t -> new SoftwareUpdateTypeNode(t));
     //SoftwareLoadingType, nsu=http://opcfoundation.org/UA/DI/;i=135
-    b.addClass(DIUaIds.SoftwareLoadingType, SoftwareLoadingTypeNode::new);
+    b.addClass(DIUaIds.SoftwareLoadingType, t -> new SoftwareLoadingTypeNode(t));
     //PackageLoadingType, nsu=http://opcfoundation.org/UA/DI/;i=137
-    b.addClass(DIUaIds.PackageLoadingType, PackageLoadingTypeNode::new);
+    b.addClass(DIUaIds.PackageLoadingType, t -> new PackageLoadingTypeNode(t));
     //DirectLoadingType, nsu=http://opcfoundation.org/UA/DI/;i=153
-    b.addClass(DIUaIds.DirectLoadingType, DirectLoadingTypeNode::new);
+    b.addClass(DIUaIds.DirectLoadingType, t -> new DirectLoadingTypeNode(t));
     //CachedLoadingType, nsu=http://opcfoundation.org/UA/DI/;i=171
-    b.addClass(DIUaIds.CachedLoadingType, CachedLoadingTypeNode::new);
+    b.addClass(DIUaIds.CachedLoadingType, t -> new CachedLoadingTypeNode(t));
     //FileSystemLoadingType, nsu=http://opcfoundation.org/UA/DI/;i=192
-    b.addClass(DIUaIds.FileSystemLoadingType, FileSystemLoadingTypeNode::new);
+    b.addClass(DIUaIds.FileSystemLoadingType, t -> new FileSystemLoadingTypeNode(t));
     //SoftwareVersionType, nsu=http://opcfoundation.org/UA/DI/;i=212
-    b.addClass(DIUaIds.SoftwareVersionType, SoftwareVersionTypeNode::new);
+    b.addClass(DIUaIds.SoftwareVersionType, t -> new SoftwareVersionTypeNode(t));
     //PrepareForUpdateStateMachineType, nsu=http://opcfoundation.org/UA/DI/;i=213
-    b.addClass(DIUaIds.PrepareForUpdateStateMachineType, PrepareForUpdateStateMachineTypeNode::new);
+    b.addClass(DIUaIds.PrepareForUpdateStateMachineType, t -> new PrepareForUpdateStateMachineTypeNode(t));
     //InstallationStateMachineType, nsu=http://opcfoundation.org/UA/DI/;i=249
-    b.addClass(DIUaIds.InstallationStateMachineType, InstallationStateMachineTypeNode::new);
+    b.addClass(DIUaIds.InstallationStateMachineType, t -> new InstallationStateMachineTypeNode(t));
     //PowerCycleStateMachineType, nsu=http://opcfoundation.org/UA/DI/;i=285
-    b.addClass(DIUaIds.PowerCycleStateMachineType, PowerCycleStateMachineTypeNode::new);
+    b.addClass(DIUaIds.PowerCycleStateMachineType, t -> new PowerCycleStateMachineTypeNode(t));
     //ConfirmationStateMachineType, nsu=http://opcfoundation.org/UA/DI/;i=307
-    b.addClass(DIUaIds.ConfirmationStateMachineType, ConfirmationStateMachineTypeNode::new);
+    b.addClass(DIUaIds.ConfirmationStateMachineType, t -> new ConfirmationStateMachineTypeNode(t));
     MODEL = b.build();
   }
 }

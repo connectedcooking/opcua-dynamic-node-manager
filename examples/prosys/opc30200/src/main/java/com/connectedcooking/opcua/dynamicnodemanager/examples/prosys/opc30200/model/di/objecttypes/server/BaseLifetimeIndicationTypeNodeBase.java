@@ -18,13 +18,13 @@ import java.lang.Override;
 /**
  * Base indication type not further defining a semantic
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=473")
 public abstract class BaseLifetimeIndicationTypeNodeBase extends BaseObjectTypeNode implements BaseLifetimeIndicationType {
   private static GeneratedNodeInitializer<BaseLifetimeIndicationTypeNode> f_baseLifetimeIndicationTypeNodeInitializer;
 
-  protected BaseLifetimeIndicationTypeNodeBase(UaNode.Parameters parameters) {
+  protected BaseLifetimeIndicationTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

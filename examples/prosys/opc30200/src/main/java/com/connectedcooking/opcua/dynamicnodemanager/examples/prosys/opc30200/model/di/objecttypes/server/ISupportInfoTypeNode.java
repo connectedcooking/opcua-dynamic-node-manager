@@ -7,11 +7,11 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15054")
 public class ISupportInfoTypeNode extends ISupportInfoTypeNodeBase {
-  protected ISupportInfoTypeNode(UaNode.Parameters parameters) {
+  protected ISupportInfoTypeNode(Parameters parameters) {
     super(parameters);
   }
 

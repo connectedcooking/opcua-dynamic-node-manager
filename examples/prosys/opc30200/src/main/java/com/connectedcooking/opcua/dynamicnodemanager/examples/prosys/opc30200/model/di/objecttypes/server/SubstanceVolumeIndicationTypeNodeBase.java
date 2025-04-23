@@ -17,13 +17,13 @@ import java.lang.Override;
 /**
  * Indicates the volume of a substance, for example of a liquid.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=479")
 public abstract class SubstanceVolumeIndicationTypeNodeBase extends BaseLifetimeIndicationTypeNode implements SubstanceVolumeIndicationType {
   private static GeneratedNodeInitializer<SubstanceVolumeIndicationTypeNode> f_substanceVolumeIndicationTypeNodeInitializer;
 
-  protected SubstanceVolumeIndicationTypeNodeBase(UaNode.Parameters parameters) {
+  protected SubstanceVolumeIndicationTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

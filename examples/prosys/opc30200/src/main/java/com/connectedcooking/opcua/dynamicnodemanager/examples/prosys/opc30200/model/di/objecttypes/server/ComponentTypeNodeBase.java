@@ -24,13 +24,13 @@ import java.lang.RuntimeException;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15063")
 public abstract class ComponentTypeNodeBase extends TopologyElementTypeNode implements ComponentType {
   private static GeneratedNodeInitializer<ComponentTypeNode> f_componentTypeNodeInitializer;
 
-  protected ComponentTypeNodeBase(UaNode.Parameters parameters) {
+  protected ComponentTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

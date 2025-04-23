@@ -14,11 +14,11 @@ import java.lang.String;
 /**
  * An interface for Locking.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6388")
 public class LockingServicesTypeNode extends LockingServicesTypeNodeBase {
-  protected LockingServicesTypeNode(UaNode.Parameters parameters) {
+  protected LockingServicesTypeNode(Parameters parameters) {
     super(parameters);
   }
 

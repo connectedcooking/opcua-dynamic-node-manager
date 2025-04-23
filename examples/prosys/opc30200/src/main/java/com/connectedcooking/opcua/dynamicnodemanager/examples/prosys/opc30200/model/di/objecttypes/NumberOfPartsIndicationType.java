@@ -7,7 +7,7 @@ import com.prosysopc.ua.TypeDefinitionId;
 /**
  * Indicates the total number of parts that have been produced or can still be produced.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=475")
 public interface NumberOfPartsIndicationType extends BaseLifetimeIndicationType {

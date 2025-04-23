@@ -8,13 +8,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
-public interface CommercialKitchenEquipmentUaIds extends CommercialKitchenEquipmentUaVariableIds, CommercialKitchenEquipmentUaDataTypeIds, CommercialKitchenEquipmentUaObjectTypeIds, CommercialKitchenEquipmentUaObjectIds {
+public interface CommercialKitchenEquipmentUaIds extends CommercialKitchenEquipmentUaDataTypeIds, CommercialKitchenEquipmentUaVariableIds, CommercialKitchenEquipmentUaObjectTypeIds, CommercialKitchenEquipmentUaObjectIds {
   static Set<UaNodeId> allIdentifiers() {
     Set<UaNodeId> r = new HashSet<>();
-    r.addAll(CommercialKitchenEquipmentUaVariableIds.allVariableIdentifiers());
     r.addAll(CommercialKitchenEquipmentUaDataTypeIds.allDataTypeIdentifiers());
+    r.addAll(CommercialKitchenEquipmentUaVariableIds.allVariableIdentifiers());
     r.addAll(CommercialKitchenEquipmentUaObjectTypeIds.allObjectTypeIdentifiers());
     r.addAll(CommercialKitchenEquipmentUaObjectIds.allObjectIdentifiers());
     return Collections.unmodifiableSet(r);

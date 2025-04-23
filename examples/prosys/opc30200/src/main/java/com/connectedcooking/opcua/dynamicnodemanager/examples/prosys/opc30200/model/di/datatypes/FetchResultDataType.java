@@ -4,28 +4,20 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.m
 
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.di.DIUaIds;
 import com.prosysopc.ua.InternalUaDataTypeSpecificationMappings;
-import com.prosysopc.ua.StructureUtils;
 import com.prosysopc.ua.TypeDefinitionId;
 import com.prosysopc.ua.UaIds;
-import com.prosysopc.ua.stack.builtintypes.ExpandedNodeId;
 import com.prosysopc.ua.stack.builtintypes.Structure;
-import com.prosysopc.ua.stack.utils.AbstractStructure;
-import com.prosysopc.ua.typedictionary.FieldSpecification;
+import com.prosysopc.ua.typedictionary.DynamicStructure;
 import com.prosysopc.ua.typedictionary.StructureSpecification;
-import java.lang.Deprecated;
-import java.lang.IllegalArgumentException;
-import java.lang.Object;
+import com.prosysopc.ua.typedictionary.UaDataTypeSpecification;
 import java.lang.Override;
-import java.util.Map;
+import java.util.function.Supplier;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6522")
-public abstract class FetchResultDataType extends AbstractStructure {
-  @Deprecated
-  public static final ExpandedNodeId ID = DIUaIds.FetchResultDataType.asExpandedNodeId();
-
+public class FetchResultDataType extends DynamicStructure {
   public static final StructureSpecification SPECIFICATION;
 
   static {
@@ -34,105 +26,40 @@ public abstract class FetchResultDataType extends AbstractStructure {
     b.addSuperTypeId(UaIds.Structure);
     b.setName("FetchResultDataType");
     b.setJavaClass(FetchResultDataType.class);
+    b.setAbstract(true);
     b.setStructureType(StructureSpecification.StructureType.NORMAL);
+    b.setBuilderSupplier(t -> new Builder(t, () -> new FetchResultDataType(t)));
     SPECIFICATION = b.build();
     InternalUaDataTypeSpecificationMappings.put(FetchResultDataType.class, SPECIFICATION);
   }
 
-  public FetchResultDataType() {
+  protected FetchResultDataType() {
+    super((UaDataTypeSpecification)SPECIFICATION);
+  }
+
+  protected FetchResultDataType(UaDataTypeSpecification specification) {
+    super(specification);
   }
 
   @Override
   public FetchResultDataType clone() {
-    FetchResultDataType result = (FetchResultDataType) super.clone();
-    return result;
+    return (FetchResultDataType) super.clone();
   }
 
   @Override
-  public boolean equals(Object obj) {
-    if (this == obj) return true;
-    if (obj == null) return false;
-    if (getClass() != obj.getClass()) return false;
-    FetchResultDataType other = (FetchResultDataType) obj;
-    return true;
+  public Builder toBuilder() {
+    return (Builder) super.toBuilder();
   }
 
-  @Override
-  public int hashCode() {
-    return 0;
-  }
-
-  @Override
-  public void clear() {
-    super.clear();
-  }
-
-  @Override
-  @Deprecated
-  public ExpandedNodeId getTypeId() {
-    return ID;
-  }
-
-  @Override
-  public Map<FieldSpecification, Object> toFieldsMap() {
-    return StructureUtils.createFieldsMap(this.specification(), new Object[0]);
-  }
-
-  @Override
-  public StructureSpecification specification() {
-    return SPECIFICATION;
-  }
-
-  @Override
-  public Object get(FieldSpecification field) {
-    throw new IllegalArgumentException("Unknown field: " + field);
-  }
-
-  @Override
-  public void set(FieldSpecification field, Object value) {
-    throw new IllegalArgumentException("Unknown field: " + field);
-  }
-
-  public abstract static class Builder extends AbstractStructure.Builder {
-    protected Builder() {
+  public static class Builder extends DynamicStructure.Builder {
+    protected Builder(UaDataTypeSpecification specification,
+        Supplier<? extends Structure> emptyInstanceSupplier) {
+      super(specification, emptyInstanceSupplier);
     }
 
     @Override
-    public boolean equals(Object obj) {
-      if (this == obj) return true;
-      if (obj == null) return false;
-      if (getClass() != obj.getClass()) return false;
-      Builder other = (Builder) obj;
-      return true;
+    public FetchResultDataType build() {
+      return (FetchResultDataType)super.build();
     }
-
-    @Override
-    public int hashCode() {
-      return 0;
-    }
-
-    @Override
-    public Object get(FieldSpecification field) {
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder set(FieldSpecification field, Object value) {
-      throw new IllegalArgumentException("Unknown field: " + field);
-    }
-
-    @Override
-    public Builder clear() {
-      super.clear();
-      return this;
-    }
-
-    @Override
-    public StructureSpecification specification() {
-      return FetchResultDataType.SPECIFICATION;
-    }
-
-    @Override
-    public abstract FetchResultDataType build();
   }
 }

@@ -17,13 +17,13 @@ import java.lang.Override;
 /**
  * Indicates the abraded diameter, for example of a drill.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=478")
 public abstract class DiameterIndicationTypeNodeBase extends BaseLifetimeIndicationTypeNode implements DiameterIndicationType {
   private static GeneratedNodeInitializer<DiameterIndicationTypeNode> f_diameterIndicationTypeNodeInitializer;
 
-  protected DiameterIndicationTypeNodeBase(UaNode.Parameters parameters) {
+  protected DiameterIndicationTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

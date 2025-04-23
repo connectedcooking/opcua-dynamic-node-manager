@@ -7,11 +7,11 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=135")
 public class SoftwareLoadingTypeNode extends SoftwareLoadingTypeNodeBase {
-  protected SoftwareLoadingTypeNode(UaNode.Parameters parameters) {
+  protected SoftwareLoadingTypeNode(Parameters parameters) {
     super(parameters);
   }
 

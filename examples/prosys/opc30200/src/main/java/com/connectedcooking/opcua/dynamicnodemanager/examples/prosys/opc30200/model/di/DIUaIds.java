@@ -8,15 +8,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
-public interface DIUaIds extends DIUaReferenceTypeIds, DIUaObjectIds, DIUaMethodIds, DIUaVariableIds, DIUaObjectTypeIds, DIUaVariableTypeIds, DIUaDataTypeIds {
+public interface DIUaIds extends DIUaReferenceTypeIds, DIUaVariableIds, DIUaObjectIds, DIUaMethodIds, DIUaObjectTypeIds, DIUaVariableTypeIds, DIUaDataTypeIds {
   static Set<UaNodeId> allIdentifiers() {
     Set<UaNodeId> r = new HashSet<>();
     r.addAll(DIUaReferenceTypeIds.allReferenceTypeIdentifiers());
+    r.addAll(DIUaVariableIds.allVariableIdentifiers());
     r.addAll(DIUaObjectIds.allObjectIdentifiers());
     r.addAll(DIUaMethodIds.allMethodIdentifiers());
-    r.addAll(DIUaVariableIds.allVariableIdentifiers());
     r.addAll(DIUaObjectTypeIds.allObjectTypeIdentifiers());
     r.addAll(DIUaVariableTypeIds.allVariableTypeIdentifiers());
     r.addAll(DIUaDataTypeIds.allDataTypeIdentifiers());

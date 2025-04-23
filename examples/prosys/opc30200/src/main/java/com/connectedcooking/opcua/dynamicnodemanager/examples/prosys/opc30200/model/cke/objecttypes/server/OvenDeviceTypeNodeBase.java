@@ -15,13 +15,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1013")
 public abstract class OvenDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements OvenDeviceType {
   private static GeneratedNodeInitializer<OvenDeviceTypeNode> f_ovenDeviceTypeNodeInitializer;
 
-  protected OvenDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected OvenDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

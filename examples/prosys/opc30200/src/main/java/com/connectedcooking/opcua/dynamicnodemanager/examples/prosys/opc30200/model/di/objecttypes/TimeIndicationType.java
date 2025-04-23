@@ -7,7 +7,7 @@ import com.prosysopc.ua.TypeDefinitionId;
 /**
  * Indicates the time the entity has been in use or can still be used
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=474")
 public interface TimeIndicationType extends BaseLifetimeIndicationType {

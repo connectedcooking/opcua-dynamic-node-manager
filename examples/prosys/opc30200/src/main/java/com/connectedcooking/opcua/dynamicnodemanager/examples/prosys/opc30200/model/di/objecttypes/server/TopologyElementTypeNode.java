@@ -9,11 +9,11 @@ import java.lang.Override;
 /**
  * Defines the basic information components for all configurable elements in a device topology
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1001")
 public class TopologyElementTypeNode extends TopologyElementTypeNodeBase {
-  protected TopologyElementTypeNode(UaNode.Parameters parameters) {
+  protected TopologyElementTypeNode(Parameters parameters) {
     super(parameters);
   }
 

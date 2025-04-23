@@ -29,7 +29,7 @@ import java.lang.String;
 /**
  * An interface for Locking.
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=6388")
 public abstract class LockingServicesTypeNodeBase extends BaseObjectTypeNode implements LockingServicesType {
@@ -43,7 +43,7 @@ public abstract class LockingServicesTypeNodeBase extends BaseObjectTypeNode imp
 
   private static LockingServicesTypeBreakLockMethod f_breakLockMethodImplementation;
 
-  protected LockingServicesTypeNodeBase(UaNode.Parameters parameters) {
+  protected LockingServicesTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

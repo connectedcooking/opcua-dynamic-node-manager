@@ -39,7 +39,7 @@ public class ProsysSimpleServer {
         server.setPort(port);
         server.setServerName("OPCUA/Simple");
         server.getSecurityModes().add(SecurityMode.NONE);
-        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD);
+        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC128RSA15);
         var appDescription = new ApplicationDescription();
         appDescription.setApplicationName(new LocalizedText("Simple Dynamic Server"));
         appDescription.setApplicationUri("urn:connectedcooking:opcua:simple");

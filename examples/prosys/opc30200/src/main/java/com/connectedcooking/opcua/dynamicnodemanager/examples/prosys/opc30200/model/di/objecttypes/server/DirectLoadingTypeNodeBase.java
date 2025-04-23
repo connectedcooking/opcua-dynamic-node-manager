@@ -25,13 +25,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=153")
 public abstract class DirectLoadingTypeNodeBase extends PackageLoadingTypeNode implements DirectLoadingType {
   private static GeneratedNodeInitializer<DirectLoadingTypeNode> f_directLoadingTypeNodeInitializer;
 
-  protected DirectLoadingTypeNodeBase(UaNode.Parameters parameters) {
+  protected DirectLoadingTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

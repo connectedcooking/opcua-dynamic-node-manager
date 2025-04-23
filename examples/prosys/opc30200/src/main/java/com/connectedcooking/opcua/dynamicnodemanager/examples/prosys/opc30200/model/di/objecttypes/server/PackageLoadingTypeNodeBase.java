@@ -26,13 +26,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=137")
 public abstract class PackageLoadingTypeNodeBase extends SoftwareLoadingTypeNode implements PackageLoadingType {
   private static GeneratedNodeInitializer<PackageLoadingTypeNode> f_packageLoadingTypeNodeInitializer;
 
-  protected PackageLoadingTypeNodeBase(UaNode.Parameters parameters) {
+  protected PackageLoadingTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

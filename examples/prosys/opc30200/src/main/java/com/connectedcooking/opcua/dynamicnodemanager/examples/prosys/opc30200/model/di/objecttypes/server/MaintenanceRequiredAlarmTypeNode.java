@@ -7,11 +7,11 @@ import com.prosysopc.ua.nodes.UaNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15739")
 public class MaintenanceRequiredAlarmTypeNode extends MaintenanceRequiredAlarmTypeNodeBase {
-  protected MaintenanceRequiredAlarmTypeNode(UaNode.Parameters parameters) {
+  protected MaintenanceRequiredAlarmTypeNode(Parameters parameters) {
     super(parameters);
   }
 

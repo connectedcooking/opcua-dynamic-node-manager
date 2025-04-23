@@ -9,11 +9,11 @@ import java.lang.Override;
 /**
  * Adds the concept of Blocks needed for block-oriented FieldDevices
  * <p>
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=1003")
 public class BlockTypeNode extends BlockTypeNodeBase {
-  protected BlockTypeNode(UaNode.Parameters parameters) {
+  protected BlockTypeNode(Parameters parameters) {
     super(parameters);
   }
 

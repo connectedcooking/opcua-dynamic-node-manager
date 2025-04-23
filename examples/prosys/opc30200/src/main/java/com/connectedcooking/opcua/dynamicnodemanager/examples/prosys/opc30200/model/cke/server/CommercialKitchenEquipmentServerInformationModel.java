@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 public class CommercialKitchenEquipmentServerInformationModel implements ServerCodegenModelProvider {
   public static final ServerCodegenModel MODEL;

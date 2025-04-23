@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=3002")
 public enum EnergySourceEnumeration implements Enumeration {

@@ -22,7 +22,7 @@ import java.lang.String;
 import java.util.BitSet;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=333")
 public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Options, UnsignedInteger, UpdateBehavior, UpdateBehavior.Builder> implements UInt32OptionSetDataType<UpdateBehavior.Options> {
@@ -62,7 +62,7 @@ public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Opt
     b.setJavaClass(UpdateBehavior.class);
     b.setBaseTypeId(UaIds.UInt32);
     b.addOptions(Options.values());
-    b.setBuilderSupplier(Builder::new);
+    b.setBuilderSupplier(t -> UpdateBehavior.builder());
     SPECIFICATION = b.build();
     InternalUaDataTypeSpecificationMappings.put(UpdateBehavior.class, SPECIFICATION);
   }
@@ -143,7 +143,7 @@ public class UpdateBehavior extends AbstractOptionSetDataType<UpdateBehavior.Opt
     }
   }
 
-  public static class Builder extends AbstractOptionSetDataType.AbstractBuilder<Options> {
+  public static class Builder extends AbstractBuilder<Options> {
     private Builder() {
       super(UpdateBehavior.SPECIFICATION);
     }

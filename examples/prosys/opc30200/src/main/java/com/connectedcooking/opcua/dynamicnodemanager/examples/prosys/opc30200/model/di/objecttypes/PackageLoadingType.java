@@ -14,7 +14,7 @@ import com.prosysopc.ua.types.opcua.TemporaryFileTransferType;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=137")
 public interface PackageLoadingType extends SoftwareLoadingType {

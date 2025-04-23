@@ -21,13 +21,13 @@ import java.lang.Override;
 import java.lang.RuntimeException;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1019")
 public abstract class MultiFunctionPanDeviceTypeNodeBase extends CommercialKitchenDeviceTypeNode implements MultiFunctionPanDeviceType {
   private static GeneratedNodeInitializer<MultiFunctionPanDeviceTypeNode> f_multiFunctionPanDeviceTypeNodeInitializer;
 
-  protected MultiFunctionPanDeviceTypeNodeBase(UaNode.Parameters parameters) {
+  protected MultiFunctionPanDeviceTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

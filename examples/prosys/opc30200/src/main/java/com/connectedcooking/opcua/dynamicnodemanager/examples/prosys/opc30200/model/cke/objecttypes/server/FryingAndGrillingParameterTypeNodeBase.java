@@ -31,13 +31,13 @@ import java.lang.String;
 import java.util.List;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/CommercialKitchenEquipment/;i=1031")
 public abstract class FryingAndGrillingParameterTypeNodeBase extends KitchenDeviceParameterTypeNode implements FryingAndGrillingParameterType {
   private static GeneratedNodeInitializer<FryingAndGrillingParameterTypeNode> f_fryingAndGrillingParameterTypeNodeInitializer;
 
-  protected FryingAndGrillingParameterTypeNodeBase(UaNode.Parameters parameters) {
+  protected FryingAndGrillingParameterTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

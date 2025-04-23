@@ -15,13 +15,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15739")
 public abstract class MaintenanceRequiredAlarmTypeNodeBase extends DeviceHealthDiagnosticAlarmTypeNode implements MaintenanceRequiredAlarmType {
   private static GeneratedNodeInitializer<MaintenanceRequiredAlarmTypeNode> f_maintenanceRequiredAlarmTypeNodeInitializer;
 
-  protected MaintenanceRequiredAlarmTypeNodeBase(UaNode.Parameters parameters) {
+  protected MaintenanceRequiredAlarmTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

@@ -16,13 +16,13 @@ import com.prosysopc.ua.types.opcua.server.FiniteStateMachineTypeNode;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=285")
 public abstract class PowerCycleStateMachineTypeNodeBase extends FiniteStateMachineTypeNode implements PowerCycleStateMachineType {
   private static GeneratedNodeInitializer<PowerCycleStateMachineTypeNode> f_powerCycleStateMachineTypeNodeInitializer;
 
-  protected PowerCycleStateMachineTypeNodeBase(UaNode.Parameters parameters) {
+  protected PowerCycleStateMachineTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

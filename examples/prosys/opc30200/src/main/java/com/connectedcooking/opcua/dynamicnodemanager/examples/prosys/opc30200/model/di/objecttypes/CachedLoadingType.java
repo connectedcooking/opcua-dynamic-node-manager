@@ -12,7 +12,7 @@ import com.prosysopc.ua.nodes.UaMethod;
 import java.lang.String;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=171")
 public interface CachedLoadingType extends PackageLoadingType {

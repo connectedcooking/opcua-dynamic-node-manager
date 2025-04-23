@@ -15,13 +15,13 @@ import com.prosysopc.ua.stack.builtintypes.Variant;
 import java.lang.Override;
 
 /**
- * Generated on 2024-09-09 10:35:45
+ * Generated on 2025-04-16 18:27:23
  */
 @TypeDefinitionId("nsu=http://opcfoundation.org/UA/DI/;i=15441")
 public abstract class CheckFunctionAlarmTypeNodeBase extends DeviceHealthDiagnosticAlarmTypeNode implements CheckFunctionAlarmType {
   private static GeneratedNodeInitializer<CheckFunctionAlarmTypeNode> f_checkFunctionAlarmTypeNodeInitializer;
 
-  protected CheckFunctionAlarmTypeNodeBase(UaNode.Parameters parameters) {
+  protected CheckFunctionAlarmTypeNodeBase(Parameters parameters) {
     super(parameters);
   }
 

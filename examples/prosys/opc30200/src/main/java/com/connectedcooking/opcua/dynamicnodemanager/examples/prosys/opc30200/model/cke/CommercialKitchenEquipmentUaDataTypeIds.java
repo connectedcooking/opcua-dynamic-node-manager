@@ -6,7 +6,7 @@ import com.prosysopc.ua.UaNodeId;
 import java.util.Set;
 
 /**
- * Generated on 2024-09-09 10:35:47
+ * Generated on 2025-04-16 18:27:26
  */
 public interface CommercialKitchenEquipmentUaDataTypeIds {
   UaNodeId BeverageSMLEnumeration = CommercialKitchenEquipmentUaDataTypeIdsInit.initBeverageSMLEnumeration();
