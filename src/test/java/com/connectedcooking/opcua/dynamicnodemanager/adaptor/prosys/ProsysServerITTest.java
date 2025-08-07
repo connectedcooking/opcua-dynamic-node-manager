@@ -125,7 +125,7 @@ class ProsysServerITTest {
         sernumAttrs.setAccessLevel((ctx, nid, dnode) -> new DynAttributes.AccessLevels[]{DynAttributes.AccessLevels.CurrentRead, DynAttributes.AccessLevels.CurrentWrite});
         var sernumRefs = new DynReferenceManager();
         sernumRefs.add(DynReferences.Types.HasTypeDefinition, (ctx, nid, dnode) -> new RealNodeId(0, 63));   // BaseDataVariableType
-        sernumRefs.addInverse(DynReferences.Types.HasProperty, (ctx, nid, dnode) -> device.nodeId().toReal(nid));
+        sernumRefs.addInverse(DynReferences.Types.HasProperty, (ctx, nid, dnode) -> device.nodeId().toRealById(nid));
         var sernum = new BaseDynNode(new PartialNodeId(SERNUM_NODE_ID), device.nodeId(), sernumAttrs, sernumRefs);
         dynNodeManager.registerNode(sernum);
     }

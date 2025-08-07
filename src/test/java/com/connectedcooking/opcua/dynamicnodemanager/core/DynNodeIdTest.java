@@ -41,19 +41,19 @@ class DynNodeIdTest {
     @Test
     void toReal_from_nodeId() {
         var dynNodeId = new DynNodeId("Device<Index>/Errors/Err<ID>");
-        assertThat(dynNodeId.toReal("Device123/Errors/ErrE456/Msg").identifier()).isEqualTo("Device123/Errors/ErrE456");
+        assertThat(dynNodeId.toRealById("Device123/Errors/ErrE456/Msg").identifier()).isEqualTo("Device123/Errors/ErrE456");
     }
 
     @Test
     void toReal_from_nodeId2() {
         var dynNodeId = new DynNodeId("Device<Index>");
-        assertThat(dynNodeId.toReal("Device123/Errors/ErrE456/Msg").identifier()).isEqualTo("Device123");
+        assertThat(dynNodeId.toRealById("Device123/Errors/ErrE456/Msg").identifier()).isEqualTo("Device123");
     }
 
     @Test
     void toReal_from_nodeId_throws_for_wrong_nodeId() {
         var dynNodeId = new DynNodeId("Device<Index>/Errors/Err<ID>/Msg");
-        assertThrows(IllegalArgumentException.class, () -> dynNodeId.toReal("Device/Errors/ErrE/Msg"));
+        assertThrows(IllegalArgumentException.class, () -> dynNodeId.toRealById("Device/Errors/ErrE/Msg"));
     }
 
     @Test
