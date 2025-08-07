@@ -75,7 +75,7 @@ public class DynNodeId {
      * @param nodeId the requested node ID
      * @return the real node ID
      */
-    public RealNodeId toReal(String nodeId) {
+    public RealNodeId toRealById(String nodeId) {
         var matcher = identifier.matcher(nodeId);
         if (matcher.find()) {
             return new RealNodeId(matcher.group());
