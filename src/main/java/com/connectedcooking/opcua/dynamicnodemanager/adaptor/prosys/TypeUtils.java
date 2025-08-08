@@ -330,32 +330,28 @@ class TypeUtils {
             return BasicValueDataTypes.Guid;
         } else if (value instanceof byte[]) {
             return BasicValueDataTypes.ByteString;
-        } else if (value instanceof NodeId) {
-            return BasicValueDataTypes.NodeId;
-        } else if (value instanceof ExpandedNodeId) {
-            return BasicValueDataTypes.ExpandedNodeId;
-        } else if (value instanceof QualifiedName) {
-            return BasicValueDataTypes.QualifiedName;
-        } else if (value instanceof LocalizedText) {
-            return BasicValueDataTypes.LocalizedText;
         } else if (value instanceof Enumeration) {
             return BasicValueDataTypes.Enumeration;
         } else if (value instanceof BigDecimal) {
             return BasicValueDataTypes.Decimal;
         } else if (value instanceof BigInteger) {
             return BasicValueDataTypes.Integer;
-        } else if (value instanceof Date || value instanceof LocalDate || value instanceof LocalDateTime) {
-            return BasicValueDataTypes.DateTime;
         } else if (value instanceof ZonedDateTime) {
             return BasicValueDataTypes.UtcTime;
         } else if (value instanceof LocalTime) {
             return BasicValueDataTypes.Time;
         } else if (value instanceof Duration) {
             return BasicValueDataTypes.Duration;
-        } else if (value instanceof DynQualifiedName) {
+        } else if (value instanceof Date || value instanceof LocalDate || value instanceof LocalDateTime) {
+            return BasicValueDataTypes.DateTime;
+        } else if (value instanceof QualifiedName || value instanceof DynQualifiedName) {
             return BasicValueDataTypes.QualifiedName;
-        } else if (value instanceof DynLocalizedText) {
+        } else if (value instanceof LocalizedText || value instanceof DynLocalizedText) {
             return BasicValueDataTypes.LocalizedText;
+        } else if (value instanceof NodeId || value instanceof RealNodeId || value instanceof DynNodeId) {
+            return BasicValueDataTypes.NodeId;
+        } else if (value instanceof ExpandedNodeId) {
+            return BasicValueDataTypes.ExpandedNodeId;
         }
         return null;
     }
