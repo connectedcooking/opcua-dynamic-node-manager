@@ -183,9 +183,33 @@ public class ProsysOpc30200Server {
                 .value(123)
                 .register();
 
-        dynNodeManager.nodeBuilder()
+        var errorConditions = dynNodeManager.nodeBuilder()
                 .childObject("ErrorConditions")
                 .asComponent(combiSteamerDevice)
+                .registerAndGet();
+
+        var error = dynNodeManager.nodeBuilder()
+                .childObject("Error_<Id>")
+                .asComponentsById(errorConditions, (ctx, deviceId) -> getErrorConditions(ctx.getUsername(), deviceId).stream().map(
+                        errorId -> new RealNodeId(errorConditions.realNodeId(deviceId), "Error_" + errorId)).collect(toList()))
+                .registerAndGet();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("ActiveState")
+                .asComponent(error)
+                .valueById((ctx, deviceId, errorId) -> new DynLocalizedText("ERR_VALUE_" + errorId))
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("InputNode")
+                .asProperty(error)
+                .valueById((ctx, deviceId) -> combiSteamerDevice.nodeId().toReal(deviceId))
+                .register();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("SuppressedOrShelved")
+                .asProperty(error)
+                .value(true)
                 .register();
 
         dynNodeManager.nodeBuilder()
@@ -268,7 +292,7 @@ public class ProsysOpc30200Server {
         return null;
     }
 
-    private List<?> getErrorConditions(String user, Long deviceId) {
-        return List.of();   // TODO
+    private List<Long> getErrorConditions(String user, Long deviceId) {
+        return List.of(801L, 802L);  // example error IDs
     }
 }
