@@ -16,7 +16,7 @@ Add necessary dependencies:
 <dependency>
   <groupId>com.connectedcooking.opcua</groupId>
   <artifactId>opcua-dynamic-node-manager</artifactId>
-  <version>0.2.6</version>
+  <version>0.3.0</version>
 </dependency>
 <dependency>
   <groupId>com.prosysopc.ua</groupId>
