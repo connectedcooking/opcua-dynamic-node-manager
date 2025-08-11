@@ -662,6 +662,9 @@ public class ProsysDynNodeManagerAdaptor extends NodeManager {
             if (value instanceof RealNodeId) {
                 return TypeUtils.toNodeId((RealNodeId) value, namespaceIndex);
             }
+            if (value instanceof DynResponse.StatusCodes) {
+                return TypeUtils.toStatusCode((DynResponse.StatusCodes) value);
+            }
             return value;
         }
     }

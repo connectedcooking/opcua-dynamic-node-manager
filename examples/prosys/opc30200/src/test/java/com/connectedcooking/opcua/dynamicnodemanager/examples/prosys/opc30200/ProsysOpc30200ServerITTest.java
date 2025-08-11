@@ -721,6 +721,7 @@ class ProsysOpc30200ServerITTest {
         assertThat(containsReference(ReferenceTypeIds.HasComponent, new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/ActiveState"), new NodeId(0, 63), references)).isTrue();
         assertThat(containsReference(ReferenceTypeIds.HasProperty, new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/InputNode"), new NodeId(0, 68), references)).isTrue();
         assertThat(containsReference(ReferenceTypeIds.HasProperty, new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/SuppressedOrShelved"), new NodeId(0, 68), references)).isTrue();
+        assertThat(containsReference(ReferenceTypeIds.HasComponent, new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/Quality"), new NodeId(0, 63), references)).isTrue();
     }
 
     @Test
@@ -739,6 +740,43 @@ class ProsysOpc30200ServerITTest {
                 () -> assertThat(((QualifiedName) browseName.getValue().getValue()).getName()).isEqualTo("Error_801"),
                 () -> assertThat(((LocalizedText) displayName.getValue().getValue()).getText()).isEqualTo("Error_801"),
                 () -> assertThat(((LocalizedText) description.getValue().getValue()).getText()).isEqualTo("")
+        );
+    }
+
+    @Test
+    void ErrorConditions_Error_Quality_TypeDefinition() throws Exception {
+        var typeDefinition = client.getAddressSpace().getTypeDefinition(new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/Quality"));
+
+        assertThat(typeDefinition).isEqualTo(new ExpandedNodeId(new NodeId(0, 63)));
+    }
+
+    @Test
+    void ErrorConditions_Error_Quality_references() throws Exception {
+        var references = client.getAddressSpace().browse(new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/Quality"));
+
+        assertThat(references).isEmpty();
+    }
+
+    @Test
+    void ErrorConditions_Error_Quality_attributes() throws Exception {
+        var browseId = new NodeId(NS, "CombiSteamerDevice_1/ErrorConditions/Error_801/Quality");
+
+        var nodeId = client.readAttribute(browseId, Attributes.NodeId);
+        var nodeClass = client.readAttribute(browseId, Attributes.NodeClass);
+        var browseName = client.readAttribute(browseId, Attributes.BrowseName);
+        var displayName = client.readAttribute(browseId, Attributes.DisplayName);
+        var description = client.readAttribute(browseId, Attributes.Description);
+        var dataType = client.readAttribute(browseId, Attributes.DataType);
+        var value = client.readAttribute(browseId, Attributes.Value);
+
+        assertAll(
+                () -> assertThat(nodeId.getValue().getValue()).isEqualTo(browseId),
+                () -> assertThat(nodeClass.getValue().getValue()).isEqualTo(NodeClass.Variable.getValue()),
+                () -> assertThat(((QualifiedName) browseName.getValue().getValue()).getName()).isEqualTo("Quality"),
+                () -> assertThat(((LocalizedText) displayName.getValue().getValue()).getText()).isEqualTo("Quality"),
+                () -> assertThat(((LocalizedText) description.getValue().getValue()).getText()).isEqualTo(""),
+                () -> assertThat(dataType.getValue().getValue()).isEqualTo(DataTypeIdentifiers.StatusCode),
+                () -> assertThat(value.getValue().getValue()).isEqualTo(StatusCodes.Uncertain)
         );
     }
 
