@@ -2,6 +2,7 @@ package com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200;
 
 import com.connectedcooking.opcua.dynamicnodemanager.adaptor.prosys.ProsysDynNodeManagerAdaptor;
 import com.connectedcooking.opcua.dynamicnodemanager.core.DynNodeManager;
+import com.connectedcooking.opcua.dynamicnodemanager.core.DynResponse;
 import com.connectedcooking.opcua.dynamicnodemanager.core.RealNodeId;
 import com.connectedcooking.opcua.dynamicnodemanager.core.datatype.DynLocalizedText;
 import com.connectedcooking.opcua.dynamicnodemanager.examples.prosys.opc30200.model.cke.server.CommercialKitchenEquipmentServerInformationModel;
@@ -193,6 +194,12 @@ public class ProsysOpc30200Server {
                 .asComponentsById(errorConditions, (ctx, deviceId) -> getErrorConditions(ctx.getUsername(), deviceId).stream().map(
                         errorId -> new RealNodeId(errorConditions.realNodeId(deviceId), "Error_" + errorId)).collect(toList()))
                 .registerAndGet();
+
+        dynNodeManager.nodeBuilder()
+                .childVariable("Quality")
+                .asComponent(error)
+                .value(DynResponse.StatusCodes.Uncertain)
+                .register();
 
         dynNodeManager.nodeBuilder()
                 .childVariable("ActiveState")

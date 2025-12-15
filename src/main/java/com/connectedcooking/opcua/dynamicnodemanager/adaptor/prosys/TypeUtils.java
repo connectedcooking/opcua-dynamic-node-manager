@@ -281,6 +281,8 @@ class TypeUtils {
                 return StatusCodes.Bad_NotSupported;
             case Bad_NotImplemented:
                 return StatusCodes.Bad_NotImplemented;
+            case Uncertain:
+                return StatusCodes.Uncertain;
         }
         return StatusCodes.Bad;
     }
@@ -352,6 +354,8 @@ class TypeUtils {
             return BasicValueDataTypes.NodeId;
         } else if (value instanceof ExpandedNodeId) {
             return BasicValueDataTypes.ExpandedNodeId;
+        } else if (value instanceof DynResponse.StatusCodes) {
+            return BasicValueDataTypes.StatusCode;
         }
         return null;
     }

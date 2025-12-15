@@ -22,7 +22,8 @@ public class DynResponse<T> {
         Bad_AttributeIdInvalid,
         Bad_NotFound,
         Bad_NotSupported,
-        Bad_NotImplemented;
+        Bad_NotImplemented,
+        Uncertain;
 
         /**
          * Indicates whether the response is successful.
