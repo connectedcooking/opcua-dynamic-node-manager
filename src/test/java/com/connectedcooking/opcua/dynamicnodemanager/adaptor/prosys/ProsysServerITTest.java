@@ -43,9 +43,6 @@ class ProsysServerITTest {
 
     private static final String SERNUM_NODE_ID = "SerialNumber";
 
-    private static final String USERNAME = "TestUser1";
-    private static final String PASSWORD = "Secret123!";
-
     private static UaServer server;
     private static UaClient client;
 
@@ -62,7 +59,7 @@ class ProsysServerITTest {
         server.setPort(14840);
         server.setServerName("OPCUA/Test");
         server.getSecurityModes().add(SecurityMode.NONE);
-        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC128RSA15);
+        server.setUserTokenPolicies(UserTokenPolicies.ANONYMOUS);
         var appDescription = new ApplicationDescription();
         appDescription.setApplicationName(new LocalizedText("TestServer"));
         appDescription.setApplicationUri("urn:test:opcua");
@@ -81,7 +78,6 @@ class ProsysServerITTest {
         client = new UaClient("opc.tcp://127.0.0.1:14840/OPCUA/Test");
         client.setApplicationIdentity(new ApplicationIdentity());
         client.setSecurityMode(SecurityMode.NONE);
-        client.setUserIdentity(new UserIdentity(USERNAME, PASSWORD));
         client.setTimeout(10, TimeUnit.MINUTES);
 
         setupDynamicNodeManager();
