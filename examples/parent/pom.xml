@@ -14,9 +14,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <dynamicnodemanager.version>0.3.2</dynamicnodemanager.version>
+        <dynamicnodemanager.version>0.3.3</dynamicnodemanager.version>
 
-        <prosys.version>5.4.0-201</prosys.version>
+        <prosys.version>5.5.0-212</prosys.version>
         <slf4j.version>2.0.17</slf4j.version>
         <jupiter.version>5.13.4</jupiter.version>
         <mockito.version>5.20.0</mockito.version>
