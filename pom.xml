@@ -17,11 +17,11 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <prosys.version>5.5.0-212</prosys.version>
-        <bouncycastle.version>1.81</bouncycastle.version>
-        <micrometer.version>1.15.4</micrometer.version>
+        <bouncycastle.version>1.83</bouncycastle.version>
+        <micrometer.version>1.16.1</micrometer.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <jupiter.version>5.13.4</jupiter.version>
-        <mockito.version>5.20.0</mockito.version>
+        <jupiter.version>6.0.1</jupiter.version>
+        <mockito.version>5.21.0</mockito.version>
         <assertj.version>3.27.6</assertj.version>
     </properties>
 
@@ -93,11 +93,11 @@
         <plugins>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.4</version>
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.11.2</version>
+                <version>3.12.0</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -117,7 +117,7 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>3.3.1</version>
+                        <version>3.4.0</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -143,7 +143,7 @@
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.8.0</version>
+                        <version>0.9.0</version>
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
