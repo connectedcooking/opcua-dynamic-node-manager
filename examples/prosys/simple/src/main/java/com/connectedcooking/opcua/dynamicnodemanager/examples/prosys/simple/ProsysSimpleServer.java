@@ -39,13 +39,13 @@ public class ProsysSimpleServer {
         server.setPort(port);
         server.setServerName("OPCUA/Simple");
         server.getSecurityModes().add(SecurityMode.NONE);
-        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC128RSA15);
+        server.setUserTokenPolicies(UserTokenPolicies.SECURE_USERNAME_PASSWORD_BASIC256SHA256);
         var appDescription = new ApplicationDescription();
         appDescription.setApplicationName(new LocalizedText("Simple Dynamic Server"));
         appDescription.setApplicationUri("urn:connectedcooking:opcua:simple");
         appDescription.setProductUri("https://connectedcooking.com/opcua/simple");
         appDescription.setApplicationType(ApplicationType.Server);
-        server.setApplicationIdentity(ApplicationIdentity.createCertificate(appDescription, "Simple", 512));
+        server.setApplicationIdentity(ApplicationIdentity.createCertificate(appDescription, "Simple", 2048));
 
         deviceService = new DeviceService();
     }

@@ -65,7 +65,7 @@ class ProsysServerITTest {
         appDescription.setApplicationUri("urn:test:opcua");
         appDescription.setProductUri("https://connectedcooking.com/opcua");
         appDescription.setApplicationType(ApplicationType.Server);
-        server.setApplicationIdentity(ApplicationIdentity.createCertificate(appDescription, "Test", 512));
+        server.setApplicationIdentity(ApplicationIdentity.createCertificate(appDescription, "Test", 1024));
 
         server.start();
 
