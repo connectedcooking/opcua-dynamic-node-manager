@@ -16,12 +16,12 @@ Add necessary dependencies:
 <dependency>
   <groupId>com.connectedcooking.opcua</groupId>
   <artifactId>opcua-dynamic-node-manager</artifactId>
-  <version>0.3.4</version>
+  <version>0.3.5</version>
 </dependency>
 <dependency>
   <groupId>com.prosysopc.ua</groupId>
   <artifactId>prosys-opc-ua-sdk-client-server</artifactId>
-  <version>5.6.0-221</version>
+  <version>5.6.2-227</version>
 </dependency>
 ```
 
